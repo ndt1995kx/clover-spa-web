@@ -1,0 +1,1444 @@
+{
+ "P3": [
+  {
+   "y": 445.8,
+   "co": 200.0,
+   "font": "Fraunces",
+   "chu": "Signature",
+   "dam": [
+    "Signature"
+   ]
+  },
+  {
+   "y": 1720.25,
+   "co": 100.0,
+   "font": "Be Vietnam Pro",
+   "chu": "Khám phá hai trải nghiệm",
+   "dam": []
+  },
+  {
+   "y": 1847.25,
+   "co": 100.0,
+   "font": "Be Vietnam Pro",
+   "chu": "đặc trưng:",
+   "dam": []
+  },
+  {
+   "y": 2025.25,
+   "co": 70.0,
+   "font": "Be Vietnam Pro",
+   "chu": "Massage ốc biển ấm kết hợp thảo dược",
+   "dam": [
+    "Massage ốc biển",
+    "ấm kết hợp thảo dược"
+   ]
+  },
+  {
+   "y": 2114.25,
+   "co": 70.0,
+   "font": "Be Vietnam Pro",
+   "chu": "và Massage cổ truyền Việt Nam.",
+   "dam": [
+    "và",
+    "Massage cổ truyền Việt Nam"
+   ]
+  },
+  {
+   "y": 2292.25,
+   "co": 70.0,
+   "font": "Be Vietnam Pro",
+   "chu": "Hơi ấm, hương thơm và những chuyển",
+   "dam": [
+    "Hơi ấm, hương thơm và những chuyển"
+   ]
+  },
+  {
+   "y": 2381.25,
+   "co": 70.0,
+   "font": "Be Vietnam Pro",
+   "chu": "động nhịp nhàng hòa quyện, giúp cơ thể",
+   "dam": [
+    "động nhịp nhàng hòa quyện, giúp cơ thể"
+   ]
+  },
+  {
+   "y": 2470.25,
+   "co": 70.0,
+   "font": "Be Vietnam Pro",
+   "chu": "thả lỏng trong một khoảng nghỉ mang",
+   "dam": [
+    "thả lỏng trong một khoảng nghỉ mang"
+   ]
+  },
+  {
+   "y": 2559.25,
+   "co": 70.0,
+   "font": "Be Vietnam Pro",
+   "chu": "dấu ấn Clover.",
+   "dam": [
+    "dấu ấn",
+    "Clover",
+    "."
+   ]
+  }
+ ],
+ "P4": [
+  {
+   "y": 844.65,
+   "co": 100.0,
+   "font": "Fraunces",
+   "chu": "Ốc Biển 899. 000",
+   "dam": [
+    "899",
+    ".",
+    "000"
+   ]
+  },
+  {
+   "y": 930.2,
+   "co": 40.0,
+   "font": "Be Vietnam Pro",
+   "chu": "60’/90’",
+   "dam": []
+  },
+  {
+   "y": 1182.65,
+   "co": 100.0,
+   "font": "Fraunces",
+   "chu": "Xương Rồng 870. 000",
+   "dam": [
+    "870.",
+    "000"
+   ]
+  },
+  {
+   "y": 1268.2,
+   "co": 40.0,
+   "font": "Be Vietnam Pro",
+   "chu": "60’/90’",
+   "dam": []
+  },
+  {
+   "y": 1516.65,
+   "co": 100.0,
+   "font": "Fraunces",
+   "chu": "Cổ Truyền Việt Nam 570. 000",
+   "dam": [
+    "570.",
+    "000"
+   ]
+  },
+  {
+   "y": 1602.2,
+   "co": 40.0,
+   "font": "Be Vietnam Pro",
+   "chu": "60’/90’",
+   "dam": []
+  },
+  {
+   "y": 1639.65,
+   "co": 100.0,
+   "font": "Fraunces",
+   "chu": "800. 000",
+   "dam": [
+    "800.",
+    "000"
+   ]
+  },
+  {
+   "y": 1902.65,
+   "co": 100.0,
+   "font": "Fraunces",
+   "chu": "Bấm Huyệt 570. 000",
+   "dam": [
+    "570.",
+    "000"
+   ]
+  },
+  {
+   "y": 1988.2,
+   "co": 40.0,
+   "font": "Be Vietnam Pro",
+   "chu": "60’/90’",
+   "dam": []
+  },
+  {
+   "y": 2025.65,
+   "co": 100.0,
+   "font": "Fraunces",
+   "chu": "795. 000",
+   "dam": [
+    "795.",
+    "000"
+   ]
+  }
+ ],
+ "P5": [
+  {
+   "y": 508.65,
+   "co": 100.0,
+   "font": "Fraunces",
+   "chu": "Massage Body 570. 000",
+   "dam": [
+    "570.",
+    "000"
+   ]
+  },
+  {
+   "y": 594.2,
+   "co": 40.0,
+   "font": "Be Vietnam Pro",
+   "chu": "60’/90’",
+   "dam": []
+  },
+  {
+   "y": 631.65,
+   "co": 100.0,
+   "font": "Fraunces",
+   "chu": "800. 000",
+   "dam": [
+    "800.",
+    "000"
+   ]
+  },
+  {
+   "y": 854.65,
+   "co": 100.0,
+   "font": "Fraunces",
+   "chu": "Aroma Massage 570. 000",
+   "dam": [
+    "570.",
+    "000"
+   ]
+  },
+  {
+   "y": 940.2,
+   "co": 40.0,
+   "font": "Be Vietnam Pro",
+   "chu": "60’/90’",
+   "dam": []
+  },
+  {
+   "y": 977.65,
+   "co": 100.0,
+   "font": "Fraunces",
+   "chu": "800. 000",
+   "dam": [
+    "800.",
+    "000"
+   ]
+  },
+  {
+   "y": 1200.65,
+   "co": 100.0,
+   "font": "Fraunces",
+   "chu": "Thảo Dược 570. 000",
+   "dam": [
+    "570.",
+    "000"
+   ]
+  },
+  {
+   "y": 1286.2,
+   "co": 40.0,
+   "font": "Be Vietnam Pro",
+   "chu": "60’/90’",
+   "dam": []
+  },
+  {
+   "y": 1323.65,
+   "co": 100.0,
+   "font": "Fraunces",
+   "chu": "800. 000",
+   "dam": [
+    "800.",
+    "000"
+   ]
+  },
+  {
+   "y": 1546.65,
+   "co": 100.0,
+   "font": "Fraunces",
+   "chu": "Đá Nóng 570. 000",
+   "dam": [
+    "570.",
+    "000"
+   ]
+  },
+  {
+   "y": 1632.2,
+   "co": 40.0,
+   "font": "Be Vietnam Pro",
+   "chu": "60’/90’",
+   "dam": []
+  },
+  {
+   "y": 1669.65,
+   "co": 100.0,
+   "font": "Fraunces",
+   "chu": "795. 000",
+   "dam": [
+    "795.",
+    "000"
+   ]
+  },
+  {
+   "y": 1892.65,
+   "co": 100.0,
+   "font": "Fraunces",
+   "chu": "Đá Nóng Thảo Dược 570. 000",
+   "dam": [
+    "570.",
+    "000"
+   ]
+  },
+  {
+   "y": 1978.2,
+   "co": 40.0,
+   "font": "Be Vietnam Pro",
+   "chu": "60’/90’",
+   "dam": []
+  },
+  {
+   "y": 2015.65,
+   "co": 100.0,
+   "font": "Fraunces",
+   "chu": "795. 000",
+   "dam": [
+    "795.",
+    "000"
+   ]
+  },
+  {
+   "y": 2238.65,
+   "co": 100.0,
+   "font": "Fraunces",
+   "chu": "Massage Thái 570. 000",
+   "dam": [
+    "570.",
+    "000"
+   ]
+  },
+  {
+   "y": 2324.2,
+   "co": 40.0,
+   "font": "Be Vietnam Pro",
+   "chu": "60’/90’",
+   "dam": []
+  },
+  {
+   "y": 2361.65,
+   "co": 100.0,
+   "font": "Fraunces",
+   "chu": "795. 000",
+   "dam": [
+    "795.",
+    "000"
+   ]
+  }
+ ],
+ "P6": [
+  {
+   "y": 445.8,
+   "co": 200.0,
+   "font": "Fraunces",
+   "chu": "Massage Toàn Thân",
+   "dam": [
+    "Massage Toàn Thân"
+   ]
+  },
+  {
+   "y": 1059.25,
+   "co": 100.0,
+   "font": "Be Vietnam Pro",
+   "chu": "Lắng nghe cơ thể. Chăm sóc",
+   "dam": []
+  },
+  {
+   "y": 1186.25,
+   "co": 100.0,
+   "font": "Be Vietnam Pro",
+   "chu": "đều bạn cần.",
+   "dam": []
+  },
+  {
+   "y": 1402.25,
+   "co": 70.0,
+   "font": "Be Vietnam Pro",
+   "chu": "Sau những hành trình và nhịp sống bận",
+   "dam": [
+    "Sau những hành trình và nhịp sống bận"
+   ]
+  },
+  {
+   "y": 1491.25,
+   "co": 70.0,
+   "font": "Be Vietnam Pro",
+   "chu": "rộn, hãy dành cho cơ thể một khoảng",
+   "dam": [
+    "rộn, hãy dành cho cơ thể một khoảng"
+   ]
+  },
+  {
+   "y": 1580.25,
+   "co": 70.0,
+   "font": "Be Vietnam Pro",
+   "chu": "nghỉ được chăm sóc trọn vẹn. Tại Clover,",
+   "dam": [
+    "nghỉ được chăm sóc trọn vẹn. Tại",
+    "Clover",
+    ","
+   ]
+  },
+  {
+   "y": 1669.25,
+   "co": 70.0,
+   "font": "Be Vietnam Pro",
+   "chu": "các bài Massage toàn thân chăm sóc từ",
+   "dam": [
+    "các bài",
+    "Massage toàn thân",
+    "chăm sóc từ"
+   ]
+  },
+  {
+   "y": 1758.25,
+   "co": 70.0,
+   "font": "Be Vietnam Pro",
+   "chu": "lưng, vai gáy đến tay, chân và đầu, giúp",
+   "dam": [
+    "lưng, vai gáy đến tay, chân và đầu, giúp"
+   ]
+  },
+  {
+   "y": 1847.25,
+   "co": 70.0,
+   "font": "Be Vietnam Pro",
+   "chu": "xoa dịu cảm giác căng mỏi và mang lại sự",
+   "dam": [
+    "xoa dịu cảm giác căng mỏi và mang lại sự"
+   ]
+  },
+  {
+   "y": 1936.25,
+   "co": 70.0,
+   "font": "Be Vietnam Pro",
+   "chu": "thư thái.",
+   "dam": [
+    "thư thái."
+   ]
+  },
+  {
+   "y": 2025.25,
+   "co": 70.0,
+   "font": "Be Vietnam Pro",
+   "chu": "Với lực tay nhẹ đến vừa, Body Massage",
+   "dam": [
+    "Với lực tay nhẹ đến vừa,",
+    "Body Massage"
+   ]
+  },
+  {
+   "y": 2114.25,
+   "co": 70.0,
+   "font": "Be Vietnam Pro",
+   "chu": "là lựa chọn dành cho người yêu thích",
+   "dam": [
+    "là lựa chọn dành cho người yêu thích"
+   ]
+  },
+  {
+   "y": 2203.25,
+   "co": 70.0,
+   "font": "Be Vietnam Pro",
+   "chu": "những chuyển động vuốt, miết và ấn nhịp",
+   "dam": [
+    "những chuyển động vuốt, miết và ấn nhịp"
+   ]
+  },
+  {
+   "y": 2292.25,
+   "co": 70.0,
+   "font": "Be Vietnam Pro",
+   "chu": "nhàng. Nếu muốn khám phá một trải",
+   "dam": [
+    "nhàng. Nếu muốn khám phá một trải"
+   ]
+  },
+  {
+   "y": 2381.25,
+   "co": 70.0,
+   "font": "Be Vietnam Pro",
+   "chu": "nghiệm khác biệt, bạn có thể lựa chọn",
+   "dam": [
+    "nghiệm khác biệt, bạn có thể lựa chọn"
+   ]
+  },
+  {
+   "y": 2470.25,
+   "co": 70.0,
+   "font": "Be Vietnam Pro",
+   "chu": "hương tinh dầu, hơi ấm thảo dược, đá",
+   "dam": [
+    "hương tinh dầu, hơi ấm thảo dược, đá"
+   ]
+  },
+  {
+   "y": 2559.25,
+   "co": 70.0,
+   "font": "Be Vietnam Pro",
+   "chu": "nóng hoặc các động tác kéo giãn.",
+   "dam": [
+    "nóng hoặc các động tác kéo giãn."
+   ]
+  }
+ ],
+ "P7": [
+  {
+   "y": 445.8,
+   "co": 200.0,
+   "font": "Fraunces",
+   "chu": "Chăm Sóc Da Mặt",
+   "dam": [
+    "Chăm Sóc Da Mặt"
+   ]
+  },
+  {
+   "y": 1009.25,
+   "co": 100.0,
+   "font": "Be Vietnam Pro",
+   "chu": "Chăm chút làn da. Rạng rỡ",
+   "dam": []
+  },
+  {
+   "y": 1136.25,
+   "co": 100.0,
+   "font": "Be Vietnam Pro",
+   "chu": "nét tự nhiên.",
+   "dam": []
+  },
+  {
+   "y": 1314.25,
+   "co": 70.0,
+   "font": "Be Vietnam Pro",
+   "chu": "Làn da cũng cần những khoảng nghỉ để",
+   "dam": [
+    "Làn da cũng cần những khoảng nghỉ để"
+   ]
+  },
+  {
+   "y": 1403.25,
+   "co": 70.0,
+   "font": "Be Vietnam Pro",
+   "chu": "được làm sạch và chăm dưỡng. Tại",
+   "dam": [
+    "được làm sạch và chăm dưỡng. Tại"
+   ]
+  },
+  {
+   "y": 1492.25,
+   "co": 70.0,
+   "font": "Be Vietnam Pro",
+   "chu": "Clover, các liệu trình chăm sóc da mặt",
+   "dam": [
+    "Clover",
+    ", các liệu trình chăm sóc da mặt"
+   ]
+  },
+  {
+   "y": 1581.25,
+   "co": 70.0,
+   "font": "Be Vietnam Pro",
+   "chu": "kết hợp từng bước làm sạch với Massage",
+   "dam": [
+    "kết hợp từng bước làm sạch với",
+    "Massage"
+   ]
+  },
+  {
+   "y": 1670.25,
+   "co": 70.0,
+   "font": "Be Vietnam Pro",
+   "chu": "và đắp mặt nạ, giúp làn da sạch thoáng,",
+   "dam": [
+    "và đắp mặt nạ",
+    ", giúp làn da sạch thoáng,"
+   ]
+  },
+  {
+   "y": 1759.25,
+   "co": 70.0,
+   "font": "Be Vietnam Pro",
+   "chu": "mềm mại hơn trong khi bạn tận hưởng",
+   "dam": [
+    "mềm mại hơn trong khi bạn tận hưởng"
+   ]
+  },
+  {
+   "y": 1848.25,
+   "co": 70.0,
+   "font": "Be Vietnam Pro",
+   "chu": "cảm giác thư giãn.",
+   "dam": [
+    "cảm giác thư giãn."
+   ]
+  },
+  {
+   "y": 1937.25,
+   "co": 70.0,
+   "font": "Be Vietnam Pro",
+   "chu": "Chăm sóc da mặt cơ bản là lựa chọn cho",
+   "dam": [
+    "Chăm sóc da mặt cơ bản là lựa chọn cho"
+   ]
+  },
+  {
+   "y": 2026.25,
+   "co": 70.0,
+   "font": "Be Vietnam Pro",
+   "chu": "một chu trình làm sạch và chăm dưỡng",
+   "dam": [
+    "một chu trình làm sạch và chăm dưỡng"
+   ]
+  },
+  {
+   "y": 2115.25,
+   "co": 70.0,
+   "font": "Be Vietnam Pro",
+   "chu": "đều đặn, từ tẩy trang, tẩy tế bào chết",
+   "dam": [
+    "đều đặn, từ tẩy trang, tẩy tế bào chết"
+   ]
+  },
+  {
+   "y": 2204.25,
+   "co": 70.0,
+   "font": "Be Vietnam Pro",
+   "chu": "đến Massage và đắp mặt nạ. Nếu muốn",
+   "dam": [
+    "đến",
+    "Massage và đắp mặt nạ",
+    ". Nếu muốn"
+   ]
+  },
+  {
+   "y": 2293.25,
+   "co": 70.0,
+   "font": "Be Vietnam Pro",
+   "chu": "bổ sung bước chăm sóc với serum, bạn",
+   "dam": [
+    "bổ sung bước chăm sóc với serum, bạn"
+   ]
+  },
+  {
+   "y": 2382.25,
+   "co": 70.0,
+   "font": "Be Vietnam Pro",
+   "chu": "có thể khám phá liệu trình phục hồi, kết",
+   "dam": [
+    "có thể khám phá liệu trình phục hồi, kết"
+   ]
+  },
+  {
+   "y": 2471.25,
+   "co": 70.0,
+   "font": "Be Vietnam Pro",
+   "chu": "hợp dưỡng da cùng các bước làm dịu và",
+   "dam": [
+    "hợp dưỡng da cùng các bước làm dịu và"
+   ]
+  },
+  {
+   "y": 2560.25,
+   "co": 70.0,
+   "font": "Be Vietnam Pro",
+   "chu": "bảo vệ da sau liệu trình.",
+   "dam": [
+    "bảo vệ da sau liệu trình."
+   ]
+  }
+ ],
+ "P8": [
+  {
+   "y": 466.15,
+   "co": 100.0,
+   "font": "Fraunces",
+   "chu": "Mặt Cơ Bản 420. 000",
+   "dam": [
+    "420.",
+    "000"
+   ]
+  },
+  {
+   "y": 551.7,
+   "co": 40.0,
+   "font": "Be Vietnam Pro",
+   "chu": "60’/90’",
+   "dam": []
+  },
+  {
+   "y": 724.15,
+   "co": 100.0,
+   "font": "Fraunces",
+   "chu": "Mặt Thiên Nhiên 450. 000",
+   "dam": [
+    "450.",
+    "000"
+   ]
+  },
+  {
+   "y": 809.7,
+   "co": 40.0,
+   "font": "Be Vietnam Pro",
+   "chu": "60’/90’",
+   "dam": []
+  },
+  {
+   "y": 978.15,
+   "co": 100.0,
+   "font": "Fraunces",
+   "chu": "Mặt Trắng Sáng 500. 000",
+   "dam": [
+    "500.",
+    "000"
+   ]
+  },
+  {
+   "y": 1063.7,
+   "co": 40.0,
+   "font": "Be Vietnam Pro",
+   "chu": "60’/90’",
+   "dam": []
+  },
+  {
+   "y": 1232.15,
+   "co": 100.0,
+   "font": "Fraunces",
+   "chu": "Mặt Vitamin C 550. 000",
+   "dam": [
+    "550.",
+    "000"
+   ]
+  },
+  {
+   "y": 1317.7,
+   "co": 40.0,
+   "font": "Be Vietnam Pro",
+   "chu": "60’/90’",
+   "dam": []
+  },
+  {
+   "y": 1513.15,
+   "co": 100.0,
+   "font": "Fraunces",
+   "chu": "Tẩy Da Chết 450. 000",
+   "dam": [
+    "450.",
+    "000"
+   ]
+  },
+  {
+   "y": 1598.7,
+   "co": 40.0,
+   "font": "Be Vietnam Pro",
+   "chu": "60’/90’",
+   "dam": []
+  },
+  {
+   "y": 1794.15,
+   "co": 100.0,
+   "font": "Fraunces",
+   "chu": "Tẩy Da Chết 550. 000",
+   "dam": [
+    "550.",
+    "000"
+   ]
+  },
+  {
+   "y": 1907.2,
+   "co": 40.0,
+   "font": "Be Vietnam Pro",
+   "chu": "60’/90’",
+   "dam": []
+  },
+  {
+   "y": 1917.15,
+   "co": 100.0,
+   "font": "Fraunces",
+   "chu": "Toàn Thân",
+   "dam": []
+  },
+  {
+   "y": 2075.15,
+   "co": 100.0,
+   "font": "Fraunces",
+   "chu": "Gội Đầu 130. 000",
+   "dam": [
+    "130.",
+    "000"
+   ]
+  },
+  {
+   "y": 2160.7,
+   "co": 40.0,
+   "font": "Be Vietnam Pro",
+   "chu": "60’/90’",
+   "dam": []
+  },
+  {
+   "y": 2356.15,
+   "co": 100.0,
+   "font": "Fraunces",
+   "chu": "Xông Hơi 130. 000",
+   "dam": [
+    "130.",
+    "000"
+   ]
+  },
+  {
+   "y": 2441.7,
+   "co": 40.0,
+   "font": "Be Vietnam Pro",
+   "chu": "60’/90’",
+   "dam": []
+  }
+ ],
+ "P9": [
+  {
+   "y": 559.65,
+   "co": 100.0,
+   "font": "Fraunces",
+   "chu": "Kid Massage 399. 000",
+   "dam": [
+    "399.",
+    "000"
+   ]
+  },
+  {
+   "y": 645.2,
+   "co": 40.0,
+   "font": "Be Vietnam Pro",
+   "chu": "60’/90’",
+   "dam": []
+  },
+  {
+   "y": 682.65,
+   "co": 100.0,
+   "font": "Fraunces",
+   "chu": "580. 000",
+   "dam": [
+    "580.",
+    "000"
+   ]
+  },
+  {
+   "y": 905.65,
+   "co": 100.0,
+   "font": "Fraunces",
+   "chu": "Massage Mẹ Bầu 570. 000",
+   "dam": [
+    "570.",
+    "000"
+   ]
+  },
+  {
+   "y": 991.2,
+   "co": 40.0,
+   "font": "Be Vietnam Pro",
+   "chu": "60’/90’",
+   "dam": []
+  },
+  {
+   "y": 1028.65,
+   "co": 100.0,
+   "font": "Fraunces",
+   "chu": "795. 000",
+   "dam": [
+    "795.",
+    "000"
+   ]
+  },
+  {
+   "y": 1251.65,
+   "co": 100.0,
+   "font": "Fraunces",
+   "chu": "Foot Massage 460. 000",
+   "dam": [
+    "460.",
+    "000"
+   ]
+  },
+  {
+   "y": 1337.2,
+   "co": 40.0,
+   "font": "Be Vietnam Pro",
+   "chu": "30’",
+   "dam": []
+  },
+  {
+   "y": 1545.65,
+   "co": 100.0,
+   "font": "Fraunces",
+   "chu": "Foot Tẩy Massage 530. 000",
+   "dam": [
+    "530.",
+    "000"
+   ]
+  },
+  {
+   "y": 1631.2,
+   "co": 40.0,
+   "font": "Be Vietnam Pro",
+   "chu": "60’",
+   "dam": []
+  },
+  {
+   "y": 1866.65,
+   "co": 100.0,
+   "font": "Fraunces",
+   "chu": "Massage Đầu 210. 000",
+   "dam": [
+    "210.",
+    "000"
+   ]
+  },
+  {
+   "y": 1952.2,
+   "co": 40.0,
+   "font": "Be Vietnam Pro",
+   "chu": "30’",
+   "dam": []
+  },
+  {
+   "y": 2187.65,
+   "co": 100.0,
+   "font": "Fraunces",
+   "chu": "Body Part 310. 000",
+   "dam": [
+    "310.",
+    "000"
+   ]
+  },
+  {
+   "y": 2273.2,
+   "co": 40.0,
+   "font": "Be Vietnam Pro",
+   "chu": "60’/90’",
+   "dam": []
+  },
+  {
+   "y": 2310.65,
+   "co": 100.0,
+   "font": "Fraunces",
+   "chu": "530. 000",
+   "dam": [
+    "530.",
+    "000"
+   ]
+  }
+ ],
+ "P10": [
+  {
+   "y": 445.8,
+   "co": 200.0,
+   "font": "Fraunces",
+   "chu": "Chăm Sóc Đặc Biệt",
+   "dam": [
+    "Chăm Sóc Đặc Biệt"
+   ]
+  },
+  {
+   "y": 1059.25,
+   "co": 100.0,
+   "font": "Be Vietnam Pro",
+   "chu": "Thả lỏng cơ thể. Tìm lại sự",
+   "dam": []
+  },
+  {
+   "y": 1186.25,
+   "co": 100.0,
+   "font": "Be Vietnam Pro",
+   "chu": "nhẹ nhõm.",
+   "dam": []
+  },
+  {
+   "y": 1402.25,
+   "co": 70.0,
+   "font": "Be Vietnam Pro",
+   "chu": "Sau những hành trình và nhịp sống bận",
+   "dam": [
+    "Sau những hành trình và nhịp sống bận"
+   ]
+  },
+  {
+   "y": 1491.25,
+   "co": 70.0,
+   "font": "Be Vietnam Pro",
+   "chu": "rộn, hãy dành cho cơ thể một khoảng",
+   "dam": [
+    "rộn, hãy dành cho cơ thể một khoảng"
+   ]
+  },
+  {
+   "y": 1580.25,
+   "co": 70.0,
+   "font": "Be Vietnam Pro",
+   "chu": "nghỉ được chăm sóc trọn vẹn. Tại Clover,",
+   "dam": [
+    "nghỉ được chăm sóc trọn vẹn. Tại",
+    "Clover",
+    ","
+   ]
+  },
+  {
+   "y": 1669.25,
+   "co": 70.0,
+   "font": "Be Vietnam Pro",
+   "chu": "các bài Massage toàn thân chăm sóc từ",
+   "dam": [
+    "các bài",
+    "Massage toàn thân",
+    "chăm sóc từ"
+   ]
+  },
+  {
+   "y": 1758.25,
+   "co": 70.0,
+   "font": "Be Vietnam Pro",
+   "chu": "lưng, vai gáy đến tay, chân và đầu, giúp",
+   "dam": [
+    "lưng, vai gáy đến tay, chân và đầu, giúp"
+   ]
+  },
+  {
+   "y": 1847.25,
+   "co": 70.0,
+   "font": "Be Vietnam Pro",
+   "chu": "xoa dịu cảm giác căng mỏi và mang lại sự",
+   "dam": [
+    "xoa dịu cảm giác căng mỏi và mang lại sự"
+   ]
+  },
+  {
+   "y": 1936.25,
+   "co": 70.0,
+   "font": "Be Vietnam Pro",
+   "chu": "thư thái.",
+   "dam": [
+    "thư thái."
+   ]
+  },
+  {
+   "y": 2025.25,
+   "co": 70.0,
+   "font": "Be Vietnam Pro",
+   "chu": "Với lực tay nhẹ đến vừa, Body Massage",
+   "dam": [
+    "Với lực tay nhẹ đến vừa,",
+    "Body Massage"
+   ]
+  },
+  {
+   "y": 2114.25,
+   "co": 70.0,
+   "font": "Be Vietnam Pro",
+   "chu": "là lựa chọn dành cho người yêu thích",
+   "dam": [
+    "là lựa chọn dành cho người yêu thích"
+   ]
+  },
+  {
+   "y": 2203.25,
+   "co": 70.0,
+   "font": "Be Vietnam Pro",
+   "chu": "những chuyển động vuốt, miết và ấn nhịp",
+   "dam": [
+    "những chuyển động vuốt, miết và ấn nhịp"
+   ]
+  },
+  {
+   "y": 2292.25,
+   "co": 70.0,
+   "font": "Be Vietnam Pro",
+   "chu": "nhàng. Nếu muốn khám phá một trải",
+   "dam": [
+    "nhàng. Nếu muốn khám phá một trải"
+   ]
+  },
+  {
+   "y": 2381.25,
+   "co": 70.0,
+   "font": "Be Vietnam Pro",
+   "chu": "nghiệm khác biệt, bạn có thể lựa chọn",
+   "dam": [
+    "nghiệm khác biệt, bạn có thể lựa chọn"
+   ]
+  },
+  {
+   "y": 2470.25,
+   "co": 70.0,
+   "font": "Be Vietnam Pro",
+   "chu": "hương tinh dầu, hơi ấm thảo dược, đá",
+   "dam": [
+    "hương tinh dầu, hơi ấm thảo dược, đá"
+   ]
+  },
+  {
+   "y": 2559.25,
+   "co": 70.0,
+   "font": "Be Vietnam Pro",
+   "chu": "nóng hoặc các động tác kéo giãn.",
+   "dam": [
+    "nóng hoặc các động tác kéo giãn."
+   ]
+  }
+ ],
+ "P11": [
+  {
+   "y": 445.8,
+   "co": 200.0,
+   "font": "Fraunces",
+   "chu": "COMBO Massage",
+   "dam": [
+    "COMBO Massage"
+   ]
+  },
+  {
+   "y": 842.0,
+   "co": 100.0,
+   "font": "Fraunces",
+   "chu": "Combo 1",
+   "dam": []
+  },
+  {
+   "y": 869.65,
+   "co": 100.0,
+   "font": "Fraunces",
+   "chu": "430. 000",
+   "dam": [
+    "430.",
+    "000"
+   ]
+  },
+  {
+   "y": 942.7,
+   "co": 40.0,
+   "font": "Be Vietnam Pro",
+   "chu": "Gội đầu thảo dược 30 Phút",
+   "dam": [
+    "30 Phút"
+   ]
+  },
+  {
+   "y": 945.2,
+   "co": 40.0,
+   "font": "Be Vietnam Pro",
+   "chu": "~ 60’",
+   "dam": []
+  },
+  {
+   "y": 990.7,
+   "co": 40.0,
+   "font": "Be Vietnam Pro",
+   "chu": "Massage cổ vai gáy 30 Phút",
+   "dam": [
+    "30 Phút"
+   ]
+  },
+  {
+   "y": 1197.65,
+   "co": 100.0,
+   "font": "Fraunces",
+   "chu": "Combo 2 770. 000",
+   "dam": [
+    "770.",
+    "000"
+   ]
+  },
+  {
+   "y": 1273.2,
+   "co": 40.0,
+   "font": "Be Vietnam Pro",
+   "chu": "~ 90’",
+   "dam": []
+  },
+  {
+   "y": 1298.7,
+   "co": 40.0,
+   "font": "Be Vietnam Pro",
+   "chu": "Chọn 1 dịch vụ massage 60 Phút bất kỳ",
+   "dam": [
+    "60 Phút"
+   ]
+  },
+  {
+   "y": 1346.7,
+   "co": 40.0,
+   "font": "Be Vietnam Pro",
+   "chu": "Massage chân/Chăm sóc da mặt/Tẩy ủ thảo dược cao cấp 30 Phút",
+   "dam": [
+    "30 Phút"
+   ]
+  },
+  {
+   "y": 1553.65,
+   "co": 100.0,
+   "font": "Fraunces",
+   "chu": "Combo 3 995. 000",
+   "dam": [
+    "995.",
+    "000"
+   ]
+  },
+  {
+   "y": 1629.2,
+   "co": 40.0,
+   "font": "Be Vietnam Pro",
+   "chu": "~ 120’",
+   "dam": []
+  },
+  {
+   "y": 1654.7,
+   "co": 40.0,
+   "font": "Be Vietnam Pro",
+   "chu": "Chọn 1 dịch vụ massage 60 Phút bất kỳ",
+   "dam": [
+    "60 Phút"
+   ]
+  },
+  {
+   "y": 1702.7,
+   "co": 40.0,
+   "font": "Be Vietnam Pro",
+   "chu": "Massage chân/Chăm sóc da mặt/Tẩy ủ thảo dược cao cấp 60 Phút",
+   "dam": [
+    "60 Phút"
+   ]
+  },
+  {
+   "y": 1909.65,
+   "co": 100.0,
+   "font": "Fraunces",
+   "chu": "Combo 4 1250. 000",
+   "dam": [
+    "1250.",
+    "000"
+   ]
+  },
+  {
+   "y": 1985.2,
+   "co": 40.0,
+   "font": "Be Vietnam Pro",
+   "chu": "~ 150’",
+   "dam": []
+  },
+  {
+   "y": 2010.7,
+   "co": 40.0,
+   "font": "Be Vietnam Pro",
+   "chu": "Chọn 1 dịch vụ massage 60 Phút bất kỳ",
+   "dam": [
+    "60 Phút"
+   ]
+  },
+  {
+   "y": 2058.7,
+   "co": 40.0,
+   "font": "Be Vietnam Pro",
+   "chu": "Chăm sóc da mặt trắng sáng 60 Phút + Massage chân 30 Phút",
+   "dam": [
+    "60 Phút",
+    "30 Phút"
+   ]
+  },
+  {
+   "y": 2265.65,
+   "co": 100.0,
+   "font": "Fraunces",
+   "chu": "Combo 5 1390. 000",
+   "dam": [
+    "1390.",
+    "000"
+   ]
+  },
+  {
+   "y": 2341.2,
+   "co": 40.0,
+   "font": "Be Vietnam Pro",
+   "chu": "~ 180’",
+   "dam": []
+  },
+  {
+   "y": 2366.7,
+   "co": 40.0,
+   "font": "Be Vietnam Pro",
+   "chu": "Chọn 1 dịch vụ massage 60 Phút bất kỳ",
+   "dam": [
+    "60 Phút"
+   ]
+  },
+  {
+   "y": 2414.7,
+   "co": 40.0,
+   "font": "Be Vietnam Pro",
+   "chu": "Tẩy tế bào da chết toàn thân 30 Phút + Chăm sóc da mặt 30 Phút",
+   "dam": [
+    "30 Phút",
+    "30 Phút"
+   ]
+  },
+  {
+   "y": 2462.7,
+   "co": 40.0,
+   "font": "Be Vietnam Pro",
+   "chu": "+ Massage chân 30 Phút + Gội đầu 30 Phút",
+   "dam": [
+    "30 Phút",
+    "30 Phút"
+   ]
+  }
+ ],
+ "P12": [
+  {
+   "y": 445.8,
+   "co": 200.0,
+   "font": "Fraunces",
+   "chu": "COUPLE Massage",
+   "dam": [
+    "COUPLE Massage"
+   ]
+  },
+  {
+   "y": 894.65,
+   "co": 100.0,
+   "font": "Fraunces",
+   "chu": "Nhẹ Nhàng 1380. 000",
+   "dam": [
+    "1380.",
+    "000"
+   ]
+  },
+  {
+   "y": 970.2,
+   "co": 40.0,
+   "font": "Be Vietnam Pro",
+   "chu": "~ 90’",
+   "dam": []
+  },
+  {
+   "y": 1044.2,
+   "co": 40.0,
+   "font": "Be Vietnam Pro",
+   "chu": "Massage toàn thân thư giản 60 Phú t",
+   "dam": [
+    "60 Phú"
+   ]
+  },
+  {
+   "y": 1109.2,
+   "co": 40.0,
+   "font": "Be Vietnam Pro",
+   "chu": "Chăm sóc mặt 30 Phút /Massage chân 30 Phút",
+   "dam": [
+    "30 Phút",
+    "30 Phút"
+   ]
+  },
+  {
+   "y": 1324.65,
+   "co": 100.0,
+   "font": "Fraunces",
+   "chu": "Tinh Tế 1890. 000",
+   "dam": [
+    "1890.",
+    "000"
+   ]
+  },
+  {
+   "y": 1400.2,
+   "co": 40.0,
+   "font": "Be Vietnam Pro",
+   "chu": "~ 105’",
+   "dam": []
+  },
+  {
+   "y": 1474.2,
+   "co": 40.0,
+   "font": "Be Vietnam Pro",
+   "chu": "Liệu pháp massage hương thơm 60 Phút ( cho Nữ )",
+   "dam": [
+    "60 Phút"
+   ]
+  },
+  {
+   "y": 1539.2,
+   "co": 40.0,
+   "font": "Be Vietnam Pro",
+   "chu": "Liệu pháp trị liệu bấm huyệt 60 Phút ( cho Nam )",
+   "dam": [
+    "60 Phút"
+   ]
+  },
+  {
+   "y": 1604.2,
+   "co": 40.0,
+   "font": "Be Vietnam Pro",
+   "chu": "Chăm sóc da mặt cơ bản/ Tẩy da chết toàn thân 45 Phút",
+   "dam": [
+    "45",
+    "Phút"
+   ]
+  },
+  {
+   "y": 1819.65,
+   "co": 100.0,
+   "font": "Fraunces",
+   "chu": "Đẳng Cấp 2780. 000",
+   "dam": [
+    "2780.",
+    "000"
+   ]
+  },
+  {
+   "y": 1895.2,
+   "co": 40.0,
+   "font": "Be Vietnam Pro",
+   "chu": "~ 150’",
+   "dam": []
+  },
+  {
+   "y": 1939.2,
+   "co": 40.0,
+   "font": "Be Vietnam Pro",
+   "chu": "Liệu pháp massage xương rồng 90 Phút ( cho Nữ )",
+   "dam": [
+    "90 Phút"
+   ]
+  },
+  {
+   "y": 2004.2,
+   "co": 40.0,
+   "font": "Be Vietnam Pro",
+   "chu": "Liệu pháp massage Ốc biển 90 Phút ( cho Nam )",
+   "dam": [
+    "90 Phút"
+   ]
+  },
+  {
+   "y": 2069.2,
+   "co": 40.0,
+   "font": "Be Vietnam Pro",
+   "chu": "Liệu pháp phục hồi Vitamin C/Tẩy ủ thảo dược cao cấp/Foot",
+   "dam": []
+  },
+  {
+   "y": 2134.2,
+   "co": 40.0,
+   "font": "Be Vietnam Pro",
+   "chu": "Massage 60 Phút",
+   "dam": [
+    "60 Phút"
+   ]
+  }
+ ]
+}
