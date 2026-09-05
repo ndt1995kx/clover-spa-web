@@ -172,10 +172,14 @@ for (const b of BAN) {
 
   /* Nut ngon ngu: danh dau ban dang xem, va cho moi nut mot duong dan that
      de Google bo duoc sang cac ban khac thay vi chi thay nut chay bang JS */
+  /* Duong dan tuong doi chu khong tuyet doi: nhu vay chay dung ca khi site
+     nam o goc ten mien (cloverspa.vn) lan khi nam trong thu muc con
+     (ban xem thu tren GitHub Pages o /clover-spa-web/). */
+  const lui = b.thumuc ? '../' : '';
   doc.querySelectorAll('.langs button').forEach(nut => {
     nut.setAttribute('aria-current', nut.dataset.short === b.ma ? 'true' : 'false');
     const dich = BAN.find(x => x.ma === nut.dataset.short && !x.trung);
-    if (dich) nut.setAttribute('data-href', dich.duong);
+    if (dich) nut.setAttribute('data-href', (lui + dich.duong.slice(1)) || './');
   });
 
   /* Duong dan tuong doi: trang trong thu muc con phai lui mot cap moi thay anh */
