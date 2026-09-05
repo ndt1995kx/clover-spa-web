@@ -51,6 +51,30 @@ thật không lọt lên kết quả tìm kiếm. Việc chặn chỉ áp dụng
 - Menu đầy đủ 10 trang: bấm "Xem menu đầy đủ" ở mục bảng giá để mở lớp phủ đọc dọc,
   kèm nút tải bản PDF. Ảnh chỉ tải khi khách bấm mở nên trang chủ không nặng thêm
 
+### Menu đầy đủ · cách sắp xếp
+
+File ảnh giữ đúng số trang bạn đánh trong bản gốc: `images/menu/menu-p03.webp` …
+`menu-p12.webp`. Nhìn tên file là biết ngay ứng với trang nào.
+
+Menu gốc dàn theo **trang đôi**, nên trên màn hình rộng hai trang được ghép liền
+nhau không chừa khe, đọc như đang cầm quyển menu:
+
+| Trang đôi | Trái | Phải |
+|---|---|---|
+| 1 | P3 · giới thiệu Signature | P4 · bảng giá Signature |
+| 2 | P5 · bảng giá Massage Body | P6 · giới thiệu Massage Toàn Thân |
+| 3 | P7 · giới thiệu Chăm Sóc Da Mặt | P8 · bảng giá Chăm Sóc Da Mặt |
+| 4 | P9 · bảng giá Kid / Mẹ Bầu / Foot | P10 · giới thiệu Chăm Sóc Đặc Biệt |
+| 5 | P11 · COMBO Massage | P12 · COUPLE Massage |
+
+Dưới 900px hai trang tách ra xếp dọc cho chữ đủ lớn.
+Dưới 620px **bỏ hẳn bốn trang giới thiệu P3, P6, P7, P10**, chỉ giữ sáu trang bảng
+giá (P4, P5, P8, P9, P11, P12) — trên điện thoại khách cần giá chứ không cần đọc
+trang bìa. Bốn trang bị ẩn cũng không bị tải xuống.
+
+Muốn đổi cách xếp thì sửa mảng `MENU_CAP` trong `index.html`; `gt: 1` là dấu đánh
+trang giới thiệu để ẩn trên điện thoại.
+
 ## Còn lại
 
 Xem [`_audit/soat-seo.md`](_audit/soat-seo.md) — soát SEO đầy đủ, xếp theo mức độ.

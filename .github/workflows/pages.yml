@@ -68,8 +68,11 @@ jobs:
 
           # Menu day du: 10 trang x 2 dinh dang + file PDF gop
           test -f dist/files/clover-spa-menu.pdf || { echo "LOI: thieu file PDF menu"; exit 1; }
-          SOMENU=$(ls dist/images/menu/*.webp dist/images/menu/*.jpg 2>/dev/null | wc -l)
-          test "$SOMENU" -eq 20 || { echo "LOI: mong doi 20 anh menu, dem duoc $SOMENU"; exit 1; }
+          for N in 03 04 05 06 07 08 09 10 11 12; do
+            for E in webp jpg; do
+              test -f "dist/images/menu/menu-p$N.$E"                 || { echo "LOI: thieu dist/images/menu/menu-p$N.$E"; exit 1; }
+            done
+          done
 
           # Trang trong thu muc con phai lui mot cap moi thay anh menu
           for T in en kr cn ru vn; do

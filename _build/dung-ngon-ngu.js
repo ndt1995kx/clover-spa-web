@@ -94,10 +94,11 @@ const anhCanDung = new Set();
   for (const m of src.matchAll(/(?:images|files)\/[A-Za-z0-9._\/-]+\.(?:jpe?g|png|webp|svg|pdf)/g)) {
     anhCanDung.add(m[0]);
   }
-  for (let i = 1; i <= 10; i++) {
+  /* 10 trang menu, dat ten theo dung so P cua file goc (P3..P12) */
+  for (let i = 3; i <= 12; i++) {
     const so = ('0' + i).slice(-2);
-    anhCanDung.add('images/menu/menu-' + so + '.webp');
-    anhCanDung.add('images/menu/menu-' + so + '.jpg');
+    anhCanDung.add('images/menu/menu-p' + so + '.webp');
+    anhCanDung.add('images/menu/menu-p' + so + '.jpg');
   }
 }
 let soAnh = 0;
