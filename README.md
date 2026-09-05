@@ -39,7 +39,7 @@ thật không lọt lên kết quả tìm kiếm. Việc chặn chỉ áp dụng
 
 - Khớp đúng bản thiết kế Figma ở cả desktop 1440 và mobile 390 (sai lệch 0 px trên mọi dải)
 - Responsive liên tục từ 305 px đến 1905 px
-- 5 ngôn ngữ: Việt · English · 한국어 · 中文 · Русский (chuyển bằng nút, chưa có URL riêng)
+- 5 ngôn ngữ, mỗi ngôn ngữ một URL riêng để Google index được từng bản
 - Motion: ảnh mở dần khi cuộn, ken burns ở hero, chữ chạy, đường kẻ vẽ dần —
   toàn bộ tắt khi hệ điều hành bật "giảm chuyển động"
 - Mục chi nhánh: bấm vào ô địa chỉ thì đổi ảnh, tên, địa chỉ, ghim bản đồ và đường nối
@@ -58,13 +58,46 @@ xem 25 trang dịch vụ đang có thứ hạng trên site cũ sẽ chuyển hư
 ## Cấu trúc
 
 ```
-index.html              toàn bộ trang · HTML + CSS + JS trong một file
+index.html              trang gốc · HTML + CSS + JS trong một file · SỬA Ở ĐÂY
 images/logo-clover.png  logo
 images/design/          13 ảnh đang dùng
 robots.txt              cho tên miền thật
 sitemap.xml             cho tên miền thật
+_build/                 script sinh bản 5 ngôn ngữ
 _audit/                 báo cáo soát SEO và rủi ro chuyển đổi
-.github/workflows/      deploy bản xem thử lên GitHub Pages
+.github/workflows/      dựng và deploy bản xem thử lên GitHub Pages
+dist/                   KẾT QUẢ DỰNG · không có trong repo, sinh bằng lệnh
 ```
 
 File thiết kế nguồn (Figma export, ảnh so sánh, bản backup) không đưa lên repo cho nhẹ.
+
+---
+
+## Dựng bản 5 ngôn ngữ
+
+Chỉ sửa `index.html`. Năm bản còn lại sinh ra tự động từ chính nó — không chép tay,
+không có bản dịch nào nằm rời ra ngoài.
+
+```bash
+cd _build && npm install && cd ..
+node _build/dung-ngon-ngu.js index.html dist
+```
+
+Xong sẽ có thư mục `dist/` — đây mới là thứ đem upload lên host:
+
+| Đường dẫn | Ngôn ngữ | Ghi chú |
+|---|---|---|
+| `/` | Tiếng Việt | bản chính tắc |
+| `/vn/` | Tiếng Việt | bản trùng, canonical trỏ về `/`, giữ cho đường dẫn cũ không 404 |
+| `/en/` | English | |
+| `/kr/` | 한국어 | |
+| `/cn/` | 中文 | |
+| `/ru/` | Русский | |
+
+Mỗi bản có `<html lang>` riêng, `<title>` và mô tả đã dịch, canonical riêng, cụm
+hreflang đủ 6 chiều và `og:locale` đúng. Nhờ vậy Google index được từng ngôn ngữ
+như một trang riêng — trước đây đổi ngôn ngữ chỉ chạy bằng JS trên cùng một URL
+nên Google chỉ thấy mỗi bản tiếng Việt.
+
+Bấm nút ngôn ngữ trên bản dựng sẽ chuyển sang URL tương ứng. Mở thẳng `index.html`
+không qua bước dựng thì nút vẫn đổi chữ tại chỗ như cũ.

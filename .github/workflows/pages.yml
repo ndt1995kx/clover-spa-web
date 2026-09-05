@@ -1,5 +1,5 @@
 # ============================================================
-#  Deploy ban xem thu len GitHub Pages.
+#  Dung ban 5 ngon ngu roi deploy len GitHub Pages.
 #
 #  Ban preview nay CHAN Google index. Ly do: trang dang con
 #  review chua xac minh nguon va dia chi tam, khong duoc de
@@ -31,35 +31,47 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Gom file cua trang
-        run: |
-          mkdir -p _site
-          cp index.html _site/
-          cp -r images _site/
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Cai jsdom
+        working-directory: _build
+        run: npm install --no-audit --no-fund
+
+      - name: Sinh ban 5 ngon ngu vao dist/
+        run: node _build/dung-ngon-ngu.js index.html dist
 
       - name: Chan robot cho ban xem thu
         run: |
-          # 1. Doi the meta robots sang noindex
-          sed -i 's|<meta name="robots" content="index,follow[^>]*>|<meta name="robots" content="noindex,nofollow">|' _site/index.html
+          # 1. Doi the meta robots sang noindex tren TAT CA cac ban ngon ngu
+          find dist -name index.html -print0 | xargs -0 sed -i \
+            's|<meta name="robots" content="index,follow[^>]*>|<meta name="robots" content="noindex,nofollow">|'
 
           # 2. Chan o tang robots.txt
-          printf 'User-agent: *\nDisallow: /\n' > _site/robots.txt
+          printf 'User-agent: *\nDisallow: /\n' > dist/robots.txt
 
           # 3. Khong dua sitemap len ban xem thu
-          rm -f _site/sitemap.xml
-
-          echo "--- kiem tra ---"
-          grep -o '<meta name="robots"[^>]*>' _site/index.html
-          cat _site/robots.txt
+          rm -f dist/sitemap.xml
 
       - name: Dung sai thi dung han
         run: |
-          grep -q 'content="noindex,nofollow"' _site/index.html \
-            || { echo "LOI: chua chen duoc noindex, huy deploy"; exit 1; }
+          SO=$(find dist -name index.html | wc -l)
+          test "$SO" -eq 6 || { echo "LOI: mong doi 6 trang, dem duoc $SO"; exit 1; }
+
+          CHAN=$(grep -l 'content="noindex,nofollow"' $(find dist -name index.html) | wc -l)
+          test "$CHAN" -eq 6 || { echo "LOI: chi $CHAN/6 trang co noindex, huy deploy"; exit 1; }
+
+          # Khong duoc con duong dan anh sai o thu muc con
+          SAI=$(grep -roE '(src|data-img)="images/' dist/en dist/kr dist/cn dist/ru dist/vn | wc -l)
+          test "$SAI" -eq 0 || { echo "LOI: $SAI duong dan anh chua doi thanh ../images/"; exit 1; }
+
+          echo "OK - 6 trang, deu co noindex, duong dan anh dung"
+          grep -o '<html lang="[a-z]*"' $(find dist -name index.html) | sort
 
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: _site
+          path: dist
 
   deploy:
     needs: build

@@ -33,6 +33,10 @@ images/hero-massage.jpg
 images/hero-thoa-dau.jpg
 images/phong-gio-yen.jpg
 
+# --- Ket qua dung, sinh lai bang lenh nen khong day len ---
+dist/
+_build/node_modules/
+
 # --- He dieu hanh ---
 Thumbs.db
 desktop.ini

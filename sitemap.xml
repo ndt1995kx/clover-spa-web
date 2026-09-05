@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
   Sitemap Clover Spa.
-  Ban tren site dang chay chua 51 URL tro 100% sang cloverspadalat.com, de nam 2021.
-  Day la ban thay the, chi chua URL that cua cloverspa.vn.
+
+  Chi khai cac URL CHINH TAC va CO THAT. Ban tren site dang chay chua 51 URL
+  tro toan bo sang cloverspadalat.com, de nam 2021 - day la ban thay the.
+
+  Khong khai /vn: do la ban trung cua trang chu, canonical tro ve goc, giu lai
+  chi de duong dan cu dang duoc Google biet khong tra 404.
 
   CAN BO SUNG truoc khi doi ten mien: 25 trang dich vu rieng le va 9 bai viet
   hien dang co thu hang tren Google. Xem _audit/rui-ro-chuyen-doi.md.
@@ -12,22 +16,66 @@
 
   <url>
     <loc>https://cloverspa.vn/</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
-    <xhtml:link rel="alternate" hreflang="vi" href="https://cloverspa.vn/vn"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://cloverspa.vn/en"/>
-    <xhtml:link rel="alternate" hreflang="ko" href="https://cloverspa.vn/kr"/>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://cloverspa.vn/cn"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://cloverspa.vn/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cloverspa.vn/en/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://cloverspa.vn/kr/"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://cloverspa.vn/cn/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://cloverspa.vn/ru/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://cloverspa.vn/"/>
   </url>
 
-  <url><loc>https://cloverspa.vn/vn</loc><lastmod>2026-09-02</lastmod><priority>0.9</priority></url>
-  <url><loc>https://cloverspa.vn/en</loc><lastmod>2026-09-02</lastmod><priority>0.9</priority></url>
-  <url><loc>https://cloverspa.vn/kr</loc><lastmod>2026-09-02</lastmod><priority>0.9</priority></url>
-  <url><loc>https://cloverspa.vn/cn</loc><lastmod>2026-09-02</lastmod><priority>0.9</priority></url>
+  <url>
+    <loc>https://cloverspa.vn/en/</loc>
+    <lastmod>2026-09-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://cloverspa.vn/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cloverspa.vn/en/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://cloverspa.vn/kr/"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://cloverspa.vn/cn/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://cloverspa.vn/ru/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cloverspa.vn/"/>
+  </url>
 
-  <url><loc>https://cloverspa.vn/gioi-thieu.html</loc><lastmod>2026-09-02</lastmod><priority>0.7</priority></url>
-  <url><loc>https://cloverspa.vn/chi-nhanh.html</loc><lastmod>2026-09-02</lastmod><priority>0.8</priority></url>
-  <url><loc>https://cloverspa.vn/lien-he.html</loc><lastmod>2026-09-02</lastmod><priority>0.7</priority></url>
+  <url>
+    <loc>https://cloverspa.vn/kr/</loc>
+    <lastmod>2026-09-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://cloverspa.vn/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cloverspa.vn/en/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://cloverspa.vn/kr/"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://cloverspa.vn/cn/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://cloverspa.vn/ru/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cloverspa.vn/"/>
+  </url>
+
+  <url>
+    <loc>https://cloverspa.vn/cn/</loc>
+    <lastmod>2026-09-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://cloverspa.vn/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cloverspa.vn/en/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://cloverspa.vn/kr/"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://cloverspa.vn/cn/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://cloverspa.vn/ru/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cloverspa.vn/"/>
+  </url>
+
+  <url>
+    <loc>https://cloverspa.vn/ru/</loc>
+    <lastmod>2026-09-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://cloverspa.vn/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cloverspa.vn/en/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://cloverspa.vn/kr/"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://cloverspa.vn/cn/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://cloverspa.vn/ru/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cloverspa.vn/"/>
+  </url>
 </urlset>

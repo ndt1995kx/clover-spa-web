@@ -1,0 +1,12 @@
+{
+  "name": "clover-spa-build",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Sinh ban tinh cho tung ngon ngu tu index.html",
+  "scripts": {
+    "build": "node dung-ngon-ngu.js ../index.html ../dist"
+  },
+  "dependencies": {
+    "jsdom": "^27.0.0"
+  }
+}

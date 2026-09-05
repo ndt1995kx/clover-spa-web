@@ -1107,9 +1107,15 @@ a{color:inherit;text-decoration:none}
   if (mq.addEventListener) mq.addEventListener('change', placeLangs);
   else mq.addListener(placeLangs);
 
-  /* bộ chuyển ngôn ngữ: đổi thật, không chỉ đổi trạng thái nút */
+  /* Bộ chuyển ngôn ngữ: đổi thật, không chỉ đổi trạng thái nút.
+     Bản dựng tĩnh gắn sẵn data-href cho mỗi nút (mỗi ngôn ngữ một URL riêng để
+     Google đọc được) nên bấm là chuyển trang. Khi mở thẳng file này không qua
+     bản dựng thì không có data-href, lúc đó đổi chữ ngay tại chỗ như cũ. */
   document.querySelectorAll('.langs button').forEach(function (b) {
-    b.addEventListener('click', function () { doiNgonNgu(b.dataset.short); });
+    b.addEventListener('click', function () {
+      if (b.dataset.href) { location.href = b.dataset.href; return; }
+      doiNgonNgu(b.dataset.short);
+    });
   });
 
   /* reveal khi cuộn: IntersectionObserver, không dùng scroll listener */
