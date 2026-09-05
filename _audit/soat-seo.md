@@ -31,7 +31,7 @@ Kết luận ngắn: **nền kỹ thuật tốt, nhưng chưa phát hành đư�
 
 ## B · Chặn phát hành
 
-### B1 · hreflang trỏ vào 4 URL không tồn tại — nội dung 4 ngôn ngữ vô hình với Google
+### B1 · ĐÃ SỬA 05/09 · hreflang trỏ vào 4 URL không tồn tại — nội dung 4 ngôn ngữ vô hình với Google
 
 `<head>` khai `/vn` `/en` `/kr` `/cn`. Không URL nào tồn tại. Việc đổi ngôn ngữ hiện
 làm hoàn toàn bằng JS trên cùng một URL, không đụng `history`, không đổi đường dẫn.
@@ -71,7 +71,7 @@ Google Business Profile. Đây cũng trái với chính yêu cầu ban đầu c�
 
 Xử lý: gỡ, hoặc thay bằng review Google thật kèm link về hồ sơ.
 
-### B4 · Sitemap khai 7 URL không tồn tại
+### B4 · ĐÃ SỬA 05/09 · Sitemap khai 7 URL không tồn tại
 
 Khai 8 URL, chỉ `https://cloverspa.vn/` là có thật. Bảy URL còn lại
 (`/vn` `/en` `/kr` `/cn` `gioi-thieu.html` `chi-nhanh.html` `lien-he.html`) sẽ trả 404
@@ -166,3 +166,23 @@ Link `#` cũng là dead link.
 
 Mục 5 và 6 tôi làm được ngay, không cần thêm dữ liệu từ bạn.
 Mục 1–4 và 7 phải có dữ liệu thật.
+
+---
+
+## Nhật ký sửa
+
+**05/09/2026 — đã sửa B1 và B4.**
+
+- **B1** Mỗi ngôn ngữ nay có URL riêng: `/` `/vn/` `/en/` `/kr/` `/cn/` `/ru/`.
+  Sinh tự động từ `index.html` bằng `_build/dung-ngon-ngu.js` (dùng jsdom, áp
+  đúng logic hàm `doiNgonNgu()` nên kết quả giống hệt khi bấm nút). 101 khoá mỗi
+  bản, không thiếu khoá nào. Mỗi bản có `lang`, `title`, mô tả, canonical,
+  `og:locale`, `inLanguage` riêng và cụm hreflang đủ 6 chiều đối xứng.
+  `/vn/` giữ lại cho đường dẫn cũ không 404, canonical trỏ về `/`.
+  Nút ngôn ngữ chuyển URL thật thay vì chỉ đổi chữ.
+- **B4** `sitemap.xml` chỉ còn 5 URL chính tắc có thật. Đã bỏ 3 trang chưa tồn tại
+  (`gioi-thieu.html`, `chi-nhanh.html`, `lien-he.html`) và 4 URL ngôn ngữ sai dạng.
+
+Còn lại theo thứ tự ở mục E: **B3** (review chưa xác minh) và **C2** (địa chỉ 4 chi
+nhánh) chờ dữ liệu thật; **C5 · C6** (WebP, self-host font) làm được ngay.
+Mục **B2** (giá) tạm bỏ theo yêu cầu.
