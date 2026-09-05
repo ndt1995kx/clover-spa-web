@@ -1,0 +1,72 @@
+# ============================================================
+#  Deploy ban xem thu len GitHub Pages.
+#
+#  Ban preview nay CHAN Google index. Ly do: trang dang con
+#  review chua xac minh nguon va dia chi tam, khong duoc de
+#  Google thu thap roi tao ban trung canh tranh voi cloverspa.vn.
+#
+#  Viec chan chi xay ra o day, luc deploy. File index.html goc
+#  trong repo van giu nguyen the robots "index,follow" de khi
+#  len ten mien that khong phai sua lai gi.
+# ============================================================
+name: Deploy ban xem thu
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Gom file cua trang
+        run: |
+          mkdir -p _site
+          cp index.html _site/
+          cp -r images _site/
+
+      - name: Chan robot cho ban xem thu
+        run: |
+          # 1. Doi the meta robots sang noindex
+          sed -i 's|<meta name="robots" content="index,follow[^>]*>|<meta name="robots" content="noindex,nofollow">|' _site/index.html
+
+          # 2. Chan o tang robots.txt
+          printf 'User-agent: *\nDisallow: /\n' > _site/robots.txt
+
+          # 3. Khong dua sitemap len ban xem thu
+          rm -f _site/sitemap.xml
+
+          echo "--- kiem tra ---"
+          grep -o '<meta name="robots"[^>]*>' _site/index.html
+          cat _site/robots.txt
+
+      - name: Dung sai thi dung han
+        run: |
+          grep -q 'content="noindex,nofollow"' _site/index.html \
+            || { echo "LOI: chua chen duoc noindex, huy deploy"; exit 1; }
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+
+# Sitemap cua site dang chay bi bo trong va tro sai sang cloverspadalat.com.
+# Dong duoi day la ban sua.
+Sitemap: https://cloverspa.vn/sitemap.xml

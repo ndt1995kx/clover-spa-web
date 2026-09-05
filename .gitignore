@@ -1,0 +1,39 @@
+# ============================================================
+#  Clover Spa · repo chi chua thu can de chay va review web.
+#  File lam viec (thiet ke nguon, backup, script export) giu
+#  o may, khong day len de repo nhe va de doc.
+# ============================================================
+
+# --- File lam viec ---
+_design/
+_ref/
+_sosanh/
+_figma-plugin/
+.claude/
+
+# --- Ban backup va cong cu export SVG ---
+_backup-index-*.html
+_svg_export*.js
+_svg_view*.html
+_export_server.py
+_tokens-preview.html
+clover-home.svg
+clover-mobile-*.svg
+
+# --- Anh khong trang nao goi toi (1,9 MB) ---
+# Ban do Viet Nam la SVG noi tuyen trong index.html nen file rieng nay thua.
+images/ban-do-viet-nam.svg
+images/cn-danang-letan.jpg
+images/dv-body.jpg
+images/dv-chan.jpg
+images/dv-mat.jpg
+images/hero-alt-linen.jpg
+images/hero-alt-silhouette.jpg
+images/hero-massage.jpg
+images/hero-thoa-dau.jpg
+images/phong-gio-yen.jpg
+
+# --- He dieu hanh ---
+Thumbs.db
+desktop.ini
+.DS_Store

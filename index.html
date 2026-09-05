@@ -1,0 +1,1566 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
+<!-- ====================== SEO cơ bản ====================== -->
+<title>Clover Spa · Massage trị liệu Đà Nẵng, Huế, Nha Trang, Đà Lạt</title>
+<meta name="description" content="Clover Spa: massage body, bấm huyệt, đá nóng và chăm sóc da mặt tại Đà Nẵng, Huế, Nha Trang, Đà Lạt. Mở cửa 10:00-22:00. Đặt lịch qua Zalo, KakaoTalk, WhatsApp, WeChat.">
+<link rel="canonical" href="https://cloverspa.vn/">
+<meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1">
+<meta name="theme-color" content="#F8C850">
+<meta name="geo.region" content="VN-DN">
+<meta name="geo.placename" content="Đà Nẵng">
+
+<!-- Bốn bản ngôn ngữ đang được Google index theo đường dẫn trên site hiện tại.
+     Giữ đúng cấu trúc này để không mất thứ hạng khi thay site. -->
+<link rel="alternate" hreflang="vi" href="https://cloverspa.vn/vn">
+<link rel="alternate" hreflang="en" href="https://cloverspa.vn/en">
+<link rel="alternate" hreflang="ko" href="https://cloverspa.vn/kr">
+<link rel="alternate" hreflang="zh" href="https://cloverspa.vn/cn">
+<link rel="alternate" hreflang="x-default" href="https://cloverspa.vn/">
+
+<!-- ====================== Chia sẻ mạng xã hội ====================== -->
+<meta property="og:type" content="website">
+<meta property="og:locale" content="vi_VN">
+<meta property="og:site_name" content="Clover Spa">
+<meta property="og:title" content="Clover Spa · Điểm đến của sự an yên">
+<meta property="og:description" content="Massage body, bấm huyệt, đá nóng và chăm sóc da mặt tại Đà Nẵng, Huế, Nha Trang, Đà Lạt. Mở cửa 10:00-22:00.">
+<meta property="og:url" content="https://cloverspa.vn/">
+<meta property="og:image" content="https://cloverspa.vn/images/design/hero.jpg">
+<meta property="og:image:width" content="1800">
+<meta property="og:image:height" content="1029">
+<meta property="og:image:alt" content="Kỹ thuật viên Clover Spa đang massage lưng cho khách trong phòng trị liệu xanh sẫm.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Clover Spa · Điểm đến của sự an yên">
+<meta name="twitter:description" content="Massage trị liệu tại Đà Nẵng, Huế, Nha Trang, Đà Lạt. Mở cửa 10:00-22:00.">
+<meta name="twitter:image" content="https://cloverspa.vn/images/design/hero.jpg">
+
+<link rel="icon" href="images/logo-clover.png">
+<link rel="apple-touch-icon" href="images/logo-clover.png">
+
+<!-- ====================== Font ====================== -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300..700&family=Cormorant+Garamond:wght@300;400&family=Be+Vietnam+Pro:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<!-- Ảnh hero là LCP, tải trước để không kéo dài thời gian hiện nội dung chính -->
+<link rel="preload" as="image" href="images/design/hero.jpg" fetchpriority="high">
+
+<style>
+/* ==========================================================================
+   CLOVER SPA - bản dựng từ SVG xuất Figma (Desktop 1440, khung 1440 x 5781)
+   Mã màu lấy trực tiếp từ file SVG. Font là suy đoán vì bản xuất bật
+   "Outline text" nên toàn bộ chữ đã thành path, không còn thông tin font.
+   ========================================================================== */
+:root{
+  /* màu đọc thẳng từ SVG */
+  --gold:#F8C850; --gold-2:#F2C63F; --gold-3:#F4CD6B;
+  --ivory:#FFF9E9; --cream:#FBF4DD; --paper:#F4F1EA; --input:#FFFDF6;
+  --ink:#17452B; --ink-2:#2A5C3C; --olive:#3D541F; --leaf:#3E7A4E;
+  --deep:#173A2C; --night:#0F3320; --pine:#365344;
+
+  --marquee:#2A5542; --sub-br:#405332; --hint:#9A917F;
+  --muted:rgba(23,58,44,.78); --muted-up:rgba(255,249,233,.7);
+  --line:rgba(23,69,43,.2); --line-2:rgba(23,69,43,.4); --line-up:rgba(248,200,80,.3);
+
+  --f-serif:'Fraunces',Georgia,'Times New Roman',serif;
+  --f-serif-2:'Cormorant Garamond',Georgia,serif;
+  --f-sans:'Be Vietnam Pro','Segoe UI',system-ui,sans-serif;
+
+  --maxw:1440px;
+  --gutter:clamp(1.25rem,8.9vw,128px);    /* muc toan kho: noi dung 128..1312 */
+  --edge:clamp(1.25rem,3.9vw,56px);       /* nav + hero: noi dung tu 56 */
+  --pad-panel:clamp(1.5rem,6.25vw,90px);  /* le trong panel vang: 110..1330 */
+  --r-2:12px; --r-3:20px; --r-4:32px; --r-pill:999px;
+  --dur:280ms; --dur-slow:640ms; --ease:cubic-bezier(.22,.68,.24,1);
+  --nav-h:75px;
+}
+@media (prefers-reduced-motion: reduce){
+  *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;
+    transition-duration:.01ms!important;scroll-behavior:auto!important}
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+/* Thanh nav dinh cao 75px se che mat dinh muc khi nhay neo, tru san ra */
+:target,[id]{scroll-margin-top:calc(var(--nav-h) + 16px)}
+body{font-family:var(--f-sans);background:var(--cream);color:var(--deep);
+     font-size:16px;line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{max-width:100%;display:block;height:auto}
+a{color:inherit;text-decoration:none}
+:focus-visible{outline:3px solid var(--ink);outline-offset:3px;border-radius:6px}
+.shell{max-width:var(--maxw);margin:0 auto;padding:0 var(--gutter)}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.dsp{font-family:var(--f-serif);font-weight:500;line-height:1.12;letter-spacing:-.01em;color:var(--ink)}
+.eyebrow{font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-2)}
+.hero .eyebrow{font-size:16px;font-weight:300;letter-spacing:.16em}
+.rule{width:110px;height:2px;background:var(--ink);border:0;display:block;margin-top:18px}
+
+/* ---------------------------------------------------------------- NAV --- */
+.nav{position:sticky;top:0;z-index:90;height:var(--nav-h);background:var(--gold);
+     transition:box-shadow var(--dur) var(--ease)}
+.nav.stuck{box-shadow:0 10px 30px -22px rgba(15,51,32,.85)}
+.nav .in{max-width:var(--maxw);margin:0 auto;height:100%;padding:0 var(--edge);
+     display:flex;align-items:center;gap:0}
+.nav .in>nav{flex:1;display:flex;justify-content:center}
+.brand{flex:none}
+.brand img{height:44px;width:auto}
+.langs{flex:none}
+.nav ul{list-style:none;display:flex;gap:34px}
+.nav .btn{padding:14px 19px}
+.nav ul a{font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;
+     position:relative;padding-bottom:3px;color:var(--deep)}
+.nav ul a::after{content:"";position:absolute;left:0;bottom:0;height:2px;width:0;background:var(--ink);
+     transition:width var(--dur) var(--ease)}
+.nav ul a:hover::after,.nav ul a:focus-visible::after{width:100%}
+.langs{display:flex;gap:2px;background:rgba(23,69,43,.12);border-radius:var(--r-pill);
+     padding:3px;margin-right:22px}
+.langs button{font:inherit;font-size:11px;font-weight:700;border:0;cursor:pointer;white-space:nowrap;
+     background:transparent;color:var(--muted);padding:5px 9px;border-radius:var(--r-pill);
+     transition:background var(--dur) var(--ease),color var(--dur) var(--ease)}
+.langs button[aria-current="true"]{background:var(--ink);color:var(--gold)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;white-space:nowrap;flex:none;
+     font-family:var(--f-sans);font-weight:700;font-size:13px;letter-spacing:.08em;text-transform:uppercase;
+     border:0;cursor:pointer;border-radius:var(--r-2);padding:14px 26px;position:relative;overflow:hidden;
+     transition:transform var(--dur) var(--ease),box-shadow var(--dur) var(--ease)}
+.btn>*{position:relative;z-index:1}
+.btn::before{content:"";position:absolute;inset:0;z-index:0;transform:scaleX(0);transform-origin:left;
+     transition:transform var(--dur) var(--ease)}
+.btn:hover::before,.btn:focus-visible::before{transform:scaleX(1)}
+.btn:hover{transform:translateY(-2px);box-shadow:0 16px 30px -18px rgba(15,51,32,.8)}
+.btn:active{transform:translateY(0) scale(.985)}
+.btn-dark{background:var(--ink);color:var(--gold)}      .btn-dark::before{background:var(--ink-2)}
+.btn-gold{background:var(--gold);color:var(--ink)}      .btn-gold::before{background:var(--gold-3)}
+.btn-line{background:transparent;color:var(--ink);box-shadow:inset 0 0 0 1.5px var(--line-2)}
+.btn-line::before{background:rgba(23,69,43,.08)}
+.btn-line-gold{background:transparent;color:var(--gold);box-shadow:inset 0 0 0 1.5px var(--gold)}
+.btn-line-gold::before{background:rgba(248,200,80,.16)}
+.burger{display:none;background:transparent;border:0;cursor:pointer;padding:8px;color:var(--ink)}
+.burger i{display:block;width:22px;height:2px;background:currentColor;margin:4px 0;border-radius:2px;
+     transition:transform var(--dur) var(--ease),opacity var(--dur) var(--ease)}
+.burger[aria-expanded="true"] i:nth-child(1){transform:translateY(6px) rotate(45deg)}
+.burger[aria-expanded="true"] i:nth-child(2){opacity:0}
+.burger[aria-expanded="true"] i:nth-child(3){transform:translateY(-6px) rotate(-45deg)}
+@media(max-width:1079px){
+  .nav ul{position:fixed;inset:var(--nav-h) 0 auto 0;background:var(--gold);flex-direction:column;
+    gap:0;padding:8px var(--edge) 32px;box-shadow:0 20px 30px -24px rgba(15,51,32,.8);
+    transform:translateY(-10px);opacity:0;pointer-events:none;
+    transition:opacity var(--dur) var(--ease),transform var(--dur) var(--ease)}
+  .nav ul.open{transform:none;opacity:1;pointer-events:auto}
+  .nav ul li{border-bottom:1px solid var(--line)}
+  .nav ul a{display:block;padding:16px 0;font-size:15px}
+  .langs{margin-left:auto;order:2}.nav .btn{order:3;padding:11px 16px}.burger{display:block;order:4}
+}
+@media(max-width:660px){.nav .in{gap:12px}.brand img{height:36px}
+  .nav .btn{padding:11px 15px;font-size:12px}}
+@media(max-width:520px){
+  .nav .in{gap:9px}.brand img{height:32px}
+  .nav .btn{padding:10px 14px;font-size:11px;letter-spacing:.03em}
+}
+/* Duoi 660px thanh nav khong du cho cho ca logo, 5 nut ngon ngu va CTA.
+   Bo ngon ngu duoc JS chuyen xuong trong menu bung, tranh bop nat nut Dat lich. */
+.lang-li{padding:14px 0}
+.lang-li .langs{display:inline-flex}
+
+/* --------------------------------------------------------------- HERO --- */
+.hero{position:relative;height:801px;max-height:calc(100dvh - var(--nav-h));min-height:560px;
+      overflow:hidden;background:var(--night);display:flex;align-items:flex-end}
+.hero>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:64% 50%;
+      transform:scale(1.14);animation:kenburns 24s var(--ease) forwards}
+@keyframes kenburns{to{transform:scale(1.06)}}
+.hero::after{content:"";position:absolute;inset:0;pointer-events:none;
+      background:linear-gradient(100deg,rgba(11,28,21,.93) 0%,rgba(11,28,21,.8) 26%,
+                 rgba(11,28,21,.32) 54%,rgba(11,28,21,.06) 76%,rgba(11,28,21,.3) 100%)}
+.hero .in{position:relative;z-index:2;width:100%;max-width:var(--maxw);margin:0 auto;
+      padding:0 var(--edge) 85px}
+.hero .eyebrow{color:var(--ivory);display:block}
+.hero h1{margin-top:26px;font-family:var(--f-serif);line-height:1.04;letter-spacing:-.035em;text-transform:uppercase}
+.hero h1 .l1{display:block;font-weight:700;font-size:clamp(2.2rem,4.2vw,60px);color:var(--gold)}
+.hero h1 .l2{display:block;font-weight:300;font-size:clamp(2.2rem,4.2vw,60px);color:var(--ivory)}
+.hero .lede{margin-top:22px;max-width:460px;font-size:18px;line-height:1.7;color:var(--ivory)}
+.hero .acts{margin-top:32px;display:flex;gap:12px;flex-wrap:wrap}
+.hero .stats{margin-top:38px;padding-top:22px;border-top:1px solid var(--line-up);
+      display:flex;gap:clamp(32px,6vw,88px);flex-wrap:wrap}
+.hero .stats b{display:block;font-family:var(--f-serif-2);font-weight:300;
+      font-size:28px;color:var(--gold);line-height:1.15}
+.hero .stats span{font-size:11.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;
+      color:var(--ivory)}
+.hero .rise{opacity:0;transform:translateY(26px);animation:rise .95s var(--ease) forwards}
+.hero .rise:nth-child(2){animation-delay:.1s}
+.hero .rise:nth-child(3){animation-delay:.22s}
+.hero .rise:nth-child(4){animation-delay:.34s}
+.hero .rise:nth-child(5){animation-delay:.46s}
+@keyframes rise{to{opacity:1;transform:none}}
+
+/* ------------------------------------------------------------ MARQUEE --- */
+.marquee{background:var(--cream);overflow:hidden;padding:33px 0;
+      -webkit-mask-image:linear-gradient(90deg,transparent,#000 7%,#000 93%,transparent);
+      mask-image:linear-gradient(90deg,transparent,#000 7%,#000 93%,transparent)}
+.marquee .track{display:flex;flex:none;width:max-content;animation:slide 40s linear infinite}
+.marquee:hover .track,.marquee:focus-within .track{animation-play-state:paused}
+.marquee span{font-family:var(--f-serif-2);font-weight:400;font-size:clamp(18px,1.8vw,25px);
+      line-height:1;text-transform:uppercase;color:var(--marquee);padding:0 42px;white-space:nowrap}
+@keyframes slide{to{transform:translateX(-50%)}}
+
+/* -------------------------------------------------------------- PANEL --- */
+.panel{max-width:none;margin:0 20px;border-radius:var(--r-4);
+       padding:clamp(2.5rem,6.6vw,95px)
+               max(var(--pad-panel), calc((100% - 1220px) / 2 - 20px))}
+.panel-gold{background:var(--gold-2)}
+.panel-ivory{background:var(--ivory)}
+.sec-h{font-family:var(--f-serif);font-weight:400;line-height:1.14;letter-spacing:-.015em;
+       font-size:clamp(1.75rem,3.5vw,50px);color:var(--ink)}
+
+/* ----------------------------------------------------------- DỊCH VỤ --- */
+.svc{padding:0}
+.svc .panel{padding-top:61px;padding-bottom:79px}
+.svc .rule{width:114px;margin-top:25px}
+.cards{margin-top:52px;display:grid;gap:24px;grid-template-columns:repeat(4,1fr)}
+@media(min-width:1081px){.card{min-height:518px}}
+@media(max-width:1080px){.cards{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:600px){.cards{grid-template-columns:1fr}}
+.card{background:var(--cream);border-radius:var(--r-3);overflow:hidden;
+      display:flex;flex-direction:column;
+      transition:transform var(--dur) var(--ease),box-shadow var(--dur) var(--ease)}
+.card:hover,.card:focus-visible{transform:translateY(-6px);
+      box-shadow:0 26px 44px -28px rgba(15,51,32,.75)}
+.card .ph{aspect-ratio:16/11;overflow:hidden;background:var(--ink-2)}
+.card .ph img{width:100%;height:100%;object-fit:cover;transition:transform 900ms var(--ease)}
+.card:hover .ph img{transform:scale(1.07)}
+.card .bd{padding:22px 22px 26px;display:flex;flex-direction:column;flex:1}
+.chip{align-self:flex-start;font-size:10px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;
+      background:var(--gold);color:var(--ink);padding:6px 14px;border-radius:var(--r-pill);
+      margin:-33px 0 14px;position:relative;z-index:1;box-shadow:0 4px 10px -6px rgba(15,51,32,.6)}
+.card h3{font-family:var(--f-serif);font-weight:400;font-size:22px;line-height:1.2;color:var(--ink)}
+.card .dur{margin-top:7px;font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;
+      color:var(--leaf)}
+.card p{margin-top:14px;font-size:14px;line-height:1.6;color:var(--ink-2)}
+.card .pr{margin-top:auto;padding-top:24px;display:flex;align-items:flex-end;
+      justify-content:space-between;gap:10px}
+.card .pr b{font-family:var(--f-serif);font-weight:700;font-size:19px;color:var(--olive);display:block}
+.card .pr i{font-style:normal;font-size:12px;color:var(--ink-2);display:block;margin-top:2px}
+.card .go{width:42px;height:42px;border-radius:10px;flex:none;display:grid;place-items:center;
+      box-shadow:inset 0 0 0 1.5px var(--line-2);font-family:var(--f-serif);font-size:25px;
+      color:var(--ink);
+      transition:background var(--dur) var(--ease),color var(--dur) var(--ease),
+                 transform var(--dur) var(--ease)}
+.card:hover .go{background:var(--ink);color:var(--gold);transform:translateX(4px)}
+
+/* ------------------------------------------------------------- ƯU ĐÃI --- */
+.promo{background:var(--cream);padding:clamp(2rem,4.2vw,60px) 0 clamp(2rem,4.3vw,62px)}
+.promo .grid{max-width:var(--maxw);margin:0 auto;padding:0 var(--gutter);
+      display:grid;grid-template-columns:1fr minmax(0,442px);
+      gap:clamp(2rem,9.7vw,140px);align-items:start}
+@media(max-width:900px){.promo .grid{grid-template-columns:1fr}}
+.promo h2{margin-top:13px}
+.promo ul{list-style:none;margin-top:75px;border-top:1px solid var(--line)}
+.promo li{display:flex;align-items:baseline;gap:22px;padding:10px 0;border-bottom:1px solid var(--line)}
+.promo li b{font-family:var(--f-serif);font-weight:400;font-size:26px;line-height:1.15;
+      min-width:92px;color:var(--ink)}
+.promo li span{font-size:16px;color:var(--ink-2)}
+.promo .banner{border-radius:var(--r-3);overflow:hidden;background:var(--cream);
+      max-width:442px;aspect-ratio:1;justify-self:end;width:100%}
+.promo .banner img{width:100%;height:100%;object-fit:cover;transition:transform 1.1s var(--ease)}
+.promo .banner:hover img{transform:scale(1.04)}
+
+/* ----------------------------------------------------------- BẢNG GIÁ --- */
+.price{padding:0;background:transparent;position:relative}
+.price::before{content:"";position:absolute;inset:0 20px;background:var(--gold-2);
+      border-radius:var(--r-4) var(--r-4) 0 0}
+.price>*{position:relative}
+.price .head{text-align:left}
+.price .rule{width:140px;margin-top:33px}
+.price .box{margin-top:30px;background:var(--cream);border-radius:var(--r-3);
+      padding:clamp(1.75rem,5.3vw,76px) clamp(1.5rem,7.4vw,106px)
+              clamp(1.5rem,2.6vw,37px) clamp(1.75rem,6.25vw,90px)}
+.price-cols{display:grid;grid-template-columns:1fr 1fr;gap:0 clamp(2rem,6.8vw,98px)}
+@media(max-width:880px){.price-cols{grid-template-columns:1fr}}
+.price-row{display:grid;grid-template-columns:auto 1fr auto;align-items:start;column-gap:14px;
+      padding:16px 0 15px;border-bottom:1px solid var(--line);
+      transition:padding-left var(--dur) var(--ease)}
+.price-row:hover{padding-left:8px}
+.price-row .nm{display:flex;flex-direction:column;align-items:flex-end;
+      font-family:var(--f-serif);font-weight:400;font-size:19px;line-height:1.3;
+      color:var(--olive);white-space:nowrap}
+.price-row .nm i{font-style:normal;font-family:var(--f-sans);font-size:11px;letter-spacing:.06em;
+      color:var(--leaf);line-height:1.1;margin-top:4px}
+.price-row .dots{border-bottom:1px solid var(--line-2);margin-top:12px;min-width:18px}
+.price-row .pv{display:flex;flex-direction:column;align-items:flex-end;
+      font-family:var(--f-serif);font-weight:700;font-size:19px;line-height:1.3;
+      color:var(--olive);white-space:nowrap}
+.price-row .pv i{font-style:normal;font-family:var(--f-sans);font-size:11px;font-weight:400;
+      color:var(--pine);line-height:1.1;margin-top:4px}
+@media(max-width:620px){
+  .price-row{grid-template-columns:1fr auto;column-gap:12px}
+  /* o kho hep cot ten gian rong, canh phai se day ten ra xa - tra ve canh trai */
+  .price-row .nm{white-space:normal;align-items:flex-start}
+  .price-row .dots{display:none}
+}
+.price-foot{margin-top:57px;display:flex;justify-content:space-between;align-items:center;
+      gap:24px;flex-wrap:wrap}
+.price-foot p{font-size:13px;line-height:1.7;color:var(--pine);max-width:50ch}
+.price-foot .btn{height:50px;width:min(247px,100%);padding:0 16px;font-size:15px;
+      letter-spacing:0;text-transform:none;color:var(--gold-3)}
+
+/* ---------------------------------------------------------- ĐÁNH GIÁ --- */
+.reviews{background:transparent;position:relative;
+      padding:clamp(1.25rem,1.5vw,21px) 0 clamp(3rem,5.5vw,79px)}
+.reviews::before{content:"";position:absolute;inset:0 20px;background:var(--gold-2);
+      border-radius:0 0 var(--r-4) var(--r-4)}
+.reviews>*{position:relative}
+.rv-grid{margin-top:57px;display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(2rem,4.1vw,59px)}
+@media(max-width:900px){.rv-grid{grid-template-columns:1fr}}
+.rv-item .stars{font-size:13px;letter-spacing:.28em;color:var(--night)}
+.rv-item blockquote{margin-top:16px;font-family:var(--f-serif);font-weight:400;
+      font-size:19px;line-height:1.55;color:#000}
+.rv-item figcaption{margin-top:18px;font-size:13.5px;color:var(--leaf)}
+.rv-item figcaption b{display:block;font-weight:400;color:var(--olive);margin-bottom:4px}
+
+/* ------------------------------------------------------- KHOẢNH KHẮC --- */
+.moments{background:var(--cream);padding:clamp(2rem,4.1vw,59px) 0 clamp(2.5rem,5.6vw,80px)}
+.moments .rule{height:3px;margin-top:27px}
+.mos{margin-top:51px;display:grid;grid-template-columns:2.07fr 1fr 1fr;
+      grid-template-rows:211px 211px;gap:17px 19px}
+@media(max-width:900px){.mos{grid-template-columns:1fr 1fr;grid-template-rows:auto}}
+@media(max-width:560px){.mos{grid-template-columns:1fr}}
+.mos figure{border-radius:6px;overflow:hidden;background:var(--ink-2);margin:0}
+.mos figure:first-child{grid-row:span 2}
+@media(max-width:900px){.mos figure:first-child{grid-row:span 1;grid-column:span 2}}
+@media(max-width:560px){.mos figure:first-child{grid-column:span 1}}
+.mos img{width:100%;height:100%;object-fit:cover;aspect-ratio:16/11;
+      transition:transform 1s var(--ease)}
+.mos figure:first-child img{aspect-ratio:auto;min-height:100%}
+.mos figure:hover img{transform:scale(1.06)}
+
+/* --------------------------------------------------------- CHI NHÁNH --- */
+.branches{padding:0}
+.branches .panel{background:var(--gold);text-align:center;padding-top:29px;padding-bottom:46px}
+.branches h2{font-family:var(--f-serif);font-weight:700;text-transform:uppercase;
+      letter-spacing:-.015em;font-size:clamp(1.75rem,3.5vw,50px);line-height:1.15;color:var(--deep)}
+.branches .sub{margin:30px auto 0;max-width:52ch;color:var(--sub-br);font-size:14px}
+.map-wrap{margin-top:38px;position:relative;display:grid;gap:0;
+      grid-template-columns:288px 1fr 400px;align-items:center;text-align:left}
+@media(max-width:1100px){.map-wrap{grid-template-columns:1fr}}
+.pills{display:grid;gap:16px;position:relative;z-index:2}
+
+/* Duong noi tu o chi nhanh sang ghim tren ban do. Ve bang toa do that nen
+   tu dung o moi be rong; an di tu kho tablet vi luc do ban do xuong hang. */
+.links-svg{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:1}
+.links-svg path{fill:none;stroke:var(--ink);stroke-width:1.6;stroke-dasharray:5 6;opacity:.4;
+      transition:opacity var(--dur) var(--ease),stroke-width var(--dur) var(--ease)}
+.links-svg path.dang-chon{opacity:.9;stroke-width:2.4}
+@media(max-width:1100px){.links-svg{display:none}}
+.pill{display:flex;align-items:center;gap:14px;background:var(--ink);color:var(--ivory);
+      border:0;width:100%;text-align:left;font:inherit;cursor:pointer;
+      border-radius:var(--r-2);padding:0 22px;min-height:66px;
+      transition:transform var(--dur) var(--ease),background var(--dur) var(--ease)}
+.pill:hover{transform:translateX(6px);background:var(--ink-2)}
+.pill .dot{width:18px;height:18px;border-radius:50%;background:var(--gold);flex:none;
+      transition:transform var(--dur) var(--ease)}
+.pill:hover .dot{transform:scale(1.25)}
+.pill b{font-weight:800;font-size:17px;text-transform:uppercase;letter-spacing:-.01em;white-space:nowrap}
+.pill.main{background:var(--gold);color:var(--ink);box-shadow:inset 0 0 0 2px var(--ink)}
+.pill.main .dot{background:var(--ink)}
+.pill.main:hover{background:var(--gold-3)}
+.pill .tag{margin-left:auto;font-size:9px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;
+      background:var(--ivory);color:var(--ink);padding:4px 9px;border-radius:var(--r-pill);
+      white-space:nowrap;flex:none}
+.map{display:grid;place-items:center;position:relative;z-index:2}
+.map svg{height:clamp(320px,36.8vw,530px);width:auto;max-width:100%;overflow:visible}
+.map .land{fill:rgba(23,69,43,.14);stroke:var(--ink);stroke-width:1.4;stroke-linejoin:round}
+.map .pin{fill:var(--ink);transform-box:fill-box;transform-origin:center;opacity:0;transform:scale(.3)}
+.map.lit .pin{animation:pop .55s var(--ease) forwards}
+.map.lit .pin.p1{animation-delay:.15s}.map.lit .pin.p2{animation-delay:.3s}
+.map.lit .pin.p3{animation-delay:.45s}.map.lit .pin.p4{animation-delay:.6s}
+@keyframes pop{to{opacity:1;transform:scale(1)}}
+.map .halo{fill:none;stroke:var(--ink);stroke-width:2;opacity:0;transition:opacity .6s var(--ease) .5s}
+.map.lit g[data-pin].dang-chon .halo{opacity:.75}
+.map.lit .halo{opacity:.4}
+.map.lit .halo.main{transform-box:fill-box;transform-origin:center;
+      animation:ping 3.4s var(--ease) infinite 1.1s}
+@keyframes ping{0%{transform:scale(1);opacity:.5}70%{transform:scale(2.1);opacity:0}100%{opacity:0}}
+.br-side{display:grid;gap:22px}
+.br-side .photo{border-radius:40px;overflow:hidden;aspect-ratio:400/408;background:var(--ink-2)}
+.br-side .photo img{width:100%;height:100%;object-fit:cover;
+      transition:transform 1.1s var(--ease),opacity .4s var(--ease)}
+.br-side .photo img.doi{opacity:0}
+.br-addr{margin-top:18px}
+.br-addr b{display:block;font-family:var(--f-sans);font-weight:700;font-size:12px;
+      letter-spacing:.1em;text-transform:uppercase;color:var(--deep);margin-bottom:5px}
+.br-addr span{display:block;font-size:14px;line-height:1.6;color:var(--ink-2)}
+.br-side .photo:hover img{transform:scale(1.05)}
+.br-side h3{font-size:11px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;
+      margin-bottom:6px;color:var(--ink)}
+.br-side p{font-size:14px;line-height:1.75;color:var(--muted)}
+
+/* ---------------------------------------------------------- ĐẶT LỊCH --- */
+.booking{background:var(--cream);padding:clamp(2.5rem,4.4vw,63px) 0 clamp(2.5rem,3.5vw,51px)}
+.booking .grid{max-width:var(--maxw);margin:0 auto;padding:0 var(--gutter);
+      display:grid;grid-template-columns:1fr minmax(0,653px);
+      gap:clamp(2rem,5.4vw,78px);align-items:start}
+@media(max-width:980px){.booking .grid{grid-template-columns:1fr}}
+
+.booking .lede{margin-top:20px;font-size:16px;line-height:1.75;color:var(--ink-2);max-width:44ch}
+.form{display:grid;grid-template-columns:1fr 1fr;gap:22px 21px}
+@media(max-width:620px){.form{grid-template-columns:1fr}}
+.field{display:flex;flex-direction:column;gap:8px}
+.field.full{grid-column:1/-1}
+.field label{font-size:11.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-2)}
+.field input,.field select{font:inherit;font-size:15px;color:var(--ink);background:var(--input);
+      border:1.5px solid var(--line);border-radius:10px;padding:0 15px;height:48px;
+      transition:border-color var(--dur) var(--ease),box-shadow var(--dur) var(--ease),
+                 transform var(--dur) var(--ease)}
+.field input:focus,.field select:focus{outline:none;border-color:var(--ink);
+      box-shadow:0 0 0 4px rgba(23,69,43,.1);transform:translateY(-1px)}
+.field .hint{font-size:12px;color:var(--hint)}
+.form .btn{height:52px;padding:0 26px;font-size:15px;letter-spacing:0;text-transform:none;
+      color:var(--gold-2)}
+.booking .note{margin-top:12px;font-size:13px;color:var(--ink-2)}
+
+/* ------------------------------------------------------------ FOOTER --- */
+.foot{background:var(--night);color:var(--ivory);padding:clamp(3rem,4.7vw,68px) 0 30px}
+.foot .cols{display:grid;grid-template-columns:1.96fr 1fr 1.02fr 1.34fr;gap:clamp(2rem,2.8vw,40px)}
+@media(max-width:900px){.foot .cols{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.foot .cols{grid-template-columns:1fr}}
+.foot h2,.foot h3{font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;
+      color:var(--gold-2);margin-bottom:16px}
+.foot p,.foot li{font-size:14px;line-height:1.8;color:var(--paper)}
+.foot ul{list-style:none;display:grid;gap:8px}
+.foot a{position:relative}
+.foot a::after{content:"";position:absolute;left:0;bottom:-2px;height:1px;width:0;background:var(--gold);
+      transition:width var(--dur) var(--ease)}
+.foot a:hover{color:var(--gold)}
+.foot a:hover::after{width:100%}
+.foot .base{margin-top:68px;padding-top:30px;border-top:1px solid var(--line-up);
+      display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;
+      font-size:12.5px;color:var(--paper)}
+
+/* ================================================================ MOBILE ===
+   Dung theo thiet ke rieng cho kho 390 (khong phai ban co gian tu desktop).
+   Khac desktop: panel tran vien, le 20px, bang gia tach khoi vang ra khoi
+   hang gia, khoanh khac mot cot, chi nhanh bo ban do va xep pill 2x2.
+   ========================================================================= */
+@media(max-width:620px){
+  :root{--gutter:20px}
+
+  /* panel vang tran het be ngang, chi bo goc */
+  .panel{margin:0;max-width:none;border-radius:24px;
+         padding-left:20px;padding-right:20px}
+  .price::before,.reviews::before{inset:0;border-radius:24px}
+
+  /* --- hero --- */
+  .hero .in{padding:0 20px 40px}
+  .hero .eyebrow{font-size:11.5px;font-weight:400;letter-spacing:.06em}
+  .hero h1{margin-top:24px}
+  .hero h1 .l1,.hero h1 .l2{font-size:40px}
+  .hero .lede{font-size:15px;max-width:none}
+  .hero .stats b{font-size:28px}
+
+  /* --- marquee --- */
+  .marquee{padding:30px 0 29px}
+  .marquee span{font-size:20px;padding:0 30px}
+
+  /* --- dich vu: the xep doc, thut them 15px so voi tieu de --- */
+  .svc .panel{padding-top:40px;padding-bottom:28px}
+  .svc .rule{margin-top:12px}
+  .sec-h{font-size:28px}
+  .cards{margin:22px 15px 0;grid-template-columns:1fr;gap:27px}
+  .card .ph{aspect-ratio:320/219}
+  .card .bd{padding:20px 20px 24px}
+  .card h3{font-size:22px}
+
+  /* --- uu dai --- */
+  .promo{padding:32px 0 27px}
+  .promo .grid{grid-template-columns:1fr;gap:14px;padding:0 20px}
+  .promo h2{margin-top:12px}
+  .promo .banner{max-width:none;width:auto;aspect-ratio:319/303;justify-self:stretch;margin:0 15px}
+  .promo li b{font-size:22px;min-width:74px}
+  .promo li span{font-size:14px}
+
+  /* --- bang gia: khoi vang chi bao tieu de, hang gia nam tren nen kem --- */
+  .price::before{display:none}
+  .price .panel{padding:0!important}
+  .price .head{background:var(--gold-2);border-radius:24px 24px 0 0;
+               padding:30px 20px 28px;text-align:left}
+  .price .box{background:transparent;border-radius:0;margin-top:0;padding:30px 20px 0}
+  .price-cols{grid-template-columns:1fr;gap:0}
+  .price-row{padding:11px 0}
+  .price-row .nm{font-size:16px}
+  .price-foot{margin-top:28px;flex-direction:column;align-items:stretch;gap:20px}
+  .price-foot .btn{order:-1;width:100%}
+
+  /* --- danh gia --- */
+  .reviews{padding:44px 0 10px}
+  .rv-grid{margin-top:28px;gap:30px}
+  .rv-item blockquote{margin-top:12px;line-height:1.45}
+  .rv-item figcaption{margin-top:12px}
+  .rv-item blockquote{font-size:18px}
+
+  /* --- khoanh khac: mot cot, moi anh cao bang nhau --- */
+  .moments{padding:40px 0 33px}
+  .mos{margin-top:12px;grid-template-columns:1fr;grid-template-rows:none;gap:9px}
+  .mos figure:first-child{grid-row:auto;grid-column:auto}
+  .mos img,.mos figure:first-child img{aspect-ratio:349/201;min-height:0}
+
+  /* --- chi nhanh: bo ban do, pill 2x2, anh vuong --- */
+  .branches .panel{padding-top:36px;padding-bottom:21px}
+  .branches h2{font-size:28px}
+  .branches .sub{margin-top:18px;font-size:14px}
+  .map-wrap{display:block;margin-top:14px}
+  .map{display:none}
+  .pills{grid-template-columns:1fr 1fr;gap:15px;max-width:286px;margin:0 auto}
+  .pill{min-height:40px;padding:0 14px;gap:10px;border-radius:8px}
+  .pill b{font-size:14px}
+  .pill .dot{width:12px;height:12px}
+  .br-side{margin-top:18px}
+  .br-side .photo{aspect-ratio:323/324;border-radius:24px;margin:0 13px}
+
+  /* --- dat lich --- */
+  .booking{padding:40px 0 26px}
+  .booking .grid{grid-template-columns:1fr;gap:16px;padding:0 20px}
+  .booking .lede{font-size:14px;max-width:none}
+  .form{grid-template-columns:1fr;gap:14px}
+  .field input,.field select{height:45px}
+
+  /* --- chan trang: mot cot --- */
+  .foot{padding:34px 0 14px}
+  .foot .cols{grid-template-columns:1fr;gap:18px}
+  .foot h2,.foot h3{margin-bottom:12px}
+  .foot ul{gap:5px}
+  .foot .base{margin-top:28px;padding-top:22px}
+  .foot .base{flex-direction:column;gap:8px}
+}
+
+/* -------------------------------------------------------- DAI LIEN HE --- */
+.rail{position:fixed;right:24px;bottom:24px;z-index:80;display:grid;gap:10px}
+.rail a{width:52px;height:52px;border-radius:50%;display:grid;place-items:center;
+      background:var(--ink);color:var(--gold);text-align:center;
+      box-shadow:0 10px 24px -14px rgba(15,51,32,.9);
+      transition:transform var(--dur) var(--ease),background var(--dur) var(--ease)}
+.rail a span{font-size:9.5px;font-weight:700;letter-spacing:.04em;line-height:1}
+.rail a:hover,.rail a:focus-visible{transform:scale(1.08);background:var(--ink-2)}
+@media(max-width:900px){.rail{right:14px;bottom:14px;gap:8px}
+  .rail a{width:46px;height:46px}}
+
+/* ============================================================== MOTION ===
+   Bo sung ngoai reveal co ban. Tat ca deu tat khi prefers-reduced-motion.
+   Khong dung scroll listener: reveal chay bang IntersectionObserver, con
+   hieu ung troi theo cuon dung animation-timeline cua CSS (co thi chay,
+   khong co thi bo qua).
+   ======================================================================= */
+
+/* --- anh mo ra nhu keo man tu tren xuong, kem thu nho nhe --- */
+.rv-img>img{clip-path:inset(0 0 100% 0);transform:scale(1.1);
+     transition:clip-path 1s var(--ease),transform 1.5s var(--ease)}
+.rv-img.in>img,.in .rv-img>img{clip-path:inset(0 0 0 0);transform:scale(1)}
+
+/* --- vach ngan duoi tieu de: ve tu trai sang --- */
+.rv .rule{transform:scaleX(0);transform-origin:left;
+     transition:transform .9s var(--ease) .25s}
+.rv.in .rule{transform:scaleX(1)}
+
+/* --- vach dan trong bang gia: ve ra sau khi hang hien --- */
+.price-row .dots{transform-origin:left;transition:transform .7s var(--ease) .35s}
+.rv-st:not(.in) .price-row .dots{transform:scaleX(0)}
+
+/* --- anh hero troi nhe khi cuon, chay bang timeline cua CSS --- */
+@supports (animation-timeline: view()){
+  @media (prefers-reduced-motion: no-preference){
+    .hero>img{
+      animation-name:kenburns,heroTroi;
+      animation-duration:24s,auto;
+      animation-timing-function:var(--ease),linear;
+      animation-fill-mode:forwards,both;
+      animation-timeline:auto,view()}
+  }
+}
+@keyframes heroTroi{from{translate:0 -1.6%}to{translate:0 1.6%}}
+
+/* --- chu chay: doi toc do theo kho de nhin deu nhau --- */
+@media(max-width:900px){.marquee .track{animation-duration:26s}}
+@media(max-width:620px){.marquee .track{animation-duration:20s}}
+
+@media (prefers-reduced-motion: reduce){
+  .rv-img>img{clip-path:none;transform:none}
+  .rv .rule{transform:none}
+  .rv-st:not(.in) .price-row .dots{transform:none}
+  .hero>img{animation:none;translate:none;transform:none}
+}
+
+/* ------------------------------------------------------------ reveal --- */
+.rv{opacity:0;transform:translateY(28px);
+    transition:opacity var(--dur-slow) var(--ease),transform var(--dur-slow) var(--ease)}
+.rv.in{opacity:1;transform:none}
+.rv-st>*{opacity:0;transform:translateY(24px);
+    transition:opacity var(--dur-slow) var(--ease),transform var(--dur-slow) var(--ease)}
+.rv-st.in>*{opacity:1;transform:none}
+.rv-st.in>*:nth-child(1){transition-delay:0ms}   .rv-st.in>*:nth-child(2){transition-delay:90ms}
+.rv-st.in>*:nth-child(3){transition-delay:180ms} .rv-st.in>*:nth-child(4){transition-delay:270ms}
+.rv-st.in>*:nth-child(5){transition-delay:360ms} .rv-st.in>*:nth-child(6){transition-delay:450ms}
+.rv-st.in>*:nth-child(7){transition-delay:540ms} .rv-st.in>*:nth-child(8){transition-delay:630ms}
+@media (prefers-reduced-motion: reduce){
+  .rv,.rv-st>*{opacity:1;transform:none}
+  .hero .rise{opacity:1;transform:none;animation:none}
+  .hero>img{animation:none;transform:none}
+  .marquee .track{animation:none}
+  .map .pin{opacity:1;transform:none}.map .halo{opacity:.4}
+}
+</style>
+<noscript>
+  <!-- Khong co JS thi bo observer se khong chay. Mo khoa moi thu de trang
+       van doc duoc day du thay vi ket o trang thai an. -->
+  <style>.rv,.rv-st>*{opacity:1!important;transform:none!important}
+  .rv-img>img{clip-path:none!important;transform:none!important}
+  .rv .rule{transform:none!important}</style>
+</noscript>
+</head>
+<body>
+
+<a class="sr" href="#noi-dung">Bỏ qua điều hướng, tới nội dung chính</a>
+
+<!-- ============================== NAV ============================== -->
+<header class="nav" id="nav">
+  <div class="in">
+    <a class="brand" href="/" aria-label="Clover Spa, về trang chủ" data-i18n-al="al_home">
+      <img src="images/logo-clover.png" width="480" height="127" alt="Clover Spa" data-i18n-alt="alt_logo">
+    </a>
+    <nav aria-label="Điều hướng chính" data-i18n-al="al_nav">
+      <ul id="navList">
+        <li><a href="#dich-vu" data-i18n="nav_svc">Liệu trình</a></li>
+        <li><a href="#chi-nhanh" data-i18n="nav_branch">Chi nhánh</a></li>
+        <li><a href="#khoanh-khac" data-i18n="nav_about">Về Clover Spa</a></li>
+        <li><a href="#dat-lich" data-i18n="nav_contact">Liên hệ</a></li>
+      </ul>
+    </nav>
+    <div class="langs" role="group" aria-label="Chọn ngôn ngữ" data-i18n-al="al_lang">
+      <button type="button" aria-current="true" data-short="VI">VI</button>
+      <button type="button" data-short="EN">EN</button>
+      <button type="button" data-short="KO">한국</button>
+      <button type="button" data-short="ZH">中文</button>
+      <button type="button" data-short="RU">RU</button>
+    </div>
+    <a class="btn btn-dark" href="#dat-lich"><span data-i18n="cta_book">Đặt lịch</span></a>
+    <button class="burger" id="burger" type="button" aria-expanded="false" aria-controls="navList"
+            aria-label="Mở menu" data-i18n-al="al_menu"><i></i><i></i><i></i></button>
+  </div>
+</header>
+
+<main id="noi-dung">
+
+<!-- ============================== HERO ============================== -->
+<section class="hero" aria-labelledby="h-hero">
+  <img src="images/design/hero.jpg" width="1800" height="1029" fetchpriority="high"
+       alt="Kỹ thuật viên Clover Spa đặt tay lên lưng khách, nắng chiều rọi qua phòng trị liệu xanh sẫm." data-i18n-alt="alt_hero">
+  <div class="in">
+    <p class="eyebrow rise">Đà Nẵng · Huế · Nha Trang · Đà Lạt</p>
+    <h1 id="h-hero" class="rise"><span class="l1">Clover Spa</span><span class="l2" data-i18n="hero_l2">Điểm đến của sự an yên</span></h1>
+    <p class="lede rise" data-i18n="hero_lede">Massage body, chân và chăm sóc da mặt theo lối bài bản. Lễ tân xác nhận ngay trên ứng dụng chat bạn đang dùng.</p>
+    <div class="acts rise">
+      <a class="btn btn-gold" href="#dat-lich"><span data-i18n="cta_book">Đặt lịch</span></a>
+      <a class="btn btn-line-gold" href="#dich-vu"><span data-i18n="hero_cta2">Xem liệu trình</span></a>
+    </div>
+    <div class="stats rise">
+      <div><b>4</b><span>Chi nhánh</span></div>
+      <div><b>10:00 - 22:00</b><span data-i18n="stat_open">Mở cửa hằng ngày</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================== MARQUEE ============================== -->
+<div class="marquee" aria-hidden="true">
+  <div class="track">
+    <span data-i18n="mq_acu">Bấm huyệt Việt Nam</span><span data-i18n="mq_stone">Đá nóng</span><span data-i18n="mq_herb">Thảo dược</span><span>Aroma</span><span>Foot massage</span>
+    <span data-i18n="mq_acu">Bấm huyệt Việt Nam</span><span data-i18n="mq_stone">Đá nóng</span><span data-i18n="mq_herb">Thảo dược</span><span>Aroma</span><span>Foot massage</span>
+  </div>
+</div>
+
+<!-- ============================== DỊCH VỤ ============================== -->
+<section class="svc" id="dich-vu" aria-labelledby="h-svc">
+  <div class="panel panel-gold">
+    <div class="rv">
+      <h2 id="h-svc" class="sec-h" data-i18n="svc_h2">Bốn dịch vụ được chọn nhiều nhất</h2>
+      <hr class="rule">
+    </div>
+
+    <!-- CẦN DỮ LIỆU THẬT: cả bốn thẻ đang dùng chung một đoạn mô tả và cùng mức giá
+         690.000đ trong bản thiết kế. Cần mô tả và giá riêng cho từng dịch vụ. -->
+    <div class="cards rv-st">
+      <a class="card" href="#dat-lich" data-svc="0">
+        <div class="ph rv-img"><img src="images/design/the-ocbien.jpg" width="1600" height="1179" decoding="async"
+             alt="Bàn tay kỹ thuật viên ấn dọc lưng khách trong liệu trình Massage Ốc Biển." data-i18n-alt="alt_c1"></div>
+        <div class="bd">
+          <span class="chip" data-i18n="svc_b1">Được chọn nhiều nhất</span>
+          <h3 data-i18n="svc_n1">Massage Ốc Biển</h3>
+          <p class="dur" data-i18n="svc_dur">90 phút</p>
+          <p data-i18n="svc_desc">Dịch vụ đặc biệt chỉ có tại Clover Spa. Mang lại trải nghiệm vô cùng độc đáo từ ốc biển.</p>
+          <div class="pr"><span><b>690.000đ</b><i>~$27</i></span><span class="go" aria-hidden="true">→</span></div>
+        </div>
+      </a>
+      <a class="card" href="#dat-lich" data-svc="1">
+        <div class="ph rv-img"><img src="images/design/the-cotruyen.jpg" width="559" height="419" decoding="async"
+             alt="Túi chườm thảo mộc, nến và hoa sứ trên khay gỗ cho liệu trình Massage Cổ Truyền." data-i18n-alt="alt_c2"></div>
+        <div class="bd">
+          <span class="chip" data-i18n="svc_b2">Ấn tượng nhất</span>
+          <h3 data-i18n="svc_n2">Massage Cổ Truyền</h3>
+          <p class="dur" data-i18n="svc_dur">90 phút</p>
+          <p data-i18n="svc_desc">Dịch vụ đặc biệt chỉ có tại Clover Spa. Mang lại trải nghiệm vô cùng độc đáo từ ốc biển.</p>
+          <div class="pr"><span><b>690.000đ</b><i>~$27</i></span><span class="go" aria-hidden="true">→</span></div>
+        </div>
+      </a>
+      <a class="card" href="#dat-lich" data-svc="2">
+        <div class="ph rv-img"><img src="images/design/the-couple.jpg" width="559" height="314" decoding="async"
+             alt="Phòng đôi Clover Spa với hai giường trị liệu đặt cạnh nhau." data-i18n-alt="alt_c3"></div>
+        <div class="bd">
+          <span class="chip" data-i18n="svc_b3">Có phòng riêng couple</span>
+          <h3 data-i18n="svc_n3">Massage Couple</h3>
+          <p class="dur" data-i18n="svc_dur">90 phút</p>
+          <p data-i18n="svc_desc">Dịch vụ đặc biệt chỉ có tại Clover Spa. Mang lại trải nghiệm vô cùng độc đáo từ ốc biển.</p>
+          <div class="pr"><span><b>690.000đ</b><i>~$27</i></span><span class="go" aria-hidden="true">→</span></div>
+        </div>
+      </a>
+      <a class="card" href="#dat-lich" data-svc="3">
+        <div class="ph rv-img"><img src="images/design/the-foot.jpg" width="1600" height="1179" decoding="async"
+             alt="Kỹ thuật viên bấm huyệt lòng bàn chân khách trong liệu trình Foot Massage." data-i18n-alt="alt_c4"></div>
+        <div class="bd">
+          <span class="chip" data-i18n="svc_b4">Giá tốt giờ vàng</span>
+          <h3 data-i18n="svc_n4">Foot Massage</h3>
+          <p class="dur" data-i18n="svc_dur">90 phút</p>
+          <p data-i18n="svc_desc">Dịch vụ đặc biệt chỉ có tại Clover Spa. Mang lại trải nghiệm vô cùng độc đáo từ ốc biển.</p>
+          <div class="pr"><span><b>690.000đ</b><i>~$27</i></span><span class="go" aria-hidden="true">→</span></div>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================== ƯU ĐÃI ============================== -->
+<section class="promo" aria-labelledby="h-promo">
+  <div class="grid">
+    <div class="rv">
+      <p class="eyebrow" data-i18n="promo_eb">Ưu đãi dành riêng cho bạn</p>
+      <h2 id="h-promo" class="sec-h" data-i18n="promo_h2">Nhận nhiều ưu đãi hơn khi đặt lịch trực tiếp</h2>
+      <ul>
+        <li><b>-15%</b><span data-i18n="promo_d1">liệu trình 90 &amp; 120 phút, khung 09:00 - 14:00</span></li>
+        <li><b>-10%</b><span data-i18n="promo_d2">liệu trình 60 &amp; 70 phút, khung 09:00 - 14:00</span></li>
+        <li><b>-5%</b><span data-i18n="promo_d3">mọi liệu trình khi đặt trước từ hôm trước</span></li>
+      </ul>
+    </div>
+    <!-- CẦN DỮ LIỆU THẬT: banner 2/9 là ảnh chiến dịch có thời hạn.
+         Cần cơ chế thay hoặc gỡ khi hết đợt, tránh để lại banner cũ trên site. -->
+    <div class="banner rv-img rv">
+      <img src="images/design/promo-29.jpg" width="1800" height="1800" decoding="async"
+           alt="Chương trình Mừng Đại Lễ 2/9 của Clover Spa, giảm giá tới 30% tại Đà Nẵng, Huế, Nha Trang, Đà Lạt." data-i18n-alt="alt_promo">
+    </div>
+  </div>
+</section>
+
+<!-- ============================== BẢNG GIÁ ============================== -->
+<section class="price" id="bang-gia" aria-labelledby="h-price">
+  <div class="panel panel-gold" style="background:transparent;padding-top:62px;padding-bottom:10px">
+    <div class="head rv">
+      <h2 id="h-price" class="sec-h" data-i18n="price_h2">Mọi liệu trình, một mức giá rõ ràng</h2>
+      <hr class="rule">
+    </div>
+    <div class="box">
+      <!-- CẦN DỮ LIỆU THẬT: bảng giá chính thức và ngày áp dụng -->
+      <div class="price-cols rv-st">
+        <div class="price-row"><span class="nm" data-i18n-t1="pn_shell">Massage Ốc Biển<i>90′</i></span><span class="dots"></span><span class="pv">690<i>~$27</i></span></div>
+        <div class="price-row"><span class="nm" data-i18n-t1="pn_stone">Đá Nóng &amp; Thảo Dược<i>70′/90′</i></span><span class="dots"></span><span class="pv">690/840<i>~$27/32</i></span></div>
+        <div class="price-row"><span class="nm" data-i18n-t1="pn_aroma">Aroma Tinh Dầu<i>60′/90′</i></span><span class="dots"></span><span class="pv">530/750<i>~$20/29</i></span></div>
+        <div class="price-row"><span class="nm" data-i18n-t1="pn_thai">Massage Thái<i>60′/90′</i></span><span class="dots"></span><span class="pv">590/830<i>~$23/32</i></span></div>
+        <div class="price-row"><span class="nm" data-i18n-t1="pn_viet">Massage Việt Nam<i>60′/90′</i></span><span class="dots"></span><span class="pv">590/820<i>~$23/32</i></span></div>
+        <div class="price-row"><span class="nm" data-i18n-t1="pn_acu">Bấm Huyệt<i>60′/90′</i></span><span class="dots"></span><span class="pv">570/795<i>~$22/31</i></span></div>
+        <div class="price-row"><span class="nm" data-i18n-t1="pn_foot">Massage Chân<i>60′</i></span><span class="dots"></span><span class="pv">460<i>~$18</i></span></div>
+        <div class="price-row"><span class="nm" data-i18n-t1="pn_face">Chăm Sóc Da Mặt<i>60′</i></span><span class="dots"></span><span class="pv">420-550<i>~$16-21</i></span></div>
+      </div>
+      <div class="price-foot rv">
+        <p data-i18n="price_note">Giá tính bằng nghìn đồng, đã gồm trà thảo mộc và tráng miệng nhẹ sau liệu trình. Không phụ phí ẩn.</p>
+        <!-- CẦN DỮ LIỆU THẬT: file PDF bảng giá chính thức -->
+        <a class="btn btn-dark" href="#" data-chua-co="pdf"><span data-i18n="price_pdf">Xem menu đầy đủ (PDF)</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================== ĐÁNH GIÁ ============================== -->
+<section class="reviews" aria-labelledby="h-rv">
+  <div class="shell">
+    <h2 id="h-rv" class="sec-h rv" data-i18n="rv_h2">Khách nói về Clover</h2>
+    <!-- CẦN DỮ LIỆU THẬT: ba nhận xét dưới đây chưa xác minh được nguồn.
+         Không gắn schema Review/AggregateRating cho tới khi có review Google thật,
+         vì đánh dấu dữ liệu có cấu trúc cho nội dung không thật là vi phạm chính sách Google. -->
+    <div class="rv-grid rv-st">
+      <figure class="rv-item">
+        <div class="stars" aria-label="5 trên 5 sao" data-i18n-al="al_stars">★★★★★</div>
+        <blockquote>“Không gian vàng và xanh rất khác mọi spa tôi từng đến ở Đà Nẵng. Một giờ trôi qua như mười phút.”</blockquote>
+        <figcaption><b>김서연 · Kim Seo-yeon</b>Seoul · Google Maps</figcaption>
+      </figure>
+      <figure class="rv-item">
+        <div class="stars" aria-label="5 trên 5 sao" data-i18n-al="al_stars">★★★★★</div>
+        <blockquote>“Understated and precise. No upselling, no rush, just seventy quiet minutes and excellent hands.”</blockquote>
+        <figcaption><b>Martin Keller</b>München · Tripadvisor</figcaption>
+      </figure>
+      <figure class="rv-item">
+        <div class="stars" aria-label="5 trên 5 sao" data-i18n-al="al_stars">★★★★★</div>
+        <blockquote>“金黄色配深绿很有格调，四叶草造型的窗景难忘。技师手法专业，结束后的姜茶很暖。”</blockquote>
+        <figcaption><b>王雨桐</b>上海 · 大众点评</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ============================== KHOẢNH KHẮC ============================== -->
+<section class="moments" id="khoanh-khac" aria-labelledby="h-mm">
+  <div class="shell">
+    <div class="rv">
+      <h2 id="h-mm" class="sec-h" data-i18n="mm_h2">Khoảnh khắc tại Clover</h2>
+      <hr class="rule">
+    </div>
+    <div class="mos rv-st">
+      <figure class="rv-img"><img src="images/design/phong-doi.jpg" width="1166" height="656" loading="lazy" decoding="async"
+        alt="Phòng trị liệu đôi tại Clover Spa với tường xanh rêu, đèn lồng và cây xanh." data-i18n-alt="alt_m1"></figure>
+      <figure class="rv-img"><img src="images/design/khay-thao-moc.jpg" width="565" height="424" loading="lazy" decoding="async"
+        alt="Khay thảo mộc tươi gồm sả, gừng và lá bạc hà chuẩn bị cho liệu trình." data-i18n-alt="alt_m2"></figure>
+      <figure class="rv-img"><img src="images/design/tui-chuom.jpg" width="565" height="424" loading="lazy" decoding="async"
+        alt="Túi chườm thảo mộc và nến đặt trên khay gỗ tròn." data-i18n-alt="alt_m3"></figure>
+      <figure class="rv-img"><img src="images/design/tri-lieu-tre.jpg" width="565" height="565" loading="lazy" decoding="async"
+        alt="Kỹ thuật viên Clover Spa thực hiện liệu trình chườm thảo mộc cho khách." data-i18n-alt="alt_m4"></figure>
+      <figure class="rv-img"><img src="images/design/am-tra.jpg" width="565" height="424" loading="lazy" decoding="async"
+        alt="Ấm trà đất nung đang rót, khói bốc lên bên tách trà và hoa sứ." data-i18n-alt="alt_m5"></figure>
+    </div>
+  </div>
+</section>
+
+<!-- ============================== CHI NHÁNH ============================== -->
+<section class="branches" id="chi-nhanh" aria-labelledby="h-br">
+  <div class="panel panel-gold">
+    <h2 id="h-br" class="rv" data-i18n="br_h2">Chọn chi nhánh</h2>
+    <p class="sub rv" data-i18n="br_sub">Bốn chi nhánh, cùng một tiêu chuẩn liệu trình và cùng một cách phục vụ.</p>
+
+    <!-- CẦN DỮ LIỆU THẬT: địa chỉ, điện thoại và giờ mở cửa riêng của từng chi nhánh -->
+    <div class="map-wrap" id="mapWrap">
+
+      <!-- CẦN DỮ LIỆU THẬT: địa chỉ đầy đủ và ảnh riêng của Huế, Nha Trang, Đà Lạt.
+           Ảnh dưới đây tạm mượn từ thư viện chung để xem được tương tác. -->
+      <div class="pills rv-st">
+        <button type="button" class="pill main" data-city="danang" data-altkey="alt_br" aria-pressed="true"
+          data-img="images/design/am-tra-rong.jpg" data-addr="123 Trần Hưng Đạo, Sơn Trà, Đà Nẵng">
+          <span class="dot"></span><b>Đà Nẵng</b></button>
+        <button type="button" class="pill" data-city="hue" data-altkey="alt_m1" aria-pressed="false"
+          data-img="images/design/phong-doi.jpg" data-addr="">
+          <span class="dot"></span><b>Huế</b></button>
+        <button type="button" class="pill" data-city="nhatrang" data-altkey="alt_m4" aria-pressed="false"
+          data-img="images/design/tri-lieu-tre.jpg" data-addr="">
+          <span class="dot"></span><b>Nha Trang</b></button>
+        <button type="button" class="pill" data-city="dalat" data-altkey="alt_m2" aria-pressed="false"
+          data-img="images/design/khay-thao-moc.jpg" data-addr="">
+          <span class="dot"></span><b>Đà Lạt</b></button>
+      </div>
+
+      <!-- Đường nối từ ô chi nhánh sang ghim trên bản đồ, vẽ theo toạ độ thật -->
+      <svg class="links-svg" id="links" aria-hidden="true"></svg>
+
+      <div class="map" id="map">
+        <!-- Đường biên Việt Nam dựng từ dữ liệu địa lý thật (Natural Earth 1:50m).
+             Bốn ghim đặt đúng kinh vĩ độ thật của từng thành phố. -->
+        <svg viewBox="0 0 400 822" role="img" aria-label="Bản đồ Việt Nam đánh dấu bốn chi nhánh Clover Spa tại Đà Nẵng, Huế, Nha Trang và Đà Lạt" data-i18n-al="al_map">
+          <path class="land" d="M109.6 714.9L110.6 717.7L110.2 723.9L108.1 730.2L108.9 732.9L107.2 734.6L103.8 723L99.2 718L98.3 716L100.9 716.2L105.5 712.9L107.7 712.8L109.6 714.9ZM314.7 108.2L312.3 108.7L306.1 108.8L300.8 113.8L297 115.9L291.3 117.6L285.1 120.5L283.4 125.4L283.2 129L282.3 133L272.2 138.7L269.4 138.2L267.5 136L264.7 136.5L262.6 137.5L260.3 137.4L257.7 138.6L254.3 138.3L251.1 136.5L249.2 136L246.9 135.9L246.6 138.1L249.8 146.5L250.7 150.4L240.1 161.8L241.3 169.1L238.4 174.7L232 179.3L219.9 190.9L214.4 191.2L210.3 193.9L201.4 213L201.2 219.6L199.9 224.4L200.3 229L196.3 238.1L192.2 242L191.4 246.9L197.1 257.2L197.8 259L201 264.5L202.7 268.3L205.4 272.2L214.6 282.4L218.8 285.5L223.7 287.7L232.8 296.8L237.3 302.6L235.2 306.5L236.4 314.9L229.7 312.5L230.7 313.5L238.2 318.1L249.8 334.2L259.8 342.1L270 351.2L273.2 359.9L282.3 365.5L292.5 373.8L292.1 375.6L294.7 377.9L301.7 382.2L305.9 386.9L307.4 391.2L309.8 391.9L312.9 390.8L315.7 390.5L317.6 390.7L320.8 395.6L324.9 399.9L327 403.8L328.7 403.3L330 403.9L330.4 407.2L331.2 409.4L336.8 415.7L339.5 421.7L346.5 431.5L351.4 437L355.2 440.1L359.1 442.7L363.3 453.5L365.4 463.3L369.7 474.1L373.1 478.8L373.1 487.8L375.8 497L378.6 503.2L379.5 509.5L380.3 512.7L381.4 515L384.4 525.8L383.7 530.8L381.6 525.9L381.8 540.3L383.7 547.9L382.7 557.3L384.8 560.6L388.4 571.1L390.9 574.9L390.7 587.9L392 594.4L388.6 590.5L386.1 586.1L382.9 588.5L380.1 591.9L384.6 605.8L379.3 604.5L379.9 623.1L382 627.5L382.2 629.6L381.6 632.1L380.1 629.4L379.9 626.5L379 627.1L379.2 628.6L377.3 631.9L376.9 636L378.6 639.4L379 642.1L377.6 645.4L375.6 648.9L370.7 649.4L369.5 656.1L367.8 663.3L359.1 664.4L352.9 670.8L345 673.1L338 679.5L330.4 685.3L325.3 686L321.2 687.3L316.3 696.9L307.9 698.1L293.2 705.9L288.3 709.7L283.8 711.2L277.3 714.5L276 713.3L273.8 710.5L268.3 709.1L265.4 705.9L264.7 701.9L263.9 700.2L262.8 702.5L261.9 712.2L260.9 714.4L258.5 715.3L253.7 712.6L249.4 707L243 710.9L244.9 711.3L247.9 711L250.1 712L252 715.7L251.8 717.8L250.9 720.1L244.9 720.5L236.9 719.7L235.6 719.9L242.8 723.6L249.4 725.7L252.4 728L252.4 729.9L248.6 732.9L245.8 736.7L245.6 739.1L245.6 741.6L242.4 743.9L240.3 743.4L234.7 739.6L218.4 724.1L220.9 728.5L237.9 746L240.7 751.8L241.3 755.9L239.4 757.8L236.5 760.3L231.1 760.5L221.8 754L207.3 738.3L202.4 736.2L217.1 754.1L219.5 758.4L222 763.4L221.2 766.4L219.9 769.2L185 785.7L179.7 792.9L175.5 801.7L168.7 806.5L164.8 811.1L153.1 813.5L146.6 812.8L153.3 804.6L149.1 801.6L148.9 780.7L150.6 757.7L153.6 746.3L158 743.4L163.6 741.6L163.6 739.3L163.1 736.4L160.2 732.5L156.8 730.7L152.1 730L148.3 725.2L145.5 725.3L141 727L138.3 724.9L137.4 721.7L133.2 717.7L128.7 713.8L130.8 713.2L133.2 710.9L135.9 708.1L142.5 707.7L149.1 707.8L150.8 707.1L153.4 704L157.8 700.1L161.2 698L161.9 696.2L160.6 692.1L159.9 687.8L161.2 686.5L167 687.3L173.7 689.3L175.2 690.1L178.9 684.9L180.1 684.3L182.5 684.3L189 683.4L195.4 682L198.4 682.2L201.2 685.7L203.5 689.2L204.6 689.3L207.8 687.9L210.7 689.7L216.3 692.8L219.7 692.9L218 685.9L219.9 681L219.5 679.7L216.3 677.4L205.6 668.3L203.7 665.6L203.9 661.3L203.5 655.1L202.5 651.2L202.7 648.9L203.3 647L205.4 646.2L207.3 646.1L208.8 644.4L211.4 640.3L216.5 640.7L223.7 643L229 644.4L232.2 644.2L232.8 643.6L232.8 641.4L233.1 631.9L233 629.9L237.3 629L244.3 628.8L247.9 628.2L251.3 624.3L260 622.8L266.4 617.5L272.1 611.9L274.7 610.5L278.3 609.6L280.9 609.7L284.3 612.9L287 611L290.2 607.2L291.9 603.5L292.8 597.6L292.1 588.5L290.6 581.5L288.9 576.1L288.5 570.8L292.3 560.2L295.5 548.7L294.7 544L291.3 536.8L287.9 528L284.1 518.3L282.6 516.9L281.7 514.2L280.9 511.1L282.6 501.2L282.8 497.8L287.2 493.3L289.4 488.1L291.7 482.4L290.9 479.5L290.6 473.3L291.1 470.4L290.2 467.9L288.9 464.4L289.6 462.2L292.8 460.3L294.5 457L296.8 453L297.9 449.5L296.2 446.4L293.2 442L287.7 437.9L281.5 432.8L278.3 429.6L275.8 426.4L273.6 422.6L272.4 419.6L273.6 417.6L282.6 413.1L284.1 411.5L285.1 408.9L284.5 406.5L282.1 405.1L279.2 404.2L275.1 401.3L267.3 393.6L263.7 391.8L260 389.5L258.1 387.1L255.8 380.7L254.9 380.1L252.8 382L250 384.1L247.7 383.7L245.6 381.9L244.7 379.5L242.4 376.1L239.8 373.3L239.2 364L238.8 361L237.5 356.7L235.6 355.2L233.5 354.1L228.6 346.4L225.4 342.4L211.4 331.6L209.7 329.8L206.1 325.4L199.5 319.1L195 314L191.6 308.7L190.1 304.1L189.5 300.5L185.9 295.4L182.7 291.3L179.7 289.8L176.3 289.3L173.1 286.8L167.2 281.2L164.8 277.5L163.3 275.1L163.3 272.6L164.6 268.4L166.3 266L166.5 264.2L164.8 262.7L158.4 259.9L143.8 255.8L138.3 252.7L133.4 248.7L129.6 246L111.9 234.4L106.6 232.5L101.9 230.4L100.6 228.5L100.7 226.6L102.6 225.1L107.7 222.1L109.6 218.8L108.9 214.3L107 209.8L107.9 208.3L109.6 208.1L112.8 207.9L119.8 207.7L134.9 211.8L137 211.3L145.3 203.9L148.3 199.5L149.1 195.8L150.6 193.4L155 189.5L155 186L152.9 181.3L150.8 179.5L148.9 178.7L142.9 179.3L141.7 178.2L141 174.7L140.6 172.6L138.7 170.1L132.3 167.9L126.8 167.3L125.5 166.4L127.6 164L131.3 161.7L134.2 160.2L136.4 157.8L136.8 155.2L134 152.9L130.4 150.5L124.5 145.7L116.4 140.6L111.5 138.9L109.1 139.1L100 143.5L95.3 146.3L91.3 151.4L87.1 152.5L82.8 150.3L78.1 147.9L64.9 144.6L59.2 141.9L47.7 124.9L46 121.4L47.1 117.5L47.9 111.9L49 108.3L51.1 104.8L51.6 101.8L51.1 98.8L49.4 97.1L47.3 96.6L45.6 95.8L44.1 91.9L43.1 92.4L41.8 97.2L40.1 98.9L37.8 99.8L36 99L35 97.1L34.4 93.8L33.3 89.5L31.8 86.6L26.9 83.7L24.6 79.9L17.1 71.7L10.8 65.9L8 60.7L10.5 58.8L13.7 55.9L17.3 51.6L21 46.1L22.5 42.8L23.7 41.3L25.9 40.4L28.4 41L32.7 43.1L39.2 46L44.8 49.3L47.1 52.7L50.3 55.9L52.8 56.9L54.1 56.7L57.7 54.2L60.9 51.8L61.1 49L63.9 46.6L67.7 42.5L69.6 39.6L70.9 39.4L72.4 40.2L78.5 48.7L79.6 49.3L81.3 48L83.7 41.3L86.4 38.7L87.1 39.4L101.7 52.1L103.2 51.9L104.7 51.3L105.8 49.4L107 45L109.1 40.3L113.8 37.7L117.4 37.2L118.7 39.5L121.9 42.5L125.7 43L133.8 37.5L136.6 36.6L139.5 36.7L142.3 36.5L145.1 34.4L148 31.7L148.9 26.2L149.7 21.4L151.6 19.4L154 18L158.5 16.2L168.6 11.5L171.2 9.2L173.1 8L177.1 10L181.8 14L184.6 16.9L186.5 20.1L187.4 22.9L195 25.1L199.7 28.5L202.9 31L206.1 30.9L209.2 30.3L211.2 28.2L214.8 28.2L219 28.5L220.9 29.2L224.3 34L225.8 34.6L229 34.2L234.8 32.6L239.6 31.8L243.9 33.7L252 38.9L249.8 42.6L248.1 46.6L244.5 49.4L241.6 50.1L240.1 54L239.4 59.8L240.1 62.8L242.2 63.7L244.5 65.6L245.4 68.2L245.8 73.9L245.6 80.4L246 82.6L247.7 82.2L249.4 81.3L252.8 82.4L257.1 84.1L259.8 85.8L262 85.5L263.9 87.2L264.7 90.4L267 92.6L273 96.9L277.9 97.1L282.1 102.7L286.4 100.9L288.3 103.3L297.2 102.5L303.4 100.2L305.7 100.7L311.3 105.4L314.7 108.2ZM243.5 808.1L242 808.2L240.9 807.1L245.8 803.6L245.2 806L245.4 807.1L243.5 808.1ZM272.4 714.5L268.1 717.9L267.7 715.1L271.5 713.3L272.8 711.9L273.9 711.9L272.4 714.5ZM256.6 146L256 147.1L253.4 144.5L251.5 143.4L253 139.9L256 143.7L256.6 146ZM295.3 124.1L287.7 131L284.9 130.9L287.4 123.1L288.7 121.3L293.2 124L295.3 124.1ZM290.9 140L288.1 141.4L284.5 141.2L288.7 138.5L290.9 135.2L292.6 134.1L292.5 136.9L290.9 140ZM265.3 149.7L263.2 150L259 145.6L261.1 143.2L266 144.9L267 145.9L267 146.9L265.8 149L265.3 149.7Z"/>
+          <g data-pin="hue"><circle class="halo" cx="294.6" cy="383.5" r="10"/><circle class="pin p2" cx="294.6" cy="383.5" r="5.5"/></g>
+          <g data-pin="danang"><circle class="halo main" cx="326.7" cy="405.8" r="13"/><circle class="halo" cx="326.7" cy="405.8" r="15"/><circle class="pin p1" cx="326.7" cy="405.8" r="9"/></g>
+          <g data-pin="nhatrang"><circle class="halo" cx="378.9" cy="614.1" r="10"/><circle class="pin p3" cx="378.9" cy="614.1" r="5.5"/></g>
+          <g data-pin="dalat"><circle class="halo" cx="340.2" cy="630.3" r="10"/><circle class="pin p4" cx="340.2" cy="630.3" r="5.5"/></g>
+        </svg>
+      </div>
+
+      <div class="br-side rv">
+        <div class="photo rv-img"><img id="brAnh" src="images/design/am-tra-rong.jpg" width="1120" height="840" loading="lazy" decoding="async"
+          alt="Rót trà thảo mộc nóng sau liệu trình tại Clover Spa." data-i18n-alt="alt_br"></div>
+        <p class="br-addr"><b id="brTen">Đà Nẵng</b><span id="brDiaChi">123 Trần Hưng Đạo, Sơn Trà, Đà Nẵng</span></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================== ĐẶT LỊCH ============================== -->
+<section class="booking" id="dat-lich" aria-labelledby="h-bk">
+  <div class="grid">
+    <div class="rv">
+      <h2 id="h-bk" class="sec-h" data-i18n="bk_h2">Đặt Lịch Ngay Hôm Nay</h2>
+      <p class="lede" data-i18n="bk_lede1">Xác nhận trong 5 phút qua WhatsApp, KakaoTalk, WeChat hoặc Zalo.</p>
+      <p class="lede" style="margin-top:8px" data-i18n="bk_lede2">Huỷ miễn phí trước 3 giờ.</p>
+    </div>
+
+    <form class="form rv-st" id="form" novalidate>
+      <div class="field">
+        <label for="f-name" data-i18n="bk_l_name">Tên của bạn</label>
+        <input id="f-name" name="name" type="text" autocomplete="name" placeholder="Nguyễn Văn A" data-i18n-ph="bk_ph_name">
+      </div>
+      <div class="field">
+        <label for="f-svc">Liệu trình</label>
+        <select id="f-svc" name="service">
+          <option data-i18n="bk_o1">Massage Ốc Biển - 90′</option>
+          <option data-i18n="bk_o2">Massage Cổ Truyền - 90′</option>
+          <option data-i18n="bk_o3">Massage Couple - 90′</option>
+          <option data-i18n="bk_o4">Foot Massage - 90′</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="f-date" data-i18n="bk_l_date">Ngày</label>
+        <input id="f-date" name="date" type="date">
+      </div>
+      <div class="field">
+        <label for="f-time" data-i18n="bk_l_time">Giờ (GMT+7)</label>
+        <input id="f-time" name="time" type="time" value="19:00">
+        <span class="hint" data-i18n="bk_hint">Khung 09:00 - 14:00 đang áp dụng mã CLOVERCALM</span>
+      </div>
+      <div class="field">
+        <label for="f-guests" data-i18n="bk_l_guests">Số khách</label>
+        <select id="f-guests" name="guests"><option>1</option><option>2</option><option>3</option><option>4+</option></select>
+      </div>
+      <div class="field">
+        <label for="f-channel" data-i18n="bk_l_channel">Kênh xác nhận</label>
+        <select id="f-channel" name="channel">
+          <option>Zalo</option><option>KakaoTalk</option><option>WhatsApp</option><option>WeChat</option>
+        </select>
+      </div>
+      <div class="field full">
+        <button class="btn btn-dark" type="submit"><span data-i18n="bk_submit">Đặt lịch ngay</span></button>
+        <p class="note" data-i18n="bk_note">Không cần thanh toán trước. Chúng tôi xác nhận bằng ngôn ngữ của bạn.</p>
+      </div>
+    </form>
+  </div>
+</section>
+
+</main>
+
+<!-- ============================== FOOTER ============================== -->
+<footer class="foot">
+  <div class="shell">
+    <div class="cols">
+      <div>
+        <h2>Clover Spa</h2>
+        <p data-i18n="ft_tagline">Khu vườn vàng của sự may mắn, giữa lòng Đà Nẵng.</p>
+        <!-- CẦN DỮ LIỆU THẬT: địa chỉ chính thức của trụ sở -->
+        <p style="margin-top:10px">123 Trần Hưng Đạo, Sơn Trà<br>Đà Nẵng, Việt Nam</p>
+      </div>
+      <div>
+        <h3 data-i18n="ft_h_explore">Khám phá</h3>
+        <ul>
+          <li><a href="#dich-vu" data-i18n="ft_l_svc">Dịch vụ</a></li><li><a href="#bang-gia" data-i18n="ft_l_price">Bảng giá</a></li>
+          <li><a href="#khoanh-khac" data-i18n="ft_l_space">Không gian</a></li><li><a href="#chi-nhanh">Chi nhánh</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 data-i18n="ft_h_policy">Chính sách</h3>
+        <ul>
+          <li><a href="#" data-chua-co="trang" data-i18n="ft_p1">Chính sách huỷ lịch</a></li><li><a href="#" data-chua-co="trang" data-i18n="ft_p2">Điều khoản dịch vụ</a></li>
+          <li><a href="#" data-chua-co="trang" data-i18n="ft_p3">Quà tặng &amp; voucher</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Liên hệ</h3>
+        <ul>
+          <li><a href="tel:+84909433086">Hotline · 0909 433 086</a></li>
+          <li><a href="mailto:cloverspadanang@gmail.com">cloverspadanang@gmail.com</a></li>
+          <li><a href="https://zalo.me/0909433086" rel="noopener">Zalo</a> ·
+              <a href="https://qr.kakao.com/talk/yvgN7MDPFwBNz2XQxgGdSjrCqrY-" rel="noopener">KakaoTalk</a></li>
+          <li><a href="https://wa.me/84909433086" rel="noopener">WhatsApp</a> · WeChat</li>
+        </ul>
+      </div>
+    </div>
+    <div class="base">
+      <span>© 2026 Clover Spa · cloverspa.vn</span>
+      <span data-i18n="ft_made">Được chăm chút tại Đà Nẵng</span>
+    </div>
+  </div>
+</footer>
+
+<!-- Dai lien he noi: thiet ke ve 4 vong tron 52px o mep phai (x 1364..1416, khe 10).
+     CAN DU LIEU THAT: ban xuat SVG khong kem icon cho 4 vong tron nay, nen tam dung
+     chu viet tat. Gui icon Zalo/KakaoTalk/WhatsApp/WeChat de thay vao. -->
+<nav class="rail" aria-label="Kênh chat trực tiếp" data-i18n-al="al_rail">
+  <a href="https://zalo.me/0909433086" rel="noopener" aria-label="Nhắn Zalo"><span>Zalo</span></a>
+  <a href="https://qr.kakao.com/talk/yvgN7MDPFwBNz2XQxgGdSjrCqrY-" rel="noopener"
+     aria-label="Nhắn KakaoTalk"><span>Kakao</span></a>
+  <a href="https://wa.me/84909433086" rel="noopener" aria-label="Nhắn WhatsApp"><span>WA</span></a>
+  <a href="#dat-lich" aria-label="WeChat"><span>WeChat</span></a>
+</nav>
+
+<!-- ====================== Dữ liệu có cấu trúc cho Google ======================
+     Có: loại hình, giờ mở cửa, toạ độ, danh mục dịch vụ, bốn chi nhánh.
+     KHÔNG có: Review và AggregateRating, vì ba nhận xét trên trang chưa xác minh
+     được nguồn. Đánh dấu review không thật là vi phạm chính sách và có thể bị
+     Google phạt thủ công. Bổ sung sau khi nối review Google thật.
+     ========================================================================= -->
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@graph":[
+    {
+      "@type":"DaySpa",
+      "@id":"https://cloverspa.vn/#business",
+      "name":"Clover Spa",
+      "url":"https://cloverspa.vn/",
+      "logo":"https://cloverspa.vn/images/logo-clover.png",
+      "image":"https://cloverspa.vn/images/design/hero.jpg",
+      "description":"Massage body, bấm huyệt, đá nóng và chăm sóc da mặt tại Đà Nẵng, Huế, Nha Trang và Đà Lạt.",
+      "telephone":"+84909433086",
+      "email":"cloverspadanang@gmail.com",
+      "priceRange":"420.000đ - 1.290.000đ",
+      "currenciesAccepted":"VND",
+      "address":{
+        "@type":"PostalAddress",
+        "streetAddress":"123 Trần Hưng Đạo, Sơn Trà",
+        "addressLocality":"Đà Nẵng",
+        "addressCountry":"VN"
+      },
+      "geo":{"@type":"GeoCoordinates","latitude":16.0544,"longitude":108.2022},
+      "openingHoursSpecification":[{
+        "@type":"OpeningHoursSpecification",
+        "dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+        "opens":"10:00","closes":"22:00"
+      }],
+      "availableLanguage":["vi","en","ko","zh","ru"],
+      "sameAs":["https://www.facebook.com/cloverspavn"],
+      "department":[
+        {"@type":"DaySpa","name":"Clover Spa Đà Nẵng","telephone":"+84909433086",
+         "address":{"@type":"PostalAddress","addressLocality":"Đà Nẵng","addressCountry":"VN"},
+         "geo":{"@type":"GeoCoordinates","latitude":16.0544,"longitude":108.2022}},
+        {"@type":"DaySpa","name":"Clover Spa Huế",
+         "address":{"@type":"PostalAddress","addressLocality":"Huế","addressCountry":"VN"},
+         "geo":{"@type":"GeoCoordinates","latitude":16.4637,"longitude":107.5909}},
+        {"@type":"DaySpa","name":"Clover Spa Nha Trang",
+         "address":{"@type":"PostalAddress","addressLocality":"Nha Trang","addressCountry":"VN"},
+         "geo":{"@type":"GeoCoordinates","latitude":12.2388,"longitude":109.1967}},
+        {"@type":"DaySpa","name":"Clover Spa Đà Lạt",
+         "address":{"@type":"PostalAddress","addressLocality":"Đà Lạt","addressCountry":"VN"},
+         "geo":{"@type":"GeoCoordinates","latitude":11.9404,"longitude":108.4583}}
+      ],
+      "hasOfferCatalog":{
+        "@type":"OfferCatalog","name":"Liệu trình Clover Spa",
+        "itemListElement":[
+          {"@type":"Offer","itemOffered":{"@type":"Service","name":"Massage Ốc Biển"},
+           "price":"690000","priceCurrency":"VND"},
+          {"@type":"Offer","itemOffered":{"@type":"Service","name":"Massage Cổ Truyền"},
+           "price":"690000","priceCurrency":"VND"},
+          {"@type":"Offer","itemOffered":{"@type":"Service","name":"Massage Couple"},
+           "price":"690000","priceCurrency":"VND"},
+          {"@type":"Offer","itemOffered":{"@type":"Service","name":"Foot Massage"},
+           "price":"690000","priceCurrency":"VND"},
+          {"@type":"Offer","itemOffered":{"@type":"Service","name":"Đá Nóng & Thảo Dược"},
+           "price":"690000","priceCurrency":"VND"},
+          {"@type":"Offer","itemOffered":{"@type":"Service","name":"Chăm Sóc Da Mặt"},
+           "price":"420000","priceCurrency":"VND"}
+        ]
+      }
+    },
+    {
+      "@type":"WebSite","@id":"https://cloverspa.vn/#website",
+      "url":"https://cloverspa.vn/","name":"Clover Spa",
+      "publisher":{"@id":"https://cloverspa.vn/#business"},
+      "inLanguage":"vi"
+    }
+  ]
+}
+</script>
+
+<script>
+(function () {
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* nav đổ bóng khi rời khỏi đỉnh trang */
+  var nav = document.getElementById('nav');
+  var sen = document.createElement('div');
+  sen.style.cssText = 'position:absolute;top:0;left:0;width:1px;height:1px;pointer-events:none';
+  document.body.prepend(sen);
+  if ('IntersectionObserver' in window) {
+    new IntersectionObserver(function (e) { nav.classList.toggle('stuck', !e[0].isIntersecting); })
+      .observe(sen);
+  }
+
+  /* menu mobile */
+  var bg = document.getElementById('burger'), ls = document.getElementById('navList');
+  bg.addEventListener('click', function () {
+    var open = ls.classList.toggle('open');
+    bg.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+  ls.addEventListener('click', function (e) {
+    if (e.target.tagName === 'A') { ls.classList.remove('open'); bg.setAttribute('aria-expanded','false'); }
+  });
+
+  /* Dưới 660px chuyển bộ ngôn ngữ xuống trong menu bung, vì thanh nav
+     không đủ chỗ cho cả logo, 5 nút ngôn ngữ và nút Đặt lịch. */
+  var langs = document.querySelector('.langs');
+  var navIn = document.querySelector('.nav .in');
+  var langLi = document.createElement('li');
+  langLi.className = 'lang-li';
+  var mq = window.matchMedia('(max-width:660px)');
+  function placeLangs() {
+    if (mq.matches) {
+      if (langs.parentElement !== langLi) { langLi.appendChild(langs); ls.appendChild(langLi); }
+    } else if (langs.parentElement === langLi) {
+      navIn.insertBefore(langs, navIn.querySelector('.btn'));
+      if (langLi.parentElement) langLi.remove();
+    }
+  }
+  placeLangs();
+  if (mq.addEventListener) mq.addEventListener('change', placeLangs);
+  else mq.addListener(placeLangs);
+
+  /* bộ chuyển ngôn ngữ: đổi thật, không chỉ đổi trạng thái nút */
+  document.querySelectorAll('.langs button').forEach(function (b) {
+    b.addEventListener('click', function () { doiNgonNgu(b.dataset.short); });
+  });
+
+  /* reveal khi cuộn: IntersectionObserver, không dùng scroll listener */
+  if (reduce || !('IntersectionObserver' in window)) {
+    document.querySelectorAll('.rv,.rv-st,.rv-img').forEach(function (el) { el.classList.add('in'); });
+    var m0 = document.getElementById('map'); if (m0) m0.classList.add('lit');
+  } else {
+    var io = new IntersectionObserver(function (es) {
+      es.forEach(function (en) {
+        if (!en.isIntersecting) return;
+        en.target.classList.add('in'); io.unobserve(en.target);
+      });
+    }, { threshold: 0.13, rootMargin: '0px 0px -6% 0px' });
+    document.querySelectorAll('.rv,.rv-st,.rv-img').forEach(function (el) { io.observe(el); });
+
+    /* Luoi an toan. Hieu ung chi la trang tri, noi dung thi khong duoc phep
+       mat. Mot bo dem nhe chay song song, mo khoa bat cu phan tu nao dang nam
+       trong khung nhin ma observer bo sot (bi tiet che, bi tien ich chan, hoac
+       trinh duyet ve qua cham). Tu dung lai khi khong con gi bi an. */
+    var henKiem = setInterval(function () {
+      var con = document.querySelectorAll('.rv:not(.in),.rv-st:not(.in),.rv-img:not(.in)');
+      var mS = document.getElementById('map');
+      if (!con.length && (!mS || mS.classList.contains('lit'))) { clearInterval(henKiem); return; }
+      con.forEach(function (el) {
+        var b = el.getBoundingClientRect();
+        if (b.top < window.innerHeight * 0.94 && b.bottom > 0) el.classList.add('in');
+      });
+      if (mS && !mS.classList.contains('lit')) {
+        var bm = mS.getBoundingClientRect();
+        if (bm.top < window.innerHeight * 0.7 && bm.bottom > 0) mS.classList.add('lit');
+      }
+    }, 1200);
+
+    var map = document.getElementById('map');
+    if (map) {
+      var io2 = new IntersectionObserver(function (en) {
+        if (!en[0].isIntersecting) return;
+        map.classList.add('lit'); io2.disconnect();
+      }, { threshold: 0.3 });
+      io2.observe(map);
+    }
+  }
+
+
+  /* ==================================================================== I18N
+     Nam ngu. VI la ban goc nam san trong HTML de bo tim kiem doc duoc va de
+     trang van day du khi khong co JS; EN/KO/ZH/RU nam trong bang duoi.
+     Khong dung localStorage theo yeu cau ban dau.
+     Doi ngon ngu se cap nhat: chu, placeholder, aria-label, alt anh,
+     thuoc tinh lang cua <html>, tieu de trang va the description.
+     ===================================================================== */
+  var I18N = {
+    EN: {
+      doc_title:"Clover Spa · Massage and skincare in Da Nang, Hue, Nha Trang, Da Lat",
+      doc_desc:"Body and foot massage, acupressure, hot stone and facial care across four Clover Spa locations. Booking confirmed on WhatsApp, KakaoTalk, WeChat or Zalo.",
+      nav_svc:"Treatments", nav_branch:"Locations", nav_about:"About Clover Spa",
+      nav_contact:"Contact", cta_book:"Book now",
+      hero_l2:"Where calm finds you",
+      hero_lede:"Body and foot massage and facial care, done properly. Our front desk confirms right in the chat app you already use.",
+      hero_cta2:"See treatments", stat_branch:"Locations", stat_open:"Open daily",
+      mq_acu:"Vietnamese acupressure", mq_stone:"Hot stone", mq_herb:"Herbal",
+      svc_h2:"The four most-booked treatments",
+      svc_b1:"Most booked", svc_b2:"Most memorable",
+      svc_b3:"Private couple room", svc_b4:"Best off-peak price",
+      svc_n1:"Sea Shell Massage", svc_n2:"Traditional Massage",
+      svc_n3:"Couple Massage", svc_n4:"Foot Massage", svc_dur:"90 min",
+      svc_desc:"A signature treatment found only at Clover Spa, built around the warmth of sea shells.",
+      promo_eb:"Made for you", promo_h2:"Book direct and get more back",
+      promo_d1:"90 & 120 min treatments, 09:00 - 14:00",
+      promo_d2:"60 & 70 min treatments, 09:00 - 14:00",
+      promo_d3:"any treatment booked a day ahead",
+      price_h2:"Every treatment, one clear price",
+      pn_shell:"Sea Shell Massage", pn_stone:"Hot Stone & Herbal", pn_aroma:"Aroma Oil",
+      pn_thai:"Thai Massage", pn_viet:"Vietnamese Massage", pn_acu:"Acupressure",
+      pn_foot:"Foot Massage", pn_face:"Facial Care",
+      price_note:"Prices in thousand VND. Herbal tea and a light dessert after your treatment are included. No hidden fees.",
+      price_pdf:"Full menu (PDF)",
+      rv_h2:"What guests say", mm_h2:"Moments at Clover",
+      br_addr_soon:"Address coming soon",
+      br_h2:"Choose a location",
+      br_sub:"Four locations, one standard of treatment and service.",
+      bk_h2:"Book Your Visit Today",
+      bk_lede1:"Confirmed within 5 minutes on WhatsApp, KakaoTalk, WeChat or Zalo.",
+      bk_lede2:"Free cancellation up to 3 hours before.",
+      bk_l_name:"Your name", bk_ph_name:"e.g. Alex Miller", bk_l_svc:"Treatment",
+      bk_l_date:"Date", bk_l_time:"Time (GMT+7)",
+      bk_hint:"The 09:00 - 14:00 slot has code CLOVERCALM",
+      bk_l_guests:"Guests", bk_l_channel:"Confirm via", bk_submit:"Book now",
+      bk_note:"No prepayment. We confirm in your language.",
+      bk_o1:"Sea Shell Massage - 90′", bk_o2:"Traditional Massage - 90′",
+      bk_o3:"Couple Massage - 90′", bk_o4:"Foot Massage - 90′",
+      ft_tagline:"A golden garden of good fortune, in the heart of Da Nang.",
+      ft_h_explore:"Explore", ft_l_svc:"Services", ft_l_price:"Prices",
+      ft_l_space:"Space", ft_l_branch:"Locations",
+      ft_h_policy:"Policies", ft_p1:"Cancellation policy", ft_p2:"Terms of service",
+      ft_p3:"Gifts & vouchers", ft_h_contact:"Contact",
+      ft_made:"Made with care in Da Nang",
+      al_home:"Clover Spa, back to home", al_nav:"Main navigation",
+      al_lang:"Choose language", al_menu:"Open menu", al_rail:"Live chat channels",
+      al_stars:"5 out of 5 stars",
+      al_map:"Map of Vietnam marking the four Clover Spa locations",
+      alt_logo:"Clover Spa",
+      alt_hero:"A Clover Spa therapist rests her hands on a guest's back, afternoon light through the blinds.",
+      alt_c1:"Therapist's hands pressing along a guest's back during the Sea Shell Massage.",
+      alt_c2:"Herbal compress balls, candles and frangipani on a wooden tray for the Traditional Massage.",
+      alt_c3:"A Clover Spa couple room with two treatment beds side by side.",
+      alt_c4:"Therapist working acupressure points on a guest's sole during the Foot Massage.",
+      alt_promo:"Clover Spa National Day promotion, up to 30% off in Da Nang, Hue, Nha Trang and Da Lat.",
+      alt_m1:"A couple treatment room with moss-green walls, lanterns and plants.",
+      alt_m2:"A tray of fresh lemongrass, ginger and mint leaves prepared for a treatment.",
+      alt_m3:"Herbal compress balls and candles on a round wooden tray.",
+      alt_m4:"A Clover Spa therapist performing a herbal compress treatment.",
+      alt_m5:"A clay teapot pouring, steam rising beside a cup and frangipani.",
+      alt_br:"Hot herbal tea being poured after a treatment at Clover Spa.",
+      js_nochat:"Chat channel not connected", js_nopdf:"PDF not ready", js_nopage:"Page in progress"
+    },
+    KO: {
+      doc_title:"클로버 스파 · 다낭·후에·나짱·달랏 마사지와 스킨케어",
+      doc_desc:"네 개 지점에서 바디·발 마사지, 지압, 핫스톤, 페이셜 케어를 제공합니다.",
+      nav_svc:"트리트먼트", nav_branch:"지점", nav_about:"클로버 스파 소개",
+      nav_contact:"문의", cta_book:"예약하기",
+      hero_l2:"고요가 머무는 곳",
+      hero_lede:"바디·발 마사지와 페이셜 케어를 정석대로. 사용 중인 채팅 앱에서 바로 예약을 확인해 드립니다.",
+      hero_cta2:"트리트먼트 보기", stat_branch:"지점", stat_open:"연중무휴",
+      mq_acu:"베트남 지압", mq_stone:"핫스톤", mq_herb:"허브",
+      svc_h2:"가장 많이 선택된 네 가지",
+      svc_b1:"가장 인기", svc_b2:"가장 인상적",
+      svc_b3:"커플 전용룸", svc_b4:"한가한 시간 특가",
+      svc_n1:"씨셸 마사지", svc_n2:"전통 마사지",
+      svc_n3:"커플 마사지", svc_n4:"발 마사지", svc_dur:"90분",
+      svc_desc:"클로버 스파에서만 만나는 시그니처 트리트먼트. 따뜻한 조개껍질이 전하는 특별한 경험.",
+      promo_eb:"고객님을 위한 혜택", promo_h2:"직접 예약하시면 혜택이 더 큽니다",
+      promo_d1:"90·120분 트리트먼트, 09:00 - 14:00",
+      promo_d2:"60·70분 트리트먼트, 09:00 - 14:00",
+      promo_d3:"하루 전 예약 시 전 트리트먼트",
+      price_h2:"모든 트리트먼트, 명확한 가격",
+      pn_shell:"씨셸 마사지", pn_stone:"핫스톤 & 허브", pn_aroma:"아로마 오일",
+      pn_thai:"타이 마사지", pn_viet:"베트남 마사지", pn_acu:"지압",
+      pn_foot:"발 마사지", pn_face:"페이셜 케어",
+      price_note:"가격 단위는 천 동입니다. 트리트먼트 후 허브차와 가벼운 디저트가 포함되며, 숨은 비용은 없습니다.",
+      price_pdf:"전체 메뉴 (PDF)",
+      rv_h2:"고객 후기", mm_h2:"클로버의 순간들",
+      br_addr_soon:"주소 준비 중",
+      br_h2:"지점 선택",
+      br_sub:"네 개 지점, 같은 트리트먼트 기준과 같은 서비스.",
+      bk_h2:"오늘 바로 예약하세요",
+      bk_lede1:"WhatsApp·KakaoTalk·WeChat·Zalo로 5분 안에 확인해 드립니다.",
+      bk_lede2:"3시간 전까지 무료 취소.",
+      bk_l_name:"성함", bk_ph_name:"예: 홍길동", bk_l_svc:"트리트먼트",
+      bk_l_date:"날짜", bk_l_time:"시간 (GMT+7)",
+      bk_hint:"09:00 - 14:00 시간대는 CLOVERCALM 코드 적용",
+      bk_l_guests:"인원", bk_l_channel:"확인 채널", bk_submit:"예약하기",
+      bk_note:"선결제 없음. 고객님의 언어로 확인해 드립니다.",
+      bk_o1:"씨셸 마사지 - 90분", bk_o2:"전통 마사지 - 90분",
+      bk_o3:"커플 마사지 - 90분", bk_o4:"발 마사지 - 90분",
+      ft_tagline:"다낭 한복판, 행운의 황금빛 정원.",
+      ft_h_explore:"둘러보기", ft_l_svc:"서비스", ft_l_price:"가격",
+      ft_l_space:"공간", ft_l_branch:"지점",
+      ft_h_policy:"정책", ft_p1:"취소 정책", ft_p2:"이용약관",
+      ft_p3:"기프트·바우처", ft_h_contact:"문의",
+      ft_made:"다낭에서 정성으로",
+      al_home:"클로버 스파, 홈으로", al_nav:"주요 메뉴",
+      al_lang:"언어 선택", al_menu:"메뉴 열기", al_rail:"실시간 채팅",
+      al_stars:"5점 만점에 5점",
+      al_map:"클로버 스파 4개 지점을 표시한 베트남 지도",
+      alt_logo:"클로버 스파",
+      alt_hero:"오후 빛이 드는 방에서 손님의 등에 손을 올린 클로버 스파 테라피스트.",
+      alt_c1:"씨셸 마사지 중 손님의 등을 따라 누르는 테라피스트의 손.",
+      alt_c2:"전통 마사지를 위한 나무 쟁반 위의 허브 찜질볼, 초, 플루메리아.",
+      alt_c3:"트리트먼트 베드 두 개가 나란히 놓인 클로버 스파 커플룸.",
+      alt_c4:"발 마사지 중 손님의 발바닥 지압점을 누르는 테라피스트.",
+      alt_promo:"다낭·후에·나짱·달랏에서 최대 30% 할인하는 클로버 스파 프로모션.",
+      alt_m1:"이끼빛 초록 벽과 등, 화초가 있는 커플 트리트먼트룸.",
+      alt_m2:"트리트먼트를 위해 준비한 레몬그라스, 생강, 민트잎 쟁반.",
+      alt_m3:"둥근 나무 쟁반에 올린 허브 찜질볼과 초.",
+      alt_m4:"허브 찜질 트리트먼트를 진행하는 클로버 스파 테라피스트.",
+      alt_m5:"김이 오르는 찻잔과 플루메리아 옆에서 차를 따르는 토기 주전자.",
+      alt_br:"클로버 스파에서 트리트먼트 후 따뜻한 허브차를 따르는 모습.",
+      js_nochat:"채팅 채널 미연결", js_nopdf:"PDF 준비 중", js_nopage:"페이지 준비 중"
+    },
+    ZH: {
+      doc_title:"Clover Spa · 岘港、顺化、芽庄、大叻的按摩与护肤",
+      doc_desc:"四家门店提供身体与足部按摩、指压、热石及面部护理。可通过 WhatsApp、KakaoTalk、微信或 Zalo 确认预约。",
+      nav_svc:"疗程", nav_branch:"门店", nav_about:"关于 Clover Spa",
+      nav_contact:"联系", cta_book:"立即预约",
+      hero_l2:"让静谧安放之处",
+      hero_lede:"身体按摩、足部按摩与面部护理，一丝不苟。前台直接在您常用的聊天软件上确认预约。",
+      hero_cta2:"查看疗程", stat_branch:"门店", stat_open:"每日营业",
+      mq_acu:"越式指压", mq_stone:"热石", mq_herb:"草本",
+      svc_h2:"最受欢迎的四款疗程",
+      svc_b1:"最多人选", svc_b2:"最难忘",
+      svc_b3:"情侣独立房", svc_b4:"优惠时段价",
+      svc_n1:"海螺按摩", svc_n2:"传统按摩",
+      svc_n3:"情侣按摩", svc_n4:"足部按摩", svc_dur:"90 分钟",
+      svc_desc:"仅在 Clover Spa 提供的招牌疗程，以温热海螺带来独特体验。",
+      promo_eb:"为您准备的优惠", promo_h2:"直接预约，享更多回馈",
+      promo_d1:"90 与 120 分钟疗程，09:00 - 14:00",
+      promo_d2:"60 与 70 分钟疗程，09:00 - 14:00",
+      promo_d3:"提前一天预约，全部疗程适用",
+      price_h2:"所有疗程，明码标价",
+      pn_shell:"海螺按摩", pn_stone:"热石与草本", pn_aroma:"精油芳疗",
+      pn_thai:"泰式按摩", pn_viet:"越式按摩", pn_acu:"指压",
+      pn_foot:"足部按摩", pn_face:"面部护理",
+      price_note:"价格单位为千越南盾，含疗程后的草本茶与小点心，无隐性收费。",
+      price_pdf:"完整价目表 (PDF)",
+      rv_h2:"客人怎么说", mm_h2:"Clover 的片刻",
+      br_addr_soon:"地址即将公布",
+      br_h2:"选择门店",
+      br_sub:"四家门店，同样的疗程标准与服务方式。",
+      bk_h2:"今天就来预约",
+      bk_lede1:"通过 WhatsApp、KakaoTalk、微信或 Zalo 五分钟内确认。",
+      bk_lede2:"提前 3 小时可免费取消。",
+      bk_l_name:"您的姓名", bk_ph_name:"例：王小明", bk_l_svc:"疗程",
+      bk_l_date:"日期", bk_l_time:"时间 (GMT+7)",
+      bk_hint:"09:00 - 14:00 时段适用 CLOVERCALM 优惠码",
+      bk_l_guests:"人数", bk_l_channel:"确认渠道", bk_submit:"立即预约",
+      bk_note:"无需预付。我们用您的语言确认。",
+      bk_o1:"海螺按摩 - 90 分钟", bk_o2:"传统按摩 - 90 分钟",
+      bk_o3:"情侣按摩 - 90 分钟", bk_o4:"足部按摩 - 90 分钟",
+      ft_tagline:"岘港中心，一座金色的幸运花园。",
+      ft_h_explore:"探索", ft_l_svc:"服务", ft_l_price:"价目",
+      ft_l_space:"空间", ft_l_branch:"门店",
+      ft_h_policy:"政策", ft_p1:"取消政策", ft_p2:"服务条款",
+      ft_p3:"礼品与代金券", ft_h_contact:"联系",
+      ft_made:"用心制作于岘港",
+      al_home:"Clover Spa，返回首页", al_nav:"主导航",
+      al_lang:"选择语言", al_menu:"打开菜单", al_rail:"在线聊天",
+      al_stars:"五星好评",
+      al_map:"标注 Clover Spa 四家门店的越南地图",
+      alt_logo:"Clover Spa",
+      alt_hero:"午后光线穿过百叶窗，Clover Spa 技师将手放在客人背上。",
+      alt_c1:"海螺按摩中，技师沿客人背部按压的双手。",
+      alt_c2:"木托盘上的草本药包、蜡烛与鸡蛋花，用于传统按摩。",
+      alt_c3:"Clover Spa 情侣房，两张理疗床并排摆放。",
+      alt_c4:"足部按摩中，技师按压客人脚底穴位。",
+      alt_promo:"Clover Spa 国庆促销，岘港、顺化、芽庄、大叻低至七折。",
+      alt_m1:"苔绿色墙面、灯笼与绿植的情侣理疗房。",
+      alt_m2:"为疗程准备的新鲜香茅、生姜与薄荷叶托盘。",
+      alt_m3:"圆木托盘上的草本药包与蜡烛。",
+      alt_m4:"Clover Spa 技师进行草本热敷疗程。",
+      alt_m5:"陶壶正在倒茶，热气升起，旁边是茶杯与鸡蛋花。",
+      alt_br:"Clover Spa 疗程结束后倒上的热草本茶。",
+      js_nochat:"聊天渠道尚未接通", js_nopdf:"PDF 尚未准备", js_nopage:"页面建设中"
+    },
+    RU: {
+      doc_title:"Clover Spa · Массаж и уход за кожей в Дананге, Хюэ, Нячанге и Далате",
+      doc_desc:"Массаж тела и ног, акупрессура, горячие камни и уход за лицом в четырёх филиалах.",
+      nav_svc:"Процедуры", nav_branch:"Филиалы", nav_about:"О Clover Spa",
+      nav_contact:"Контакты", cta_book:"Записаться",
+      hero_l2:"Обитель покоя",
+      hero_lede:"Массаж тела и ног, уход за лицом — всё по правилам. Администратор подтвердит запись прямо в вашем мессенджере.",
+      hero_cta2:"Смотреть процедуры", stat_branch:"Филиала", stat_open:"Открыто ежедневно",
+      mq_acu:"Вьетнамская акупрессура", mq_stone:"Горячие камни", mq_herb:"Травяной",
+      svc_h2:"Четыре самые популярные процедуры",
+      svc_b1:"Выбирают чаще всего", svc_b2:"Самое яркое",
+      svc_b3:"Отдельный зал для пар", svc_b4:"Выгодно в тихие часы",
+      svc_n1:"Массаж раковинами", svc_n2:"Традиционный массаж",
+      svc_n3:"Парный массаж", svc_n4:"Массаж стоп", svc_dur:"90 мин",
+      svc_desc:"Фирменная процедура только в Clover Spa — особый опыт с тёплыми морскими раковинами.",
+      promo_eb:"Специально для вас", promo_h2:"Бронируйте напрямую — получайте больше",
+      promo_d1:"процедуры 90 и 120 мин, 09:00 - 14:00",
+      promo_d2:"процедуры 60 и 70 мин, 09:00 - 14:00",
+      promo_d3:"любая процедура при записи за день",
+      price_h2:"Все процедуры — понятная цена",
+      pn_shell:"Массаж раковинами", pn_stone:"Горячие камни и травы", pn_aroma:"Аромамассаж маслами",
+      pn_thai:"Тайский массаж", pn_viet:"Вьетнамский массаж", pn_acu:"Акупрессура",
+      pn_foot:"Массаж стоп", pn_face:"Уход за лицом",
+      price_note:"Цены в тысячах донгов. Травяной чай и лёгкий десерт после процедуры включены. Без скрытых доплат.",
+      price_pdf:"Полное меню (PDF)",
+      rv_h2:"Отзывы гостей", mm_h2:"Моменты в Clover",
+      br_addr_soon:"Адрес скоро будет",
+      br_h2:"Выберите филиал",
+      br_sub:"Четыре филиала — единый стандарт процедур и сервиса.",
+      bk_h2:"Запишитесь сегодня",
+      bk_lede1:"Подтверждение за 5 минут в WhatsApp, KakaoTalk, WeChat или Zalo.",
+      bk_lede2:"Бесплатная отмена за 3 часа.",
+      bk_l_name:"Ваше имя", bk_ph_name:"напр. Иван Петров", bk_l_svc:"Процедура",
+      bk_l_date:"Дата", bk_l_time:"Время (GMT+7)",
+      bk_hint:"На слот 09:00 - 14:00 действует код CLOVERCALM",
+      bk_l_guests:"Гостей", bk_l_channel:"Канал подтверждения", bk_submit:"Записаться",
+      bk_note:"Без предоплаты. Подтвердим на вашем языке.",
+      bk_o1:"Массаж раковинами - 90 мин", bk_o2:"Традиционный массаж - 90 мин",
+      bk_o3:"Парный массаж - 90 мин", bk_o4:"Массаж стоп - 90 мин",
+      ft_tagline:"Золотой сад удачи в сердце Дананга.",
+      ft_h_explore:"Обзор", ft_l_svc:"Услуги", ft_l_price:"Цены",
+      ft_l_space:"Интерьер", ft_l_branch:"Филиалы",
+      ft_h_policy:"Правила", ft_p1:"Правила отмены", ft_p2:"Условия услуг",
+      ft_p3:"Подарки и ваучеры", ft_h_contact:"Контакты",
+      ft_made:"Сделано с заботой в Дананге",
+      al_home:"Clover Spa, на главную", al_nav:"Основная навигация",
+      al_lang:"Выбор языка", al_menu:"Открыть меню", al_rail:"Чаты",
+      al_stars:"5 из 5 звёзд",
+      al_map:"Карта Вьетнама с четырьмя филиалами Clover Spa",
+      alt_logo:"Clover Spa",
+      alt_hero:"Мастер Clover Spa кладёт руки на спину гостя, дневной свет сквозь жалюзи.",
+      alt_c1:"Руки мастера ведут вдоль спины гостя во время массажа раковинами.",
+      alt_c2:"Травяные мешочки, свечи и плюмерия на деревянном подносе.",
+      alt_c3:"Парный зал Clover Spa с двумя кушетками рядом.",
+      alt_c4:"Мастер прорабатывает точки на стопе гостя.",
+      alt_promo:"Праздничная акция Clover Spa со скидкой до 30%.",
+      alt_m1:"Парный зал с моховыми зелёными стенами, фонарями и растениями.",
+      alt_m2:"Поднос со свежим лемонграссом, имбирём и мятой.",
+      alt_m3:"Травяные мешочки и свечи на круглом деревянном подносе.",
+      alt_m4:"Мастер Clover Spa проводит процедуру с травяными мешочками.",
+      alt_m5:"Глиняный чайник наливает чай, пар поднимается рядом с чашкой.",
+      alt_br:"Горячий травяной чай после процедуры в Clover Spa.",
+      js_nochat:"Чат не подключён", js_nopdf:"PDF ещё не готов", js_nopage:"Страница в работе"
+    }
+  };
+
+  /* Ban VI doc thang tu HTML luc trang vua tai, khong phai chep tay lan hai */
+  var VI = {}, THE_LANG = { VI:'vi', EN:'en', KO:'ko', ZH:'zh', RU:'ru' };
+  (function luuVI() {
+    document.querySelectorAll('[data-i18n]').forEach(function (e) { VI[e.dataset.i18n] = e.textContent; });
+    document.querySelectorAll('[data-i18n-t1]').forEach(function (e) {
+      if (e.firstChild) VI[e.dataset.i18nT1] = e.firstChild.nodeValue; });
+    document.querySelectorAll('[data-i18n-ph]').forEach(function (e) { VI[e.dataset.i18nPh] = e.placeholder; });
+    document.querySelectorAll('[data-i18n-al]').forEach(function (e) { VI[e.dataset.i18nAl] = e.getAttribute('aria-label'); });
+    document.querySelectorAll('[data-i18n-alt]').forEach(function (e) { VI[e.dataset.i18nAlt] = e.alt; });
+    VI.doc_title = document.title;
+    var md = document.querySelector('meta[name="description"]');
+    VI.doc_desc = md ? md.content : '';
+    VI.br_addr_soon = 'Đang cập nhật địa chỉ';
+    VI.js_nochat = 'Chưa nối kênh chat';
+    VI.js_nopdf = 'Chưa có file PDF';
+    VI.js_nopage = 'Trang đang xây';
+  })();
+
+  var NGON_NGU = 'VI';
+  function tra(k) {
+    var b = NGON_NGU === 'VI' ? VI : (I18N[NGON_NGU] || VI);
+    return b[k] != null ? b[k] : VI[k];
+  }
+  window.tra = tra;
+
+  function doiNgonNgu(ma) {
+    NGON_NGU = (ma === 'VI' || I18N[ma]) ? ma : 'VI';
+    document.documentElement.lang = THE_LANG[NGON_NGU] || 'vi';
+    document.querySelectorAll('[data-i18n]').forEach(function (e) {
+      var v = tra(e.dataset.i18n); if (v != null) e.textContent = v; });
+    document.querySelectorAll('[data-i18n-t1]').forEach(function (e) {
+      var v = tra(e.dataset.i18nT1); if (v != null && e.firstChild) e.firstChild.nodeValue = v; });
+    document.querySelectorAll('[data-i18n-ph]').forEach(function (e) {
+      var v = tra(e.dataset.i18nPh); if (v != null) e.placeholder = v; });
+    document.querySelectorAll('[data-i18n-al]').forEach(function (e) {
+      var v = tra(e.dataset.i18nAl); if (v != null) e.setAttribute('aria-label', v); });
+    document.querySelectorAll('[data-i18n-alt]').forEach(function (e) {
+      var v = tra(e.dataset.i18nAlt); if (v != null) e.alt = v; });
+    document.title = tra('doc_title');
+    var md = document.querySelector('meta[name="description"]');
+    if (md) md.content = tra('doc_desc');
+    document.querySelectorAll('.langs button').forEach(function (b) {
+      b.setAttribute('aria-current', b.dataset.short === NGON_NGU ? 'true' : 'false'); });
+  }
+  window.doiNgonNgu = doiNgonNgu;
+
+
+  /* --- CTA: bấm thẻ dịch vụ thì chọn sẵn liệu trình đó trong form --- */
+  var selSvc = document.getElementById('f-svc');
+  document.querySelectorAll('.card[data-svc]').forEach(function (c) {
+    c.addEventListener('click', function () {
+      var i = parseInt(c.dataset.svc, 10);
+      if (selSvc && selSvc.options[i]) selSvc.selectedIndex = i;
+    });
+  });
+
+  /* --- Chi nhánh: chọn ô nào thì đổi ảnh, địa chỉ, ghim và đường nối --- */
+  var brAnh = document.getElementById('brAnh'),
+      brTen = document.getElementById('brTen'),
+      brDiaChi = document.getElementById('brDiaChi'),
+      svgNoi = document.getElementById('links'),
+      khungBanDo = document.getElementById('mapWrap'),
+      banDoSvg = document.querySelector('#map svg');
+
+  /* Vẽ đường nối theo toạ độ thật của ô và của ghim, nên tự đúng ở mọi bề rộng */
+  function veDuongNoi() {
+    if (!svgNoi || !khungBanDo || !banDoSvg) return;
+    svgNoi.innerHTML = '';
+    if (window.innerWidth < 1101) return;
+    var kb = khungBanDo.getBoundingClientRect();
+    svgNoi.setAttribute('viewBox', '0 0 ' + kb.width + ' ' + kb.height);
+    document.querySelectorAll('.pill[data-city]').forEach(function (pill) {
+      var ghim = banDoSvg.querySelector('[data-pin="' + pill.dataset.city + '"] .pin');
+      if (!ghim) return;
+      var pb = pill.getBoundingClientRect(), gb = ghim.getBoundingClientRect();
+      var x1 = pb.right - kb.left, y1 = pb.top + pb.height / 2 - kb.top;
+      var x2 = gb.left + gb.width / 2 - kb.left, y2 = gb.top + gb.height / 2 - kb.top;
+      var mx = x1 + (x2 - x1) * 0.55;
+      var d = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+      d.setAttribute('d', 'M' + x1 + ' ' + y1 + ' C' + mx + ' ' + y1 + ' ' +
+                          mx + ' ' + y2 + ' ' + x2 + ' ' + y2);
+      if (pill.classList.contains('main')) d.setAttribute('class', 'dang-chon');
+      svgNoi.appendChild(d);
+    });
+  }
+
+  function chonChiNhanh(b) {
+    document.querySelectorAll('.pill[data-city]').forEach(function (x) {
+      var chon = x === b;
+      x.classList.toggle('main', chon);
+      x.setAttribute('aria-pressed', chon ? 'true' : 'false');
+    });
+    if (banDoSvg) {
+      banDoSvg.querySelectorAll('[data-pin]').forEach(function (g) {
+        g.classList.toggle('dang-chon', g.dataset.pin === b.dataset.city);
+      });
+      /* chuyển vòng nhấp nháy sang đúng chi nhánh đang chọn */
+      banDoSvg.querySelectorAll('.halo').forEach(function (h) { h.classList.remove('main'); });
+      var gc = banDoSvg.querySelector('[data-pin="' + b.dataset.city + '"] .halo');
+      if (gc) gc.classList.add('main');
+    }
+    if (brTen) brTen.textContent = b.querySelector('b').textContent;
+    if (brDiaChi) brDiaChi.textContent = b.dataset.addr || tra('br_addr_soon');
+    if (brAnh && b.dataset.img && brAnh.getAttribute('src') !== b.dataset.img) {
+      brAnh.classList.add('doi');
+      var xong = function () { brAnh.classList.remove('doi'); brAnh.removeEventListener('load', xong); };
+      brAnh.addEventListener('load', xong);
+      setTimeout(function () {
+        brAnh.src = b.dataset.img;
+        if (b.dataset.altkey) { brAnh.dataset.i18nAlt = b.dataset.altkey; brAnh.alt = tra(b.dataset.altkey); }
+      }, 180);
+    }
+    veDuongNoi();
+  }
+  document.querySelectorAll('.pill[data-city]').forEach(function (b) {
+    b.addEventListener('click', function () { chonChiNhanh(b); });
+  });
+  veDuongNoi();
+  window.addEventListener('resize', veDuongNoi);
+  if ('ResizeObserver' in window && khungBanDo) new ResizeObserver(veDuongNoi).observe(khungBanDo);
+  /* ghim hiện dần khi bản đồ sáng, vẽ lại đường nối cho khớp */
+  setTimeout(veDuongNoi, 1400);
+
+  /* --- Liên kết chưa có đích: báo rõ thay vì nhảy về đầu trang --- */
+  document.querySelectorAll('[data-chua-co]').forEach(function (a) {
+    a.addEventListener('click', function (e) {
+      e.preventDefault();
+      var t = a.querySelector('span') || a, cu = t.textContent;
+      t.textContent = tra(a.dataset.chuaCo === 'pdf' ? 'js_nopdf' : 'js_nopage');
+      setTimeout(function () { t.textContent = cu; }, 1800);
+    });
+  });
+
+  /* form chưa nối kênh chat */
+  document.getElementById('form').addEventListener('submit', function (e) {
+    e.preventDefault();
+    var s = this.querySelector('button[type="submit"] span'), old = s.textContent;
+    s.textContent = tra('js_nochat');
+    setTimeout(function () { s.textContent = old; }, 1800);
+  });
+})();
+</script>
+</body>
+</html>
