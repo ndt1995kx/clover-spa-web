@@ -605,6 +605,48 @@ a{color:inherit;text-decoration:none}
   .marquee .track{animation:none}
   .map .pin{opacity:1;transform:none}.map .halo{opacity:.4}
 }
+
+/* ==========================================================================
+   MENU DAY DU - lop phu doc doc, chi dung khi bam nut o muc bang gia.
+   Anh khong tai truoc: JS chi tao the <img> o lan mo dau tien.
+   ========================================================================== */
+.mnu[hidden]{display:none}
+.mnu{position:fixed;inset:0;z-index:120;background:var(--night);
+     display:flex;flex-direction:column;
+     animation:mnuVao var(--dur) var(--ease)}
+@keyframes mnuVao{from{opacity:0}to{opacity:1}}
+.mnu-bar{flex:none;display:flex;align-items:center;gap:16px;
+     padding:14px var(--edge);background:var(--gold);color:var(--ink);
+     box-shadow:0 14px 26px -20px rgba(15,51,32,.9)}
+.mnu-bar b{font-family:var(--f-serif);font-weight:400;font-size:19px;
+     letter-spacing:-.01em;margin-right:auto}
+.mnu-dl{display:inline-flex;align-items:center;height:38px;padding:0 18px;
+     border-radius:var(--r-pill);background:var(--ink);color:var(--ivory);
+     font-size:13px;font-weight:500;letter-spacing:.02em;
+     transition:transform var(--dur) var(--ease),box-shadow var(--dur) var(--ease)}
+.mnu-dl:hover,.mnu-dl:focus-visible{transform:translateY(-2px);
+     box-shadow:0 14px 24px -16px rgba(15,51,32,.9)}
+.mnu-x{width:38px;height:38px;flex:none;border:0;border-radius:50%;cursor:pointer;
+     background:rgba(23,69,43,.12);color:var(--ink);position:relative;
+     transition:background var(--dur) var(--ease)}
+.mnu-x:hover,.mnu-x:focus-visible{background:rgba(23,69,43,.22)}
+.mnu-x::before,.mnu-x::after{content:"";position:absolute;left:11px;top:18px;
+     width:16px;height:2px;background:currentColor;border-radius:2px}
+.mnu-x::before{transform:rotate(45deg)}.mnu-x::after{transform:rotate(-45deg)}
+.mnu-body{flex:1;overflow-y:auto;overscroll-behavior:contain;
+     -webkit-overflow-scrolling:touch;padding:clamp(16px,3vw,36px) var(--edge)}
+.mnu-body picture{display:block;max-width:860px;margin:0 auto clamp(16px,2.4vw,28px)}
+.mnu-body img{width:100%;height:auto;border-radius:var(--r-3);
+     box-shadow:0 24px 48px -30px rgba(0,0,0,.8)}
+.mnu-body p{max-width:860px;margin:0 auto;padding-bottom:8px;
+     font-size:12px;line-height:1.7;color:var(--muted-up);text-align:center}
+@media(max-width:620px){
+  .mnu-bar{padding:11px 16px;gap:10px}
+  .mnu-bar b{font-size:16px}
+  .mnu-dl{height:34px;padding:0 13px;font-size:12px}
+  .mnu-body{padding:14px 12px}
+}
+@media(max-width:380px){.mnu-bar b{font-size:14px}.mnu-dl{padding:0 10px}}
 </style>
 <noscript>
   <!-- Khong co JS thi bo observer se khong chay. Mo khoa moi thu de trang
@@ -762,7 +804,12 @@ a{color:inherit;text-decoration:none}
       <hr class="rule">
     </div>
     <div class="box">
-      <!-- CẦN DỮ LIỆU THẬT: bảng giá chính thức và ngày áp dụng -->
+      <!-- CẦN DỮ LIỆU THẬT: bảng giá chính thức và ngày áp dụng.
+           MÂU THUẪN ĐANG THẤY ĐƯỢC: bảng dưới đây là giá demo, còn menu thật
+           mở từ nút "Xem menu đầy đủ" ngay bên dưới lại ghi giá khác hẳn —
+           ví dụ Ốc Biển ở đây 690, trong menu là 899. Hai con số nằm cùng
+           một trang. Phải đồng bộ theo menu trước khi phát hành, và sửa cả
+           JSON-LD hasOfferCatalog ở cuối trang cho khớp. -->
       <div class="price-cols rv-st">
         <div class="price-row"><span class="nm" data-i18n-t1="pn_shell">Massage Ốc Biển<i>90′</i></span><span class="dots"></span><span class="pv">690<i>~$27</i></span></div>
         <div class="price-row"><span class="nm" data-i18n-t1="pn_stone">Đá Nóng &amp; Thảo Dược<i>70′/90′</i></span><span class="dots"></span><span class="pv">690/840<i>~$27/32</i></span></div>
@@ -775,8 +822,7 @@ a{color:inherit;text-decoration:none}
       </div>
       <div class="price-foot rv">
         <p data-i18n="price_note">Giá tính bằng nghìn đồng, đã gồm trà thảo mộc và tráng miệng nhẹ sau liệu trình. Không phụ phí ẩn.</p>
-        <!-- CẦN DỮ LIỆU THẬT: file PDF bảng giá chính thức -->
-        <a class="btn btn-dark" href="#" data-chua-co="pdf"><span data-i18n="price_pdf">Xem menu đầy đủ (PDF)</span></a>
+        <a class="btn btn-dark" href="files/clover-spa-menu.pdf" id="moMenu"><span data-i18n="price_pdf">Xem menu đầy đủ (PDF)</span></a>
       </div>
     </div>
   </div>
@@ -1064,6 +1110,24 @@ a{color:inherit;text-decoration:none}
 }
 </script>
 
+<!-- ==============================================================
+     MENU DAY DU - lop phu hien khi bam "Xem menu day du" o muc bang gia.
+     Anh khong nam san trong HTML: JS tao the <img> o lan mo dau tien,
+     nen trang chu khong phai tai them gi neu khach khong mo menu.
+     data-base duoc ban dung dat lai thanh "../" cho cac trang ngon ngu
+     nam trong thu muc con.
+     ============================================================== -->
+<div class="mnu" id="menuLb" data-base="" hidden role="dialog" aria-modal="true" aria-labelledby="menuTitle">
+  <div class="mnu-bar">
+    <b id="menuTitle" data-i18n="menu_h">Menu đầy đủ</b>
+    <a class="mnu-dl" id="menuTai" href="files/clover-spa-menu.pdf" download
+       data-i18n="menu_dl">Tải bản PDF</a>
+    <button type="button" class="mnu-x" id="menuDong"
+            aria-label="Đóng menu" data-i18n-al="al_menu_dong"></button>
+  </div>
+  <div class="mnu-body" id="menuKhung"></div>
+</div>
+
 <script>
 (function () {
   var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -1230,7 +1294,19 @@ a{color:inherit;text-decoration:none}
       alt_m4:"A Clover Spa therapist performing a herbal compress treatment.",
       alt_m5:"A clay teapot pouring, steam rising beside a cup and frangipani.",
       alt_br:"Hot herbal tea being poured after a treatment at Clover Spa.",
-      js_nochat:"Chat channel not connected", js_nopdf:"PDF not ready", js_nopage:"Page in progress"
+      js_nochat:"Chat channel not connected", js_nopdf:"PDF not ready", js_nopage:"Page in progress",
+      menu_h:"Full menu", menu_dl:"Download PDF", al_menu_dong:"Close menu",
+      menu_note:"Menu prices are in Vietnamese dong. Please ask reception for the rates currently in effect at each branch.",
+      mn1:"Signature page - the two treatments Clover Spa is known for.",
+      mn2:"Signature price list: Sea Snail, Cactus, Traditional Vietnamese and Acupressure.",
+      mn3:"Body massage price list: Body, Aroma, Herbal, Hot Stone, Hot Stone with Herbs and Thai.",
+      mn4:"Full-body massage page - introduction to the full-body treatments.",
+      mn5:"Facial care page - introduction to the facial treatments.",
+      mn6:"Facial care price list, plus body scrub, hair wash and steam.",
+      mn7:"Price list for Kid Massage, Prenatal Massage, Foot Massage, Head Massage and Body Part.",
+      mn8:"Special care page - introduction to the special treatments.",
+      mn9:"COMBO Massage price list, five packages combining several services.",
+      mn10:"COUPLE Massage price list: Gentle, Refined and Signature packages."
     },
     KO: {
       doc_title:"클로버 스파 · 다낭·후에·나짱·달랏 마사지와 스킨케어",
@@ -1294,7 +1370,19 @@ a{color:inherit;text-decoration:none}
       alt_m4:"허브 찜질 트리트먼트를 진행하는 클로버 스파 테라피스트.",
       alt_m5:"김이 오르는 찻잔과 플루메리아 옆에서 차를 따르는 토기 주전자.",
       alt_br:"클로버 스파에서 트리트먼트 후 따뜻한 허브차를 따르는 모습.",
-      js_nochat:"채팅 채널 미연결", js_nopdf:"PDF 준비 중", js_nopage:"페이지 준비 중"
+      js_nochat:"채팅 채널 미연결", js_nopdf:"PDF 준비 중", js_nopage:"페이지 준비 중",
+      menu_h:"전체 메뉴", menu_dl:"PDF 내려받기", al_menu_dong:"메뉴 닫기",
+      menu_note:"메뉴의 가격 단위는 베트남 동입니다. 지점별 현재 적용 요금은 리셉션에 문의해 주세요.",
+      mn1:"시그니처 페이지 - 클로버 스파의 대표 트리트먼트 두 가지 소개.",
+      mn2:"시그니처 가격표: 바다 소라, 선인장, 베트남 전통, 지압.",
+      mn3:"보디 마사지 가격표: 보디, 아로마, 허브, 핫스톤, 핫스톤 허브, 타이.",
+      mn4:"전신 마사지 페이지 - 전신 트리트먼트 소개.",
+      mn5:"페이셜 케어 페이지 - 얼굴 관리 트리트먼트 소개.",
+      mn6:"페이셜 케어 가격표, 각질 제거와 헤어 워시, 사우나 포함.",
+      mn7:"키즈 마사지, 임산부 마사지, 발 마사지, 헤드 마사지, 부분 마사지 가격표.",
+      mn8:"스페셜 케어 페이지 - 특별 트리트먼트 소개.",
+      mn9:"콤보 마사지 가격표, 여러 서비스를 묶은 다섯 가지 패키지.",
+      mn10:"커플 마사지 가격표: 젠틀, 리파인드, 시그니처 패키지."
     },
     ZH: {
       doc_title:"Clover Spa · 岘港、顺化、芽庄、大叻的按摩与护肤",
@@ -1358,7 +1446,19 @@ a{color:inherit;text-decoration:none}
       alt_m4:"Clover Spa 技师进行草本热敷疗程。",
       alt_m5:"陶壶正在倒茶，热气升起，旁边是茶杯与鸡蛋花。",
       alt_br:"Clover Spa 疗程结束后倒上的热草本茶。",
-      js_nochat:"聊天渠道尚未接通", js_nopdf:"PDF 尚未准备", js_nopage:"页面建设中"
+      js_nochat:"聊天渠道尚未接通", js_nopdf:"PDF 尚未准备", js_nopage:"页面建设中",
+      menu_h:"完整菜单", menu_dl:"下载 PDF", al_menu_dong:"关闭菜单",
+      menu_note:"菜单价格以越南盾计。各分店当前适用价格请向前台确认。",
+      mn1:"Signature 页面 — 介绍 Clover Spa 的两款招牌疗程。",
+      mn2:"Signature 价目表：海螺、仙人掌、越南传统、指压。",
+      mn3:"身体按摩价目表：身体、香薰、草本、热石、热石草本、泰式。",
+      mn4:"全身按摩页面 — 介绍全身疗程。",
+      mn5:"面部护理页面 — 介绍面部护理疗程。",
+      mn6:"面部护理价目表，另含去角质、洗头与蒸浴。",
+      mn7:"儿童按摩、孕妇按摩、足部按摩、头部按摩与局部按摩价目表。",
+      mn8:"特别护理页面 — 介绍特别疗程。",
+      mn9:"COMBO 按摩价目表，五款组合多项服务的套餐。",
+      mn10:"COUPLE 情侣按摩价目表：轻柔、精致与尊享套餐。"
     },
     RU: {
       doc_title:"Clover Spa · Массаж и уход за кожей в Дананге, Хюэ, Нячанге и Далате",
@@ -1422,7 +1522,19 @@ a{color:inherit;text-decoration:none}
       alt_m4:"Мастер Clover Spa проводит процедуру с травяными мешочками.",
       alt_m5:"Глиняный чайник наливает чай, пар поднимается рядом с чашкой.",
       alt_br:"Горячий травяной чай после процедуры в Clover Spa.",
-      js_nochat:"Чат не подключён", js_nopdf:"PDF ещё не готов", js_nopage:"Страница в работе"
+      js_nochat:"Чат не подключён", js_nopdf:"PDF ещё не готов", js_nopage:"Страница в работе",
+      menu_h:"Полное меню", menu_dl:"Скачать PDF", al_menu_dong:"Закрыть меню",
+      menu_note:"Цены в меню указаны во вьетнамских донгах. Актуальные цены в каждом филиале уточняйте на ресепшене.",
+      mn1:"Страница Signature — два фирменных ритуала Clover Spa.",
+      mn2:"Прайс Signature: морская ракушка, кактус, вьетнамский традиционный, точечный массаж.",
+      mn3:"Прайс массажа тела: боди, аромамассаж, травяной, горячие камни, горячие камни с травами, тайский.",
+      mn4:"Страница массажа всего тела — описание процедур для всего тела.",
+      mn5:"Страница ухода за лицом — описание процедур для лица.",
+      mn6:"Прайс ухода за лицом, а также скраб, мытьё головы и парная.",
+      mn7:"Прайс детского массажа, массажа для беременных, массажа стоп, головы и отдельных зон.",
+      mn8:"Страница особого ухода — описание специальных процедур.",
+      mn9:"Прайс COMBO Massage: пять пакетов из нескольких услуг.",
+      mn10:"Прайс COUPLE Massage: пакеты «Мягкий», «Изысканный» и «Премиум»."
     }
   };
 
@@ -1442,9 +1554,25 @@ a{color:inherit;text-decoration:none}
     VI.js_nochat = 'Chưa nối kênh chat';
     VI.js_nopdf = 'Chưa có file PDF';
     VI.js_nopage = 'Trang đang xây';
+
+    /* Menu đầy đủ: chú thích và mô tả 10 trang. Không nằm sẵn trong HTML vì
+       lớp phủ chỉ được dựng khi khách bấm mở, nên phải khai bản gốc ở đây. */
+    VI.menu_note = 'Giá trên menu tính bằng đồng. Vui lòng hỏi lễ tân để biết mức giá đang áp dụng tại từng chi nhánh.';
+    VI.mn1  = 'Trang Signature — giới thiệu hai liệu trình đặc trưng của Clover Spa.';
+    VI.mn2  = 'Bảng giá nhóm Signature: Ốc Biển, Xương Rồng, Cổ Truyền Việt Nam và Bấm Huyệt.';
+    VI.mn3  = 'Bảng giá Massage Body: Body, Aroma, Thảo Dược, Đá Nóng, Đá Nóng Thảo Dược và Massage Thái.';
+    VI.mn4  = 'Trang Massage Toàn Thân — giới thiệu nhóm massage toàn thân.';
+    VI.mn5  = 'Trang Chăm Sóc Da Mặt — giới thiệu nhóm liệu trình chăm sóc da mặt.';
+    VI.mn6  = 'Bảng giá Chăm Sóc Da Mặt, tẩy da chết, gội đầu và xông hơi.';
+    VI.mn7  = 'Bảng giá Kid Massage, Massage Mẹ Bầu, Foot Massage, Massage Đầu và Body Part.';
+    VI.mn8  = 'Trang Chăm Sóc Đặc Biệt — giới thiệu nhóm liệu trình đặc biệt.';
+    VI.mn9  = 'Bảng giá COMBO Massage, năm gói kết hợp nhiều dịch vụ.';
+    VI.mn10 = 'Bảng giá COUPLE Massage: gói Nhẹ Nhàng, Tinh Tế và Đẳng Cấp.';
   })();
 
-  var NGON_NGU = 'VI';
+  /* Ban dung tinh da dich san DOM roi, nen phai bao cho JS biet dang o ngon
+     ngu nao - neu khong, phan chu do JS tao ra (lop phu menu) se ra tieng Viet. */
+  var NGON_NGU = document.documentElement.getAttribute('data-ngonngu') || 'VI';
   function tra(k) {
     var b = NGON_NGU === 'VI' ? VI : (I18N[NGON_NGU] || VI);
     return b[k] != null ? b[k] : VI[k];
@@ -1469,6 +1597,8 @@ a{color:inherit;text-decoration:none}
     if (md) md.content = tra('doc_desc');
     document.querySelectorAll('.langs button').forEach(function (b) {
       b.setAttribute('aria-current', b.dataset.short === NGON_NGU ? 'true' : 'false'); });
+    /* Lớp phủ menu dựng bằng JS nên không nằm trong vòng quét [data-i18n] ở trên */
+    if (window.altMenuTheoNgonNgu) window.altMenuTheoNgonNgu();
   }
   window.doiNgonNgu = doiNgonNgu;
 
@@ -1559,6 +1689,89 @@ a{color:inherit;text-decoration:none}
     });
   });
 
+  /* --- Menu đầy đủ: lớp phủ đọc dọc 10 trang ---------------------------
+     Nút vẫn là thẻ <a> trỏ thẳng tới file PDF, nên nếu JS hỏng thì bấm vào
+     vẫn mở được PDF. Có JS thì chặn lại và mở lớp phủ cho nhẹ và xem nhanh. */
+  var MENU_SO_TRANG = 10;
+  var lp = document.getElementById('menuLb'),
+      lpKhung = document.getElementById('menuKhung'),
+      lpDong = document.getElementById('menuDong'),
+      nutMenu = document.getElementById('moMenu'),
+      lpDaDung = false, oNhoTieuDiem = null;
+
+  function dungAnhMenu() {
+    if (lpDaDung) return;
+    var goc = lp.dataset.base || '';
+    var manh = document.createDocumentFragment();
+    for (var i = 1; i <= MENU_SO_TRANG; i++) {
+      var so = ('0' + i).slice(-2);
+      var pic = document.createElement('picture');
+      var ngn = document.createElement('source');
+      ngn.type = 'image/webp';
+      ngn.srcset = goc + 'images/menu/menu-' + so + '.webp';
+      var anh = document.createElement('img');
+      anh.src = goc + 'images/menu/menu-' + so + '.jpg';
+      anh.width = 1200; anh.height = 1679;
+      /* hai trang đầu tải ngay cho khỏi thấy trống, phần còn lại chờ cuộn tới */
+      anh.loading = i <= 2 ? 'eager' : 'lazy';
+      anh.decoding = 'async';
+      anh.alt = tra('mn' + i) || '';
+      anh.setAttribute('data-mn', i);
+      pic.appendChild(ngn); pic.appendChild(anh); manh.appendChild(pic);
+    }
+    var ghiChu = document.createElement('p');
+    ghiChu.setAttribute('data-i18n', 'menu_note');
+    ghiChu.textContent = tra('menu_note');
+    manh.appendChild(ghiChu);
+    lpKhung.appendChild(manh);
+    lpDaDung = true;
+  }
+
+  /* Đổi ngôn ngữ sau khi đã dựng thì phải cập nhật lại phần chữ trong lớp phủ */
+  function altMenuTheoNgonNgu() {
+    if (!lpDaDung) return;
+    lpKhung.querySelectorAll('img[data-mn]').forEach(function (a) {
+      var v = tra('mn' + a.dataset.mn); if (v) a.alt = v;
+    });
+  }
+  window.altMenuTheoNgonNgu = altMenuTheoNgonNgu;
+
+  function moMenuDayDu() {
+    oNhoTieuDiem = document.activeElement;
+    dungAnhMenu();
+    lp.hidden = false;
+    document.body.style.overflow = 'hidden';
+    lpKhung.scrollTop = 0;
+    lpDong.focus();
+  }
+  function dongMenuDayDu() {
+    lp.hidden = true;
+    document.body.style.overflow = '';
+    if (oNhoTieuDiem && oNhoTieuDiem.focus) oNhoTieuDiem.focus();
+  }
+
+  if (nutMenu && lp) {
+    nutMenu.addEventListener('click', function (e) {
+      /* Ctrl/Cmd/giữa chuột: để trình duyệt mở PDF ở tab mới như thường */
+      if (e.metaKey || e.ctrlKey || e.shiftKey || e.button !== 0) return;
+      e.preventDefault();
+      moMenuDayDu();
+    });
+    lpDong.addEventListener('click', dongMenuDayDu);
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && !lp.hidden) dongMenuDayDu();
+    });
+    /* Giữ tiêu điểm quẩn trong lớp phủ khi dùng phím Tab */
+    lp.addEventListener('keydown', function (e) {
+      if (e.key !== 'Tab') return;
+      var oc = lp.querySelectorAll('a[href],button');
+      if (!oc.length) return;
+      var dau = oc[0], cuoi = oc[oc.length - 1];
+      if (e.shiftKey && document.activeElement === dau) { e.preventDefault(); cuoi.focus(); }
+      else if (!e.shiftKey && document.activeElement === cuoi) { e.preventDefault(); dau.focus(); }
+    });
+  }
+
   /* form chưa nối kênh chat */
   document.getElementById('form').addEventListener('submit', function (e) {
     e.preventDefault();
@@ -1570,3 +1783,4 @@ a{color:inherit;text-decoration:none}
 </script>
 </body>
 </html>
+

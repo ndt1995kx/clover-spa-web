@@ -86,9 +86,19 @@ const anhCanDung = new Set();
   d.querySelectorAll('[src],[href],[data-img]').forEach(e => {
     ['src', 'href', 'data-img'].forEach(t => {
       const v = e.getAttribute(t);
-      if (v && v.indexOf('images/') === 0) anhCanDung.add(v);
+      if (v && (v.indexOf('images/') === 0 || v.indexOf('files/') === 0)) anhCanDung.add(v);
     });
   });
+  /* Anh cua lop phu menu duoc JS ghep duong dan luc chay nen khong nam trong
+     thuoc tinh nao. Quet thang trong nguon de khong bo sot khi chep. */
+  for (const m of src.matchAll(/(?:images|files)\/[A-Za-z0-9._\/-]+\.(?:jpe?g|png|webp|svg|pdf)/g)) {
+    anhCanDung.add(m[0]);
+  }
+  for (let i = 1; i <= 10; i++) {
+    const so = ('0' + i).slice(-2);
+    anhCanDung.add('images/menu/menu-' + so + '.webp');
+    anhCanDung.add('images/menu/menu-' + so + '.jpg');
+  }
 }
 let soAnh = 0;
 for (const rel of anhCanDung) {
@@ -125,6 +135,9 @@ for (const b of BAN) {
 
   /* --- Phan head --- */
   doc.documentElement.lang = b.lang;
+  /* Bao cho JS trong trang biet ban nay dang o ngon ngu nao, de phan chu do JS
+     sinh ra luc chay (lop phu menu) khong bi roi ve tieng Viet. */
+  doc.documentElement.setAttribute('data-ngonngu', b.ma);
   doc.title = tra('doc_title');
   datThe(doc, 'meta[name="description"]', 'meta', { name: 'description', content: tra('doc_desc') });
 
@@ -182,12 +195,17 @@ for (const b of BAN) {
     if (dich) nut.setAttribute('data-href', (lui + dich.duong.slice(1)) || './');
   });
 
+  /* Lop phu menu ghep duong dan anh bang JS luc chay, khong qua thuoc tinh,
+     nen phai bao rieng cho no biet phai lui may cap thu muc. */
+  const lp = doc.getElementById('menuLb');
+  if (lp) lp.setAttribute('data-base', b.thumuc ? '../' : '');
+
   /* Duong dan tuong doi: trang trong thu muc con phai lui mot cap moi thay anh */
   if (b.thumuc) {
     doc.querySelectorAll('[src],[href],[data-img]').forEach(e => {
       ['src', 'href', 'data-img'].forEach(t => {
         const v = e.getAttribute(t);
-        if (v && v.indexOf('images/') === 0) e.setAttribute(t, '../' + v);
+        if (v && (v.indexOf('images/') === 0 || v.indexOf('files/') === 0)) e.setAttribute(t, '../' + v);
       });
     });
   }

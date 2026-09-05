@@ -23,6 +23,10 @@ Trang đang ở giai đoạn duyệt thiết kế. Những phần dưới đây 
 | Banner 2/9 | Chiến dịch đã hết hạn |
 | 3 link Chính sách ở footer | Chưa có trang, đang trỏ `#` |
 
+> **Lưu ý giá:** bảng giá hiển thị trên trang là số demo, **không khớp với menu
+> chính thức** mở từ nút "Xem menu đầy đủ". Ví dụ Massage Ốc Biển: bảng ghi 690,
+> menu ghi 899. Phải đồng bộ theo menu trước khi phát hành.
+
 Mọi chỗ cần dữ liệu thật đều được đánh dấu bằng `CẦN DỮ LIỆU THẬT` ngay trong mã nguồn:
 
 ```
@@ -44,6 +48,8 @@ thật không lọt lên kết quả tìm kiếm. Việc chặn chỉ áp dụng
   toàn bộ tắt khi hệ điều hành bật "giảm chuyển động"
 - Mục chi nhánh: bấm vào ô địa chỉ thì đổi ảnh, tên, địa chỉ, ghim bản đồ và đường nối
 - SEO nền: JSON-LD `DaySpa` 4 chi nhánh, Open Graph, canonical, alt đầy đủ, sitemap, robots
+- Menu đầy đủ 10 trang: bấm "Xem menu đầy đủ" ở mục bảng giá để mở lớp phủ đọc dọc,
+  kèm nút tải bản PDF. Ảnh chỉ tải khi khách bấm mở nên trang chủ không nặng thêm
 
 ## Còn lại
 
@@ -61,6 +67,8 @@ xem 25 trang dịch vụ đang có thứ hạng trên site cũ sẽ chuyển hư
 index.html              trang gốc · HTML + CSS + JS trong một file · SỬA Ở ĐÂY
 images/logo-clover.png  logo
 images/design/          13 ảnh đang dùng
+images/menu/            10 trang menu · WebP + JPG dự phòng
+files/                  menu đầy đủ bản PDF để khách tải
 robots.txt              cho tên miền thật
 sitemap.xml             cho tên miền thật
 _build/                 script sinh bản 5 ngôn ngữ

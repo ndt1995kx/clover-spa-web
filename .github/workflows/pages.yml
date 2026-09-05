@@ -66,7 +66,17 @@ jobs:
           SAI=$(grep -roE '(src|data-img)="images/' dist/en dist/kr dist/cn dist/ru dist/vn | wc -l)
           test "$SAI" -eq 0 || { echo "LOI: $SAI duong dan anh chua doi thanh ../images/"; exit 1; }
 
-          echo "OK - 6 trang, deu co noindex, duong dan anh dung"
+          # Menu day du: 10 trang x 2 dinh dang + file PDF gop
+          test -f dist/files/clover-spa-menu.pdf || { echo "LOI: thieu file PDF menu"; exit 1; }
+          SOMENU=$(ls dist/images/menu/*.webp dist/images/menu/*.jpg 2>/dev/null | wc -l)
+          test "$SOMENU" -eq 20 || { echo "LOI: mong doi 20 anh menu, dem duoc $SOMENU"; exit 1; }
+
+          # Trang trong thu muc con phai lui mot cap moi thay anh menu
+          for T in en kr cn ru vn; do
+            grep -q 'id="menuLb" data-base="../"' "dist/$T/index.html"               || { echo "LOI: $T thieu data-base=../ cho lop phu menu"; exit 1; }
+          done
+
+          echo "OK - 6 trang, deu co noindex, duong dan anh dung, menu day du"
           grep -o '<html lang="[a-z]*"' $(find dist -name index.html) | sort
 
       - uses: actions/upload-pages-artifact@v3
