@@ -384,6 +384,14 @@ a{color:inherit;text-decoration:none}
 .br-side .photo img{width:100%;height:100%;object-fit:cover;
       transition:transform 1.1s var(--ease),opacity .4s var(--ease)}
 .br-side .photo img.doi{opacity:0}
+.br-kenh{margin-top:14px;display:flex;flex-wrap:wrap;gap:8px}
+.br-kenh a{display:inline-flex;align-items:center;height:30px;padding:0 12px;
+      border:1px solid var(--line-2);border-radius:var(--r-pill);
+      font-size:12px;font-weight:500;letter-spacing:.02em;color:var(--ink-2);
+      transition:background var(--dur) var(--ease),border-color var(--dur) var(--ease),
+                 color var(--dur) var(--ease)}
+.br-kenh a:hover,.br-kenh a:focus-visible{background:var(--ink);border-color:var(--ink);
+      color:var(--ivory)}
 .br-addr{margin-top:18px}
 .br-addr b{display:block;font-family:var(--f-sans);font-weight:700;font-size:12px;
       letter-spacing:.1em;text-transform:uppercase;color:var(--deep);margin-bottom:5px}
@@ -898,22 +906,23 @@ a{color:inherit;text-decoration:none}
     <h2 id="h-br" class="rv" data-i18n="br_h2">Chọn chi nhánh</h2>
     <p class="sub rv" data-i18n="br_sub">Bốn chi nhánh, cùng một tiêu chuẩn liệu trình và cùng một cách phục vụ.</p>
 
-    <!-- CẦN DỮ LIỆU THẬT: địa chỉ, điện thoại và giờ mở cửa riêng của từng chi nhánh -->
+    <!-- CẦN DỮ LIỆU THẬT: địa chỉ đầy đủ và giờ mở cửa riêng của Huế, Nha Trang, Đà Lạt.
+         Điện thoại và kênh chat của cả bốn chi nhánh đã có (khách gửi 07/09/2026). -->
     <div class="map-wrap" id="mapWrap">
 
       <!-- CẦN DỮ LIỆU THẬT: địa chỉ đầy đủ và ảnh riêng của Huế, Nha Trang, Đà Lạt.
            Ảnh dưới đây tạm mượn từ thư viện chung để xem được tương tác. -->
       <div class="pills rv-st">
-        <button type="button" class="pill main" data-city="danang" data-altkey="alt_br" aria-pressed="true"
+        <button type="button" class="pill main" data-city="danang" data-tel="tel:+84909433086" data-zalo="https://zalo.me/0909433086" data-wa="https://wa.me/84909433086" data-fb="https://www.facebook.com/share/1Jk3A3zc5U/?mibextid=wwXIfr" data-kakao="https://qr.kakao.com/talk/yvgN7MDPFwBNz2XQxgGdSjrCqrY-" data-mess="" data-line="" data-map="" data-altkey="alt_br" aria-pressed="true"
           data-img="images/design/am-tra-rong.jpg" data-addr="123 Trần Hưng Đạo, Sơn Trà, Đà Nẵng">
           <span class="dot"></span><b>Đà Nẵng</b></button>
-        <button type="button" class="pill" data-city="hue" data-altkey="alt_m1" aria-pressed="false"
+        <button type="button" class="pill" data-city="hue" data-tel="tel:+84935733689" data-zalo="https://zalo.me/0935733689" data-wa="https://api.whatsapp.com/qr/PQ24XDYOEXU6I1?autoload=1&amp;app_absent=0" data-fb="https://www.facebook.com/share/1Bt7wQJJXh/?mibextid=wwXIfr" data-kakao="https://qr.kakao.com/talk/yS9vPJjD3tjuh7qePQg7KIVA2dI-" data-mess="" data-line="" data-map="" data-altkey="alt_m1" aria-pressed="false"
           data-img="images/design/phong-doi.jpg" data-addr="">
           <span class="dot"></span><b>Huế</b></button>
-        <button type="button" class="pill" data-city="nhatrang" data-altkey="alt_m4" aria-pressed="false"
+        <button type="button" class="pill" data-city="nhatrang" data-tel="tel:+84905520089" data-zalo="https://zalo.me/0905520089" data-wa="https://api.whatsapp.com/qr/L7ICBUHCPXAXN1?autoload=1&amp;app_absent=0" data-fb="https://www.facebook.com/share/1GYdDEv2T5/?mibextid=wwXIfr" data-kakao="https://qr.kakao.com/talk/nPpic.y759S_vYmB2XsBlwJzcys-" data-mess="" data-line="" data-map="" data-altkey="alt_m4" aria-pressed="false"
           data-img="images/design/tri-lieu-tre.jpg" data-addr="">
           <span class="dot"></span><b>Nha Trang</b></button>
-        <button type="button" class="pill" data-city="dalat" data-altkey="alt_m2" aria-pressed="false"
+        <button type="button" class="pill" data-city="dalat" data-tel="tel:+84935450089" data-zalo="https://zalo.me/0935450089" data-wa="https://wa.me/qr/7XDX5WX7UB3OI1" data-fb="" data-kakao="https://qr.kakao.com/talk/XkqX6aAUzENPeQj8x4NblJ31uy4-" data-mess="https://www.messenger.com/t/cloverspadalat" data-line="https://line.me/ti/p/HU_YcS4DIB" data-map="https://maps.app.goo.gl/AXnuj8pPwT4kKXh27" data-altkey="alt_m2" aria-pressed="false"
           data-img="images/design/khay-thao-moc.jpg" data-addr="">
           <span class="dot"></span><b>Đà Lạt</b></button>
       </div>
@@ -937,6 +946,9 @@ a{color:inherit;text-decoration:none}
         <div class="photo rv-img"><img id="brAnh" src="images/design/am-tra-rong.jpg" width="1120" height="840" loading="lazy" decoding="async"
           alt="Rót trà thảo mộc nóng sau liệu trình tại Clover Spa." data-i18n-alt="alt_br"></div>
         <p class="br-addr"><b id="brTen">Đà Nẵng</b><span id="brDiaChi">123 Trần Hưng Đạo, Sơn Trà, Đà Nẵng</span></p>
+        <!-- Kênh liên hệ của chi nhánh đang chọn, dựng bằng JS từ các
+             thuộc tính data- trên nút chi nhánh ở trên. -->
+        <div class="br-kenh" id="brKenh"></div>
       </div>
     </div>
   </div>
@@ -1037,6 +1049,7 @@ a{color:inherit;text-decoration:none}
           <li>Đà Nẵng · <a href="https://zalo.me/0909433086" rel="noopener">0909 433 086</a></li>
           <li>Nha Trang · <a href="https://zalo.me/0905520089" rel="noopener">0905 520 089</a></li>
           <li>Huế · <a href="https://zalo.me/0935733689" rel="noopener">0935 733 689</a></li>
+          <li>Đà Lạt · <a href="https://zalo.me/0935450089" rel="noopener">0935 450 089</a></li>
         </ul>
       </div>
     </div>
@@ -1059,7 +1072,7 @@ a{color:inherit;text-decoration:none}
      aria-label="Nhắn KakaoTalk" data-i18n-al="al_kakao"><span>Kakao</span></a>
   <a href="https://wa.me/84909433086" rel="noopener" aria-label="Nhắn WhatsApp Đà Nẵng"
      data-i18n-al="al_wa"><span>WA</span></a>
-  <a href="https://www.facebook.com/cloverspavn" rel="noopener" aria-label="Facebook Clover Spa"
+  <a href="https://www.facebook.com/share/1Jk3A3zc5U/?mibextid=wwXIfr" rel="noopener" aria-label="Facebook Clover Spa"
      data-i18n-al="al_fb"><span>FB</span></a>
   <a href="#dat-lich" aria-label="WeChat"><span>WeChat</span></a>
 </nav>
@@ -1110,7 +1123,8 @@ a{color:inherit;text-decoration:none}
         {"@type":"DaySpa","name":"Clover Spa Nha Trang","telephone":"+84905520089",
          "address":{"@type":"PostalAddress","addressLocality":"Nha Trang","addressCountry":"VN"},
          "geo":{"@type":"GeoCoordinates","latitude":12.2388,"longitude":109.1967}},
-        {"@type":"DaySpa","name":"Clover Spa Đà Lạt",
+        {"@type":"DaySpa","name":"Clover Spa Đà Lạt","telephone":"+84935450089",
+         "hasMap":"https://maps.app.goo.gl/AXnuj8pPwT4kKXh27",
          "address":{"@type":"PostalAddress","addressLocality":"Đà Lạt","addressCountry":"VN"},
          "geo":{"@type":"GeoCoordinates","latitude":11.9404,"longitude":108.4583}}
       ],
@@ -1330,7 +1344,7 @@ a{color:inherit;text-decoration:none}
       alt_m5:"A clay teapot pouring, steam rising beside a cup and frangipani.",
       alt_br:"Hot herbal tea being poured after a treatment at Clover Spa.",
       js_nochat:"Chat channel not connected", js_nopdf:"PDF not ready", js_nopage:"Page in progress",
-      js_nokenh:"Channel not connected yet", ft_h_zalo:"Zalo by branch", ft_wechat:"WeChat",
+      js_nokenh:"Channel not connected yet", br_goi:"Call", ft_h_zalo:"Zalo by branch", ft_wechat:"WeChat",
       al_zalo:"Message Da Nang on Zalo", al_kakao:"Message us on KakaoTalk",
       al_wa:"Message Da Nang on WhatsApp", al_fb:"Clover Spa on Facebook",
       menu_h:"Full menu", menu_dl:"Download PDF", al_menu_dong:"Close menu",
@@ -1412,7 +1426,7 @@ a{color:inherit;text-decoration:none}
       alt_m5:"김이 오르는 찻잔과 플루메리아 옆에서 차를 따르는 토기 주전자.",
       alt_br:"클로버 스파에서 트리트먼트 후 따뜻한 허브차를 따르는 모습.",
       js_nochat:"채팅 채널 미연결", js_nopdf:"PDF 준비 중", js_nopage:"페이지 준비 중",
-      js_nokenh:"아직 연결되지 않은 채널", ft_h_zalo:"지점별 Zalo", ft_wechat:"WeChat",
+      js_nokenh:"아직 연결되지 않은 채널", br_goi:"전화", ft_h_zalo:"지점별 Zalo", ft_wechat:"WeChat",
       al_zalo:"다낭점 Zalo로 문의", al_kakao:"카카오톡으로 문의",
       al_wa:"다낭점 WhatsApp으로 문의", al_fb:"클로버 스파 페이스북",
       menu_h:"전체 메뉴", menu_dl:"PDF 내려받기", al_menu_dong:"메뉴 닫기",
@@ -1494,7 +1508,7 @@ a{color:inherit;text-decoration:none}
       alt_m5:"陶壶正在倒茶，热气升起，旁边是茶杯与鸡蛋花。",
       alt_br:"Clover Spa 疗程结束后倒上的热草本茶。",
       js_nochat:"聊天渠道尚未接通", js_nopdf:"PDF 尚未准备", js_nopage:"页面建设中",
-      js_nokenh:"该渠道尚未接通", ft_h_zalo:"各分店 Zalo", ft_wechat:"微信",
+      js_nokenh:"该渠道尚未接通", br_goi:"致电", ft_h_zalo:"各分店 Zalo", ft_wechat:"微信",
       al_zalo:"通过 Zalo 联系岘港店", al_kakao:"通过 KakaoTalk 联系",
       al_wa:"通过 WhatsApp 联系岘港店", al_fb:"Clover Spa 脸书主页",
       menu_h:"完整菜单", menu_dl:"下载 PDF", al_menu_dong:"关闭菜单",
@@ -1576,7 +1590,7 @@ a{color:inherit;text-decoration:none}
       alt_m5:"Глиняный чайник наливает чай, пар поднимается рядом с чашкой.",
       alt_br:"Горячий травяной чай после процедуры в Clover Spa.",
       js_nochat:"Чат не подключён", js_nopdf:"PDF ещё не готов", js_nopage:"Страница в работе",
-      js_nokenh:"Канал пока не подключён", ft_h_zalo:"Zalo по филиалам", ft_wechat:"WeChat",
+      js_nokenh:"Канал пока не подключён", br_goi:"Позвонить", ft_h_zalo:"Zalo по филиалам", ft_wechat:"WeChat",
       al_zalo:"Написать в Zalo (Дананг)", al_kakao:"Написать в KakaoTalk",
       al_wa:"Написать в WhatsApp (Дананг)", al_fb:"Clover Spa в Facebook",
       menu_h:"Полное меню", menu_dl:"Скачать PDF", al_menu_dong:"Закрыть меню",
@@ -1611,6 +1625,7 @@ a{color:inherit;text-decoration:none}
     VI.js_nopdf = 'Chưa có file PDF';
     VI.js_nopage = 'Trang đang xây';
     VI.js_nokenh = 'Chưa nối kênh này';
+    VI.br_goi = 'Gọi điện';
 
     /* Menu đầy đủ: chú thích và mô tả 10 trang. Không nằm sẵn trong HTML vì
        lớp phủ chỉ được dựng khi khách bấm mở, nên phải khai bản gốc ở đây. */
@@ -1699,6 +1714,30 @@ a{color:inherit;text-decoration:none}
     });
   }
 
+  /* Kênh liên hệ của từng chi nhánh. Thứ tự cố định; chi nhánh nào thiếu kênh
+     nào thì bỏ qua kênh đó chứ không hiện ô trống. */
+  var KENH = [
+    ['tel',   'Gọi'],       ['zalo', 'Zalo'],  ['wa',   'WhatsApp'],
+    ['fb',    'Facebook'],  ['kakao', 'KakaoTalk'],
+    ['mess',  'Messenger'], ['line', 'LINE'],  ['map',  'Bản đồ']
+  ];
+  var oKenh = document.getElementById('brKenh');
+
+  function veKenh(b) {
+    if (!oKenh) return;
+    oKenh.innerHTML = '';
+    KENH.forEach(function (k) {
+      var d = b.dataset[k[0]];
+      if (!d) return;
+      var a = document.createElement('a');
+      a.href = d;
+      a.textContent = k[0] === 'tel' ? tra('br_goi') : k[1];
+      if (d.indexOf('http') === 0) { a.rel = 'noopener'; a.target = '_blank'; }
+      a.setAttribute('aria-label', k[1] + ' · ' + b.querySelector('b').textContent);
+      oKenh.appendChild(a);
+    });
+  }
+
   function chonChiNhanh(b) {
     document.querySelectorAll('.pill[data-city]').forEach(function (x) {
       var chon = x === b;
@@ -1716,6 +1755,7 @@ a{color:inherit;text-decoration:none}
     }
     if (brTen) brTen.textContent = b.querySelector('b').textContent;
     if (brDiaChi) brDiaChi.textContent = b.dataset.addr || tra('br_addr_soon');
+    veKenh(b);
     if (brAnh && b.dataset.img && brAnh.getAttribute('src') !== b.dataset.img) {
       brAnh.classList.add('doi');
       var xong = function () { brAnh.classList.remove('doi'); brAnh.removeEventListener('load', xong); };
@@ -1735,6 +1775,8 @@ a{color:inherit;text-decoration:none}
   if ('ResizeObserver' in window && khungBanDo) new ResizeObserver(veDuongNoi).observe(khungBanDo);
   /* ghim hiện dần khi bản đồ sáng, vẽ lại đường nối cho khớp */
   setTimeout(veDuongNoi, 1400);
+  var buocDau = document.querySelector('.pill.main[data-city]');
+  if (buocDau) veKenh(buocDau);
 
   /* --- Liên kết chưa có đích: báo rõ thay vì nhảy về đầu trang --- */
   document.querySelectorAll('[data-chua-co]').forEach(function (a) {
