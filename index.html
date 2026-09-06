@@ -197,7 +197,6 @@ a{color:inherit;text-decoration:none}
       -webkit-mask-image:linear-gradient(90deg,transparent,#000 7%,#000 93%,transparent);
       mask-image:linear-gradient(90deg,transparent,#000 7%,#000 93%,transparent)}
 .marquee .track{display:flex;flex:none;width:max-content;animation:slide 40s linear infinite}
-.marquee:hover .track,.marquee:focus-within .track{animation-play-state:paused}
 .marquee span{font-family:var(--f-serif-2);font-weight:400;font-size:clamp(18px,1.8vw,25px);
       line-height:1;text-transform:uppercase;color:var(--marquee);padding:0 42px;white-space:nowrap}
 @keyframes slide{to{transform:translateX(-50%)}}
@@ -1671,6 +1670,8 @@ a{color:inherit;text-decoration:none}
       b.setAttribute('aria-current', b.dataset.short === NGON_NGU ? 'true' : 'false'); });
     /* Lớp phủ menu dựng bằng JS nên không nằm trong vòng quét [data-i18n] ở trên */
     if (window.altMenuTheoNgonNgu) window.altMenuTheoNgonNgu();
+    /* chữ đổi thì bề rộng đổi, phải dựng lại dải chữ chạy */
+    if (window.dungChuChay) window.dungChuChay();
   }
   window.doiNgonNgu = doiNgonNgu;
 
@@ -1777,6 +1778,66 @@ a{color:inherit;text-decoration:none}
   setTimeout(veDuongNoi, 1400);
   var buocDau = document.querySelector('.pill.main[data-city]');
   if (buocDau) veKenh(buocDau);
+
+  /* --- Chữ chạy ------------------------------------------------------
+     Vòng lặp chỉ liền mạch khi MỖI NỬA của dải rộng hơn khung nhìn; nếu
+     hẹp hơn thì mỗi vòng sẽ hở ra một khoảng trắng ở mép phải. Bộ chữ
+     tiếng Trung chỉ rộng ~894px nên trên màn 1440 hở tới 546px.
+     Ở đây đo bề rộng một bộ rồi nhân bản cho đủ, tính lại khi đổi khổ. */
+  var oChay = document.querySelector('.marquee .track');
+  var SO_THE = 5;                       /* số thẻ trong một bộ */
+  var boGoc = oChay
+    ? Array.prototype.slice.call(oChay.children, 0, SO_THE)
+        .map(function (e) { return e.cloneNode(true); })
+    : [];
+  var soBoDangDung = 0;
+
+  function dungChuChay() {
+    if (!oChay || !boGoc.length) return;
+    /* dựng tạm một bộ để đo bề rộng thật của nó */
+    oChay.innerHTML = '';
+    boGoc.forEach(function (e) { oChay.appendChild(e.cloneNode(true)); });
+    var rongBo = oChay.scrollWidth;
+    if (!rongBo) return;
+
+    var soBo = Math.max(1, Math.ceil(window.innerWidth / rongBo));
+    /* đổi khổ mà số bộ không đổi thì thôi, dựng lại sẽ làm chữ giật */
+    if (soBo === soBoDangDung) {
+      oChay.innerHTML = '';
+      for (var k = 0; k < soBoDangDung * 2; k++) {
+        boGoc.forEach(function (e) { oChay.appendChild(e.cloneNode(true)); });
+      }
+      return;
+    }
+    soBoDangDung = soBo;
+    oChay.innerHTML = '';
+    for (var i = 0; i < soBo * 2; i++) {
+      boGoc.forEach(function (e) { oChay.appendChild(e.cloneNode(true)); });
+    }
+  }
+
+  if (oChay) {
+    dungChuChay();
+    /* font tải xong thì bề rộng đổi, đo lại */
+    if (document.fonts && document.fonts.ready) {
+      document.fonts.ready.then(function () { soBoDangDung = 0; dungChuChay(); });
+    }
+    var henChay;
+    window.addEventListener('resize', function () {
+      clearTimeout(henChay);
+      henChay = setTimeout(function () {
+        var truoc = soBoDangDung;
+        soBoDangDung = 0;
+        oChay.innerHTML = '';
+        boGoc.forEach(function (e) { oChay.appendChild(e.cloneNode(true)); });
+        var can = Math.max(1, Math.ceil(window.innerWidth / (oChay.scrollWidth || 1)));
+        soBoDangDung = truoc;
+        if (can !== truoc) { soBoDangDung = 0; dungChuChay(); }
+        else { dungChuChay(); }
+      }, 250);
+    });
+    window.dungChuChay = dungChuChay;   /* đổi ngôn ngữ thì gọi lại */
+  }
 
   /* --- Liên kết chưa có đích: báo rõ thay vì nhảy về đầu trang --- */
   document.querySelectorAll('[data-chua-co]').forEach(function (a) {
