@@ -422,6 +422,7 @@ a{color:inherit;text-decoration:none}
 .foot .cols{display:grid;grid-template-columns:1.96fr 1fr 1.02fr 1.34fr;gap:clamp(2rem,2.8vw,40px)}
 @media(max-width:900px){.foot .cols{grid-template-columns:1fr 1fr}}
 @media(max-width:560px){.foot .cols{grid-template-columns:1fr}}
+.foot .ft-h2{margin-top:22px}
 .foot h2,.foot h3{font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;
       color:var(--gold-2);margin-bottom:16px}
 .foot p,.foot li{font-size:14px;line-height:1.8;color:var(--paper)}
@@ -1007,7 +1008,7 @@ a{color:inherit;text-decoration:none}
         <h3 data-i18n="ft_h_explore">Khám phá</h3>
         <ul>
           <li><a href="#dich-vu" data-i18n="ft_l_svc">Dịch vụ</a></li><li><a href="#bang-gia" data-i18n="ft_l_price">Bảng giá</a></li>
-          <li><a href="#khoanh-khac" data-i18n="ft_l_space">Không gian</a></li><li><a href="#chi-nhanh">Chi nhánh</a></li>
+          <li><a href="#khoanh-khac" data-i18n="ft_l_space">Không gian</a></li><li><a href="#chi-nhanh" data-i18n="ft_l_branch">Chi nhánh</a></li>
         </ul>
       </div>
       <div>
@@ -1018,13 +1019,24 @@ a{color:inherit;text-decoration:none}
         </ul>
       </div>
       <div>
-        <h3>Liên hệ</h3>
+        <h3 data-i18n="ft_h_contact">Liên hệ</h3>
         <ul>
           <li><a href="tel:+84909433086">Hotline · 0909 433 086</a></li>
           <li><a href="mailto:cloverspadanang@gmail.com">cloverspadanang@gmail.com</a></li>
-          <li><a href="https://zalo.me/0909433086" rel="noopener">Zalo</a> ·
+          <li><a href="https://www.facebook.com/cloverspavn" rel="noopener">Facebook</a> ·
               <a href="https://qr.kakao.com/talk/yvgN7MDPFwBNz2XQxgGdSjrCqrY-" rel="noopener">KakaoTalk</a></li>
-          <li><a href="https://wa.me/84909433086" rel="noopener">WhatsApp</a> · WeChat</li>
+          <li><a href="https://wa.me/84909433086" rel="noopener">WhatsApp</a> ·
+              <span data-chua-co="kenh" data-i18n="ft_wechat">WeChat</span></li>
+        </ul>
+
+        <!-- Zalo rieng tung chi nhanh. Chi ba so nay la du lieu that khach da xac nhan.
+             CẦN DỮ LIỆU THẬT: Zalo Đà Lạt, và ID KakaoTalk + trang Facebook riêng của
+             từng chi nhánh — bản khách gửi mới chỉ ghi nhãn, chưa có số hay đường dẫn. -->
+        <h3 class="ft-h2" data-i18n="ft_h_zalo">Zalo từng chi nhánh</h3>
+        <ul>
+          <li>Đà Nẵng · <a href="https://zalo.me/0909433086" rel="noopener">0909 433 086</a></li>
+          <li>Nha Trang · <a href="https://zalo.me/0905520089" rel="noopener">0905 520 089</a></li>
+          <li>Huế · <a href="https://zalo.me/0935733689" rel="noopener">0935 733 689</a></li>
         </ul>
       </div>
     </div>
@@ -1035,14 +1047,20 @@ a{color:inherit;text-decoration:none}
   </div>
 </footer>
 
-<!-- Dai lien he noi: thiet ke ve 4 vong tron 52px o mep phai (x 1364..1416, khe 10).
-     CAN DU LIEU THAT: ban xuat SVG khong kem icon cho 4 vong tron nay, nen tam dung
-     chu viet tat. Gui icon Zalo/KakaoTalk/WhatsApp/WeChat de thay vao. -->
+<!-- Dai lien he noi. Cac bong bong deu tro ve chi nhanh Da Nang - day la kenh
+     chinh khach chot. Khach o chi nhanh khac dung so Zalo rieng ghi o chan trang.
+     CAN DU LIEU THAT: ban xuat SVG khong kem icon cho cac vong tron nay nen tam
+     dung chu viet tat. Gui icon Zalo/KakaoTalk/WhatsApp/Facebook/WeChat de thay vao.
+     CAN DU LIEU THAT: WeChat chua co ID nao. -->
 <nav class="rail" aria-label="Kênh chat trực tiếp" data-i18n-al="al_rail">
-  <a href="https://zalo.me/0909433086" rel="noopener" aria-label="Nhắn Zalo"><span>Zalo</span></a>
+  <a href="https://zalo.me/0909433086" rel="noopener" aria-label="Nhắn Zalo Đà Nẵng"
+     data-i18n-al="al_zalo"><span>Zalo</span></a>
   <a href="https://qr.kakao.com/talk/yvgN7MDPFwBNz2XQxgGdSjrCqrY-" rel="noopener"
-     aria-label="Nhắn KakaoTalk"><span>Kakao</span></a>
-  <a href="https://wa.me/84909433086" rel="noopener" aria-label="Nhắn WhatsApp"><span>WA</span></a>
+     aria-label="Nhắn KakaoTalk" data-i18n-al="al_kakao"><span>Kakao</span></a>
+  <a href="https://wa.me/84909433086" rel="noopener" aria-label="Nhắn WhatsApp Đà Nẵng"
+     data-i18n-al="al_wa"><span>WA</span></a>
+  <a href="https://www.facebook.com/cloverspavn" rel="noopener" aria-label="Facebook Clover Spa"
+     data-i18n-al="al_fb"><span>FB</span></a>
   <a href="#dat-lich" aria-label="WeChat"><span>WeChat</span></a>
 </nav>
 
@@ -1086,10 +1104,10 @@ a{color:inherit;text-decoration:none}
         {"@type":"DaySpa","name":"Clover Spa Đà Nẵng","telephone":"+84909433086",
          "address":{"@type":"PostalAddress","addressLocality":"Đà Nẵng","addressCountry":"VN"},
          "geo":{"@type":"GeoCoordinates","latitude":16.0544,"longitude":108.2022}},
-        {"@type":"DaySpa","name":"Clover Spa Huế",
+        {"@type":"DaySpa","name":"Clover Spa Huế","telephone":"+84935733689",
          "address":{"@type":"PostalAddress","addressLocality":"Huế","addressCountry":"VN"},
          "geo":{"@type":"GeoCoordinates","latitude":16.4637,"longitude":107.5909}},
-        {"@type":"DaySpa","name":"Clover Spa Nha Trang",
+        {"@type":"DaySpa","name":"Clover Spa Nha Trang","telephone":"+84905520089",
          "address":{"@type":"PostalAddress","addressLocality":"Nha Trang","addressCountry":"VN"},
          "geo":{"@type":"GeoCoordinates","latitude":12.2388,"longitude":109.1967}},
         {"@type":"DaySpa","name":"Clover Spa Đà Lạt",
@@ -1312,6 +1330,9 @@ a{color:inherit;text-decoration:none}
       alt_m5:"A clay teapot pouring, steam rising beside a cup and frangipani.",
       alt_br:"Hot herbal tea being poured after a treatment at Clover Spa.",
       js_nochat:"Chat channel not connected", js_nopdf:"PDF not ready", js_nopage:"Page in progress",
+      js_nokenh:"Channel not connected yet", ft_h_zalo:"Zalo by branch", ft_wechat:"WeChat",
+      al_zalo:"Message Da Nang on Zalo", al_kakao:"Message us on KakaoTalk",
+      al_wa:"Message Da Nang on WhatsApp", al_fb:"Clover Spa on Facebook",
       menu_h:"Full menu", menu_dl:"Download PDF", al_menu_dong:"Close menu",
       menu_note:"Menu prices are in Vietnamese dong. Please ask reception for the rates currently in effect at each branch.",
       mn_p03:"Signature page - the two treatments Clover Spa is known for.",
@@ -1391,6 +1412,9 @@ a{color:inherit;text-decoration:none}
       alt_m5:"김이 오르는 찻잔과 플루메리아 옆에서 차를 따르는 토기 주전자.",
       alt_br:"클로버 스파에서 트리트먼트 후 따뜻한 허브차를 따르는 모습.",
       js_nochat:"채팅 채널 미연결", js_nopdf:"PDF 준비 중", js_nopage:"페이지 준비 중",
+      js_nokenh:"아직 연결되지 않은 채널", ft_h_zalo:"지점별 Zalo", ft_wechat:"WeChat",
+      al_zalo:"다낭점 Zalo로 문의", al_kakao:"카카오톡으로 문의",
+      al_wa:"다낭점 WhatsApp으로 문의", al_fb:"클로버 스파 페이스북",
       menu_h:"전체 메뉴", menu_dl:"PDF 내려받기", al_menu_dong:"메뉴 닫기",
       menu_note:"메뉴의 가격 단위는 베트남 동입니다. 지점별 현재 적용 요금은 리셉션에 문의해 주세요.",
       mn_p03:"시그니처 페이지 - 클로버 스파의 대표 트리트먼트 두 가지 소개.",
@@ -1470,6 +1494,9 @@ a{color:inherit;text-decoration:none}
       alt_m5:"陶壶正在倒茶，热气升起，旁边是茶杯与鸡蛋花。",
       alt_br:"Clover Spa 疗程结束后倒上的热草本茶。",
       js_nochat:"聊天渠道尚未接通", js_nopdf:"PDF 尚未准备", js_nopage:"页面建设中",
+      js_nokenh:"该渠道尚未接通", ft_h_zalo:"各分店 Zalo", ft_wechat:"微信",
+      al_zalo:"通过 Zalo 联系岘港店", al_kakao:"通过 KakaoTalk 联系",
+      al_wa:"通过 WhatsApp 联系岘港店", al_fb:"Clover Spa 脸书主页",
       menu_h:"完整菜单", menu_dl:"下载 PDF", al_menu_dong:"关闭菜单",
       menu_note:"菜单价格以越南盾计。各分店当前适用价格请向前台确认。",
       mn_p03:"Signature 页面 — 介绍 Clover Spa 的两款招牌疗程。",
@@ -1549,6 +1576,9 @@ a{color:inherit;text-decoration:none}
       alt_m5:"Глиняный чайник наливает чай, пар поднимается рядом с чашкой.",
       alt_br:"Горячий травяной чай после процедуры в Clover Spa.",
       js_nochat:"Чат не подключён", js_nopdf:"PDF ещё не готов", js_nopage:"Страница в работе",
+      js_nokenh:"Канал пока не подключён", ft_h_zalo:"Zalo по филиалам", ft_wechat:"WeChat",
+      al_zalo:"Написать в Zalo (Дананг)", al_kakao:"Написать в KakaoTalk",
+      al_wa:"Написать в WhatsApp (Дананг)", al_fb:"Clover Spa в Facebook",
       menu_h:"Полное меню", menu_dl:"Скачать PDF", al_menu_dong:"Закрыть меню",
       menu_note:"Цены в меню указаны во вьетнамских донгах. Актуальные цены в каждом филиале уточняйте на ресепшене.",
       mn_p03:"Страница Signature — два фирменных ритуала Clover Spa.",
@@ -1580,6 +1610,7 @@ a{color:inherit;text-decoration:none}
     VI.js_nochat = 'Chưa nối kênh chat';
     VI.js_nopdf = 'Chưa có file PDF';
     VI.js_nopage = 'Trang đang xây';
+    VI.js_nokenh = 'Chưa nối kênh này';
 
     /* Menu đầy đủ: chú thích và mô tả 10 trang. Không nằm sẵn trong HTML vì
        lớp phủ chỉ được dựng khi khách bấm mở, nên phải khai bản gốc ở đây. */
@@ -1710,7 +1741,8 @@ a{color:inherit;text-decoration:none}
     a.addEventListener('click', function (e) {
       e.preventDefault();
       var t = a.querySelector('span') || a, cu = t.textContent;
-      t.textContent = tra(a.dataset.chuaCo === 'pdf' ? 'js_nopdf' : 'js_nopage');
+      var ma = a.dataset.chuaCo;
+      t.textContent = tra(ma === 'pdf' ? 'js_nopdf' : ma === 'kenh' ? 'js_nokenh' : 'js_nopage');
       setTimeout(function () { t.textContent = cu; }, 1800);
     });
   });
