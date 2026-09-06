@@ -23,9 +23,10 @@ Trang đang ở giai đoạn duyệt thiết kế. Những phần dưới đây 
 | Banner 2/9 | Chiến dịch đã hết hạn |
 | 3 link Chính sách ở footer | Chưa có trang, đang trỏ `#` |
 
-> **Lưu ý giá:** bảng giá hiển thị trên trang là số demo, **không khớp với menu
-> chính thức** mở từ nút "Xem menu đầy đủ". Ví dụ Massage Ốc Biển: bảng ghi 690,
-> menu ghi 899. Phải đồng bộ theo menu trước khi phát hành.
+> **Giá đã đồng bộ theo menu chính thức** (06/09/2026). Hai chỗ còn khác menu,
+> đều do khách chốt: Massage Ốc Biển ghi 90′ (menu in 60′/90′) và Chăm Sóc Da Mặt
+> ghi 45′ · 420 (menu in 60′/90′). Bảng giá trên trang chỉ có 8 dòng theo thiết kế,
+> menu đầy đủ 10 trang xem ở nút "Xem menu đầy đủ".
 
 Mọi chỗ cần dữ liệu thật đều được đánh dấu bằng `CẦN DỮ LIỆU THẬT` ngay trong mã nguồn:
 
