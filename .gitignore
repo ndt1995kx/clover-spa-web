@@ -35,6 +35,8 @@ images/phong-gio-yen.jpg
 
 # --- Ket qua dung, sinh lai bang lenh nen khong day len ---
 dist/
+# 16 ban SVG da dich, moi file 2,4 MB vi nhung anh nen -> 41 MB, khong day len
+_menu-dich/
 _build/node_modules/
 
 # --- He dieu hanh ---
