@@ -68,6 +68,11 @@ nhau không chừa khe, đọc như đang cầm quyển menu:
 | 4 | P9 · bảng giá Kid / Mẹ Bầu / Foot | P10 · giới thiệu Chăm Sóc Đặc Biệt |
 | 5 | P11 · COMBO Massage | P12 · COUPLE Massage |
 
+Ảnh xuất từ bộ PNG gốc 2000×2798 khách gửi 06/09/2026, thu về 1600×2238,
+WebP chất lượng 90. Bản PDF tải về dựng lại từ chính bộ ảnh đó — **không còn lớp
+chữ chọn được** như bản cũ, vì Figma chỉ xuất PNG. Muốn PDF có chữ thật thì xuất
+PDF từ Figma rồi thay file `files/clover-spa-menu.pdf`.
+
 Dưới 900px hai trang tách ra xếp dọc cho chữ đủ lớn.
 Dưới 620px **bỏ hẳn bốn trang giới thiệu P3, P6, P7, P10**, chỉ giữ sáu trang bảng
 giá (P4, P5, P8, P9, P11, P12) — trên điện thoại khách cần giá chứ không cần đọc
@@ -92,7 +97,7 @@ xem 25 trang dịch vụ đang có thứ hạng trên site cũ sẽ chuyển hư
 index.html              trang gốc · HTML + CSS + JS trong một file · SỬA Ở ĐÂY
 images/logo-clover.png  logo
 images/design/          13 ảnh đang dùng
-images/menu/            10 trang menu · WebP + JPG dự phòng
+images/menu/            10 trang menu 1600×2238 · WebP + JPG dự phòng
 files/                  menu đầy đủ bản PDF để khách tải
 robots.txt              cho tên miền thật
 sitemap.xml             cho tên miền thật
