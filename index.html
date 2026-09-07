@@ -383,14 +383,6 @@ a{color:inherit;text-decoration:none}
 .br-side .photo img{width:100%;height:100%;object-fit:cover;
       transition:transform 1.1s var(--ease),opacity .4s var(--ease)}
 .br-side .photo img.doi{opacity:0}
-.br-kenh{margin-top:14px;display:flex;flex-wrap:wrap;gap:8px}
-.br-kenh a{display:inline-flex;align-items:center;height:30px;padding:0 12px;
-      border:1px solid var(--line-2);border-radius:var(--r-pill);
-      font-size:12px;font-weight:500;letter-spacing:.02em;color:var(--ink-2);
-      transition:background var(--dur) var(--ease),border-color var(--dur) var(--ease),
-                 color var(--dur) var(--ease)}
-.br-kenh a:hover,.br-kenh a:focus-visible{background:var(--ink);border-color:var(--ink);
-      color:var(--ivory)}
 .br-addr{margin-top:18px}
 .br-addr b{display:block;font-family:var(--f-sans);font-weight:700;font-size:12px;
       letter-spacing:.1em;text-transform:uppercase;color:var(--deep);margin-bottom:5px}
@@ -919,8 +911,6 @@ a{color:inherit;text-decoration:none}
          CẦN DỮ LIỆU THẬT: giờ mở cửa riêng của từng chi nhánh, nếu khác nhau. -->
     <div class="map-wrap" id="mapWrap">
 
-      <!-- CẦN DỮ LIỆU THẬT: địa chỉ đầy đủ và ảnh riêng của Huế, Nha Trang, Đà Lạt.
-           Ảnh dưới đây tạm mượn từ thư viện chung để xem được tương tác. -->
       <div class="pills rv-st">
         <button type="button" class="pill main" data-city="danang" data-tel="tel:+84909433086" data-zalo="https://zalo.me/0909433086" data-wa="https://wa.me/84909433086" data-fb="https://www.facebook.com/share/1Jk3A3zc5U/?mibextid=wwXIfr" data-kakao="https://qr.kakao.com/talk/yvgN7MDPFwBNz2XQxgGdSjrCqrY-" data-mess="" data-line="" data-map="" data-altkey="alt_cn_dn" aria-pressed="true"
           data-img="images/design/cn-danang.jpg" data-addr="266 Trần Phú, Đà Nẵng">
@@ -955,9 +945,6 @@ a{color:inherit;text-decoration:none}
         <div class="photo rv-img"><img id="brAnh" src="images/design/cn-danang.jpg" width="800" height="816" loading="lazy" decoding="async"
           alt="Mặt tiền Clover Spa Đà Nẵng sơn vàng, biển chữ xanh và đèn lồng treo trong phòng chờ." data-i18n-alt="alt_cn_dn"></div>
         <p class="br-addr"><b id="brTen">Đà Nẵng</b><span id="brDiaChi">266 Trần Phú, Đà Nẵng</span></p>
-        <!-- Kênh liên hệ của chi nhánh đang chọn, dựng bằng JS từ các
-             thuộc tính data- trên nút chi nhánh ở trên. -->
-        <div class="br-kenh" id="brKenh"></div>
       </div>
     </div>
   </div>
@@ -1942,30 +1929,6 @@ a{color:inherit;text-decoration:none}
     });
   }
 
-  /* Kênh liên hệ của từng chi nhánh. Thứ tự cố định; chi nhánh nào thiếu kênh
-     nào thì bỏ qua kênh đó chứ không hiện ô trống. */
-  var KENH = [
-    ['tel',   'Gọi'],       ['zalo', 'Zalo'],  ['wa',   'WhatsApp'],
-    ['fb',    'Facebook'],  ['kakao', 'KakaoTalk'],
-    ['mess',  'Messenger'], ['line', 'LINE'],  ['map',  'Bản đồ']
-  ];
-  var oKenh = document.getElementById('brKenh');
-
-  function veKenh(b) {
-    if (!oKenh) return;
-    oKenh.innerHTML = '';
-    KENH.forEach(function (k) {
-      var d = b.dataset[k[0]];
-      if (!d) return;
-      var a = document.createElement('a');
-      a.href = d;
-      a.textContent = k[0] === 'tel' ? tra('br_goi') : k[1];
-      if (d.indexOf('http') === 0) { a.rel = 'noopener'; a.target = '_blank'; }
-      a.setAttribute('aria-label', k[1] + ' · ' + b.querySelector('b').textContent);
-      oKenh.appendChild(a);
-    });
-  }
-
   function chonChiNhanh(b) {
     document.querySelectorAll('.pill[data-city]').forEach(function (x) {
       var chon = x === b;
@@ -1983,7 +1946,6 @@ a{color:inherit;text-decoration:none}
     }
     if (brTen) brTen.textContent = b.querySelector('b').textContent;
     if (brDiaChi) brDiaChi.textContent = b.dataset.addr || tra('br_addr_soon');
-    veKenh(b);
     if (brAnh && b.dataset.img && brAnh.getAttribute('src') !== b.dataset.img) {
       brAnh.classList.add('doi');
       var xong = function () { brAnh.classList.remove('doi'); brAnh.removeEventListener('load', xong); };
@@ -2003,8 +1965,6 @@ a{color:inherit;text-decoration:none}
   if ('ResizeObserver' in window && khungBanDo) new ResizeObserver(veDuongNoi).observe(khungBanDo);
   /* ghim hiện dần khi bản đồ sáng, vẽ lại đường nối cho khớp */
   setTimeout(veDuongNoi, 1400);
-  var buocDau = document.querySelector('.pill.main[data-city]');
-  if (buocDau) veKenh(buocDau);
 
   /* --- Chữ chạy ------------------------------------------------------
      Vòng lặp chỉ liền mạch khi MỖI NỬA của dải rộng hơn khung nhìn; nếu
