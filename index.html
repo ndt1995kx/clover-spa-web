@@ -2182,7 +2182,13 @@ a{color:inherit;text-decoration:none}
       else { o.textContent = k[1]; }
       oKenhXn.appendChild(o);
     });
+    /* Thứ tự hiển thị theo dải bong bóng, nhưng mặc định là Zalo chứ không
+       phải mục đầu danh sách: khách nước ngoài không sửa gì mà bấm đặt lịch
+       thì rơi vào kênh nhắn tin chứ không phải gọi thoại. Lựa chọn khách đã
+       tự đổi thì luôn được giữ; chỉ khi chi nhánh mới không có kênh đó mới
+       lùi về Zalo. */
     if (giu && oKenhXn.querySelector('option[value="' + giu + '"]')) oKenhXn.value = giu;
+    else if (oKenhXn.querySelector('option[value="zalo"]')) oKenhXn.value = 'zalo';
   }
 
   if (oChiNhanh) {
