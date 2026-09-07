@@ -39,6 +39,9 @@ dist/
 _menu-dich/
 _build/node_modules/
 
+# --- Anh goc khach gui, chua qua xu ly (nang, ten file bam) ---
+images/location/
+
 # --- He dieu hanh ---
 Thumbs.db
 desktop.ini
