@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="vi" data-ngonngu="VI">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
+<!-- =====================================================================
+     TRANG MAU · mot trang dich vu dung theo dung kien truc hub-and-spoke.
+
+     Muc dich: cho thay mot trang dich vu trong he thiet ke moi trong the
+     nao, va no khac trang cu o cho nao ve SEO. Noi dung lay tu chinh
+     https://cloverspa.vn/massage-chan-tai-da-nang.html - khong bia them.
+
+     Nhung gi trang cu KHONG co ma trang nay co:
+       - canonical
+       - JSON-LD: BreadcrumbList + Service + LocalBusiness + FAQPage
+       - hreflang 5 ngon ngu
+       - H1 co ten thanh pho
+       - breadcrumb hien thi cho khach
+       - lien ket len truc /dich-vu/ va sang cac dich vu anh em
+       - gia that lay tu menu chinh thuc
+     ===================================================================== -->
+
+<title>Massage Chân Đà Nẵng · Bấm huyệt đá nóng 30 phút | Clover Spa</title>
+<meta name="description" content="Massage chân bấm huyệt kết hợp đá nóng tại Clover Spa, 266 Trần Phú, Hải Châu, Đà Nẵng. 30 phút 460.000đ. Mở cửa 9:00-23:00, đặt lịch qua Zalo.">
+<meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1">
+<link rel="canonical" href="https://cloverspa.vn/dich-vu/massage-chan-da-nang.html">
+
+<link rel="alternate" hreflang="vi" href="https://cloverspa.vn/dich-vu/massage-chan-da-nang.html">
+<link rel="alternate" hreflang="en" href="https://cloverspa.vn/en/services/foot-massage-da-nang.html">
+<link rel="alternate" hreflang="ko" href="https://cloverspa.vn/kr/dich-vu/massage-chan-da-nang.html">
+<link rel="alternate" hreflang="zh" href="https://cloverspa.vn/cn/dich-vu/massage-chan-da-nang.html">
+<link rel="alternate" hreflang="ru" href="https://cloverspa.vn/ru/dich-vu/massage-chan-da-nang.html">
+<link rel="alternate" hreflang="x-default" href="https://cloverspa.vn/dich-vu/massage-chan-da-nang.html">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Clover Spa">
+<meta property="og:locale" content="vi_VN">
+<meta property="og:title" content="Massage Chân Đà Nẵng · Bấm huyệt đá nóng | Clover Spa">
+<meta property="og:description" content="Massage chân bấm huyệt kết hợp đá nóng tại 266 Trần Phú, Hải Châu, Đà Nẵng. 30 phút 460.000đ.">
+<meta property="og:url" content="https://cloverspa.vn/dich-vu/massage-chan-da-nang.html">
+<meta property="og:image" content="https://cloverspa.vn/images/design/the-foot.jpg">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300..700&family=Cormorant+Garamond:wght@300;400&family=Be+Vietnam+Pro:wght@300;400;500;600;700;800&display=swap">
+
+<style>
+/* ---------------------------------------------------------------------
+   Bien lay nguyen tu index.html de hai trang dung chung mot he mau,
+   he chu va he bo goc. Khong dat them mau moi.
+   --------------------------------------------------------------------- */
+:root{
+  --gold:#F8C850; --gold-2:#F2C63F; --gold-3:#F4CD6B;
+  --ivory:#FFF9E9; --cream:#FBF4DD; --paper:#F4F1EA; --input:#FFFDF6;
+  --ink:#17452B; --ink-2:#2A5C3C; --olive:#3D541F; --leaf:#3E7A4E;
+  --deep:#173A2C; --night:#0F3320; --pine:#365344;
+  --hint:#9A917F;
+  --muted:rgba(23,58,44,.78); --muted-up:rgba(255,249,233,.7);
+  --line:rgba(23,69,43,.2); --line-2:rgba(23,69,43,.4); --line-up:rgba(248,200,80,.3);
+
+  --f-serif:'Fraunces',Georgia,'Times New Roman',serif;
+  --f-serif-2:'Cormorant Garamond',Georgia,serif;
+  --f-sans:'Be Vietnam Pro','Segoe UI',system-ui,sans-serif;
+
+  --maxw:1440px;
+  --gutter:clamp(1.25rem,8.9vw,128px);
+  --edge:clamp(1.25rem,3.9vw,56px);
+  --r-2:12px; --r-3:20px; --r-4:32px; --r-pill:999px;
+  --dur:280ms; --ease:cubic-bezier(.22,.68,.24,1);
+  --nav-h:75px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);
+     font-family:var(--f-sans);font-size:16px;font-weight:300;line-height:1.75;
+     -webkit-font-smoothing:antialiased}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit}
+
+/* ------------------------------------------------------------- NAV --- */
+.nav{position:sticky;top:0;z-index:60;background:var(--gold);
+     border-bottom:1px solid rgba(23,69,43,.14)}
+.nav .in{max-width:var(--maxw);margin:0 auto;height:var(--nav-h);
+     padding:0 var(--edge);display:flex;align-items:center;gap:22px}
+.nav .logo{font-family:var(--f-serif);font-size:21px;font-weight:600;
+     letter-spacing:.02em;text-decoration:none;color:var(--ink);white-space:nowrap}
+.nav .logo small{display:block;font-family:var(--f-sans);font-size:9.5px;
+     font-weight:600;letter-spacing:.22em;text-transform:uppercase;
+     color:var(--ink-2);margin-top:-2px}
+.nav ul{list-style:none;display:flex;gap:26px;margin:0;padding:0;margin-left:auto}
+.nav ul a{text-decoration:none;font-size:12.5px;font-weight:600;
+     letter-spacing:.13em;text-transform:uppercase;color:var(--ink);
+     padding:6px 0;border-bottom:1.5px solid transparent;transition:border-color var(--dur) var(--ease)}
+.nav ul a:hover,.nav ul a:focus-visible,.nav ul a[aria-current]{border-bottom-color:var(--ink)}
+.btn{display:inline-flex;align-items:center;justify-content:center;
+     height:44px;padding:0 26px;border-radius:var(--r-pill);text-decoration:none;
+     font-size:12.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;
+     border:0;cursor:pointer;transition:transform var(--dur) var(--ease),background var(--dur) var(--ease)}
+.btn-dark{background:var(--ink);color:var(--gold)}
+.btn-dark:hover,.btn-dark:focus-visible{background:var(--ink-2);transform:translateY(-2px)}
+.btn-gold{background:var(--gold);color:var(--ink)}
+.btn-gold:hover,.btn-gold:focus-visible{background:var(--gold-3);transform:translateY(-2px)}
+@media(max-width:900px){ .nav ul{display:none} }
+
+/* ------------------------------------------------------ BREADCRUMB --- */
+.bc{max-width:var(--maxw);margin:0 auto;padding:20px var(--gutter) 0}
+.bc ol{list-style:none;display:flex;flex-wrap:wrap;gap:8px;margin:0;padding:0;
+     font-size:12.5px;letter-spacing:.04em;color:var(--muted)}
+.bc li::after{content:"›";margin-left:8px;color:var(--hint)}
+.bc li:last-child::after{content:""}
+.bc a{text-decoration:none;border-bottom:1px solid var(--line)}
+.bc a:hover{border-bottom-color:var(--ink)}
+.bc [aria-current]{font-weight:600;color:var(--ink)}
+
+/* ------------------------------------------------------------ HERO --- */
+.mo{max-width:var(--maxw);margin:0 auto;padding:34px var(--gutter) 0;
+    display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(2rem,4.5vw,64px);
+    align-items:center}
+@media(max-width:900px){ .mo{grid-template-columns:1fr;padding-top:22px} }
+.eyebrow{font-size:11.5px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;
+     color:var(--leaf);margin:0 0 14px}
+h1{font-family:var(--f-serif);font-weight:400;font-size:clamp(32px,5.2vw,58px);
+   line-height:1.06;letter-spacing:-.015em;margin:0;text-wrap:balance}
+h1 em{display:block;font-style:normal;font-family:var(--f-serif-2);
+   font-size:.52em;color:var(--leaf);margin-top:12px;letter-spacing:.01em}
+.lede{font-size:17px;line-height:1.72;color:var(--muted);margin:22px 0 0;max-width:52ch}
+.mo-anh{border-radius:var(--r-4);overflow:hidden;aspect-ratio:4/3;background:var(--cream)}
+.mo-anh img{width:100%;height:100%;object-fit:cover}
+
+/* --------------------------------------------------------- BANG GIA -- */
+.gia{display:flex;flex-wrap:wrap;gap:10px;margin:26px 0 0}
+.gia b{display:inline-flex;align-items:baseline;gap:9px;background:var(--ivory);
+   border:1px solid var(--line);border-radius:var(--r-pill);padding:9px 18px;
+   font-weight:600;font-size:15px}
+.gia b span{font-weight:300;font-size:12.5px;letter-spacing:.1em;
+   text-transform:uppercase;color:var(--leaf)}
+
+/* ------------------------------------------------------------ THAN --- */
+main{display:block}
+.than{max-width:var(--maxw);margin:0 auto;padding:clamp(3rem,6vw,86px) var(--gutter) 0;
+   display:grid;grid-template-columns:minmax(0,1fr) 290px;gap:clamp(2rem,4.5vw,64px);
+   align-items:start}
+@media(max-width:1000px){ .than{grid-template-columns:1fr} }
+.bai{max-width:68ch}
+.bai h2{font-family:var(--f-serif);font-weight:400;font-size:clamp(24px,3.1vw,34px);
+   line-height:1.18;letter-spacing:-.01em;margin:54px 0 0;text-wrap:balance}
+.bai h2:first-child{margin-top:0}
+.bai h3{font-family:var(--f-sans);font-weight:600;font-size:17.5px;
+   line-height:1.4;margin:30px 0 0}
+.bai p{margin:14px 0 0;color:var(--muted)}
+.bai ul{margin:16px 0 0;padding-left:0;list-style:none}
+.bai ul li{position:relative;padding-left:26px;margin:11px 0;color:var(--muted)}
+.bai ul li::before{content:"";position:absolute;left:4px;top:12px;width:7px;height:7px;
+   border-radius:50%;background:var(--gold-2);box-shadow:0 0 0 1px var(--line)}
+.bai ul li b{color:var(--ink);font-weight:600}
+.rule{height:1px;background:var(--line);margin:52px 0 0}
+
+/* ------------------------------------------------------------- FAQ --- */
+.faq{margin-top:16px;border-top:1px solid var(--line)}
+.faq details{border-bottom:1px solid var(--line)}
+.faq summary{cursor:pointer;list-style:none;padding:18px 34px 18px 0;position:relative;
+   font-weight:600;font-size:16px;color:var(--ink)}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";position:absolute;right:6px;top:15px;font-size:22px;
+   font-weight:300;color:var(--leaf);transition:transform var(--dur) var(--ease)}
+.faq details[open] summary::after{transform:rotate(45deg)}
+.faq p{margin:0 0 18px;color:var(--muted);max-width:62ch}
+
+/* ------------------------------------------------------------ CANH --- */
+.canh{position:sticky;top:calc(var(--nav-h) + 22px);display:grid;gap:18px}
+@media(max-width:1000px){ .canh{position:static} }
+.hop{background:var(--ivory);border:1px solid var(--line);border-radius:var(--r-3);
+   padding:24px 22px}
+.hop h4{font-family:var(--f-sans);font-size:11px;font-weight:700;letter-spacing:.2em;
+   text-transform:uppercase;color:var(--leaf);margin:0 0 14px}
+.hop p{margin:0;font-size:14.5px;line-height:1.7;color:var(--muted)}
+.hop .dc{font-weight:600;color:var(--ink)}
+.hop .btn{width:100%;margin-top:16px}
+.dsv{list-style:none;margin:0;padding:0}
+.dsv li{border-top:1px solid var(--line)}
+.dsv li:first-child{border-top:0}
+.dsv a{display:flex;justify-content:space-between;gap:12px;align-items:baseline;
+   padding:12px 0;text-decoration:none;font-size:14.5px;transition:color var(--dur) var(--ease)}
+.dsv a:hover,.dsv a:focus-visible{color:var(--leaf)}
+.dsv i{font-style:normal;font-size:12.5px;color:var(--hint);white-space:nowrap}
+
+/* ------------------------------------------------------------- CTA --- */
+.cta{max-width:var(--maxw);margin:clamp(3.5rem,7vw,96px) auto 0;padding:0 var(--gutter)}
+.cta .in{background:var(--ink);color:var(--ivory);border-radius:var(--r-4);
+   padding:clamp(2.2rem,5vw,64px);display:grid;grid-template-columns:1fr auto;
+   gap:32px;align-items:center}
+@media(max-width:800px){ .cta .in{grid-template-columns:1fr} }
+.cta h2{font-family:var(--f-serif);font-weight:400;font-size:clamp(24px,3.4vw,38px);
+   line-height:1.14;margin:0;color:var(--ivory);text-wrap:balance}
+.cta p{margin:12px 0 0;color:var(--muted-up);font-size:15.5px;max-width:46ch}
+
+/* ------------------------------------------------------------ CHAN --- */
+.chan{margin-top:clamp(3.5rem,7vw,96px);background:var(--night);color:var(--ivory);
+   padding:clamp(2.5rem,5vw,72px) 0 34px}
+.chan .in{max-width:var(--maxw);margin:0 auto;padding:0 var(--gutter);
+   display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:40px}
+@media(max-width:800px){ .chan .in{grid-template-columns:1fr;gap:28px} }
+.chan h5{font-family:var(--f-sans);font-size:11px;font-weight:700;letter-spacing:.2em;
+   text-transform:uppercase;color:var(--gold);margin:0 0 14px}
+.chan p,.chan li{color:var(--muted-up);font-size:14.5px;line-height:1.75;margin:0}
+.chan ul{list-style:none;margin:0;padding:0}
+.chan li+li{margin-top:7px}
+.chan a{text-decoration:none;border-bottom:1px solid var(--line-up)}
+.chan a:hover{border-bottom-color:var(--gold)}
+.chan .duoi{max-width:var(--maxw);margin:40px auto 0;padding:22px var(--gutter) 0;
+   border-top:1px solid var(--line-up);font-size:12.5px;color:var(--muted-up)}
+
+/* ---------------------------------------------------------- IN AN ---- */
+@media print{ .nav,.cta,.canh{display:none} body{background:#fff} }
+</style>
+
+<!-- =====================================================================
+     DU LIEU CO CAU TRUC. Trang cu khong co gi ca; day la phan chenh
+     lech lon nhat so voi doi thu dang dung dau.
+     ===================================================================== -->
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "BreadcrumbList",
+   "@id": "https://cloverspa.vn/dich-vu/massage-chan-da-nang.html#duong-dan",
+   "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Trang chủ", "item": "https://cloverspa.vn/" },
+    { "@type": "ListItem", "position": 2, "name": "Dịch vụ", "item": "https://cloverspa.vn/dich-vu/" },
+    { "@type": "ListItem", "position": 3, "name": "Massage chân Đà Nẵng" }
+   ]
+  },
+  {
+   "@type": "LocalBusiness",
+   "@id": "https://cloverspa.vn/#danang",
+   "name": "Clover Spa Đà Nẵng",
+   "url": "https://cloverspa.vn/",
+   "image": "https://cloverspa.vn/images/design/cn-danang.jpg",
+   "telephone": "+84909433086",
+   "email": "cloverspadanang@gmail.com",
+   "priceRange": "130.000đ - 2.780.000đ",
+   "currenciesAccepted": "VND",
+   "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "266 Trần Phú",
+    "addressLocality": "Phường Phước Ninh, Quận Hải Châu",
+    "addressRegion": "Đà Nẵng",
+    "addressCountry": "VN"
+   },
+   "openingHoursSpecification": [{
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+    "opens": "09:00", "closes": "23:00"
+   }],
+   "availableLanguage": ["vi","en","ko","zh","ru"]
+  },
+  {
+   "@type": "Service",
+   "@id": "https://cloverspa.vn/dich-vu/massage-chan-da-nang.html#dich-vu",
+   "name": "Massage chân bấm huyệt kết hợp đá nóng",
+   "serviceType": "Massage chân",
+   "url": "https://cloverspa.vn/dich-vu/massage-chan-da-nang.html",
+   "provider": { "@id": "https://cloverspa.vn/#danang" },
+   "areaServed": { "@type": "City", "name": "Đà Nẵng" },
+   "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Các gói massage chân tại Clover Spa Đà Nẵng",
+    "itemListElement": [
+     {
+      "@type": "Offer",
+      "itemOffered": { "@type": "Service", "name": "Massage chân · bấm huyệt và đá nóng · 30 phút" },
+      "price": "460000", "priceCurrency": "VND",
+      "availability": "https://schema.org/InStock"
+     }
+    ]
+   }
+  },
+  {
+   "@type": "FAQPage",
+   "@id": "https://cloverspa.vn/dich-vu/massage-chan-da-nang.html#hoi-dap",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "Massage chân tại Clover Spa Đà Nẵng kéo dài bao lâu?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Gói massage chân bấm huyệt kết hợp đá nóng kéo dài 30 phút. Gói Foot Love Massage có thêm bước tẩy da chết chân, kéo dài 60 phút."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Clover Spa Đà Nẵng mở cửa mấy giờ?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Chi nhánh Đà Nẵng tại 266 Trần Phú mở cửa từ 9:00 đến 23:00 tất cả các ngày trong tuần."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Có cần đặt lịch trước khi đến massage chân không?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Không bắt buộc, nhưng nên đặt trước để chắc chắn có kỹ thuật viên và phòng trống vào khung giờ bạn muốn. Đặt lịch qua Zalo, Facebook, KakaoTalk hoặc gọi trực tiếp 0909 433 086."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Massage chân có phù hợp với người đứng nhiều, đi bộ nhiều không?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Có. Các kỹ thuật massage giúp giảm sưng và đau nhức, đặc biệt hữu ích cho những người thường xuyên đứng hoặc đi lại nhiều."
+     }
+    }
+   ]
+  }
+ ]
+}
+</script>
+</head>
+<body>
+
+<header class="nav">
+  <div class="in">
+    <a class="logo" href="/">Clover Spa<small>Spa &amp; Massage</small></a>
+    <ul>
+      <li><a href="/dich-vu/" aria-current="true">Liệu trình</a></li>
+      <li><a href="/#bang-gia">Bảng giá</a></li>
+      <li><a href="/#chi-nhanh">Chi nhánh</a></li>
+      <li><a href="/#khoanh-khac">Về Clover Spa</a></li>
+    </ul>
+    <a class="btn btn-dark" href="/#dat-lich">Đặt lịch</a>
+  </div>
+</header>
+
+<nav class="bc" aria-label="Đường dẫn">
+  <ol>
+    <li><a href="/">Trang chủ</a></li>
+    <li><a href="/dich-vu/">Dịch vụ</a></li>
+    <li aria-current="page">Massage chân Đà Nẵng</li>
+  </ol>
+</nav>
+
+<div class="mo">
+  <div>
+    <p class="eyebrow">Đà Nẵng · 266 Trần Phú, Hải Châu</p>
+    <h1>Massage Chân Đà Nẵng<em>Bấm huyệt kết hợp đá nóng</em></h1>
+    <p class="lede">Chăm sóc từ đầu gối xuống lòng bàn chân bằng các động tác miết, day và ấn huyệt, kết hợp đá nóng. Dành cho đôi chân đã đi bộ cả ngày quanh cầu Rồng, chợ Hàn hoặc bãi biển Mỹ Khê.</p>
+    <!-- CẦN DỮ LIỆU THẬT: giá gói "Foot Tẩy Massage" 60 phút. Bảng giá
+         chính thức mới chỉ có Massage Chân 30′ = 460.000đ. Không suy ra
+         giá gói thứ hai. -->
+    <div class="gia">
+      <b>460.000đ <span>30 phút</span></b>
+    </div>
+  </div>
+  <div class="mo-anh">
+    <img src="../images/design/the-foot.jpg" width="1600" height="1179" fetchpriority="high"
+         alt="Kỹ thuật viên Clover Spa bấm huyệt lòng bàn chân khách trong liệu trình massage chân tại Đà Nẵng.">
+  </div>
+</div>
+
+<main>
+<div class="than">
+
+  <article class="bai">
+
+    <h2>Hai kiểu massage chân tại Clover Spa Đà Nẵng</h2>
+    <p>Clover Spa Đà Nẵng nổi tiếng với các dịch vụ massage chuyên nghiệp, mang lại sự thư giãn và sức khoẻ tối ưu cho khách hàng. Trong số các dịch vụ nổi bật, massage chân là một lựa chọn không thể bỏ qua, với hai loại hình chính.</p>
+
+    <h3>Massage Chân · bấm huyệt kết hợp đá nóng</h3>
+    <p>Liệu trình tập trung vào các huyệt đạo ở lòng bàn chân và bắp chân. Kỹ thuật viên dùng lực ngón tay và cườm tay để miết, day và ấn dọc theo đường kinh lạc, sau đó dùng đá nóng lăn đều để làm ấm và giãn cơ. Liệu trình kéo dài 30 phút.</p>
+
+    <!-- CẦN THỐNG NHẤT TÊN: menu chính thức ghi "Foot Tẩy Massage" (P9, mã p9d),
+         website đang chạy gọi là "Foot Love Massage". Hai nơi đang gọi khác nhau
+         cùng một liệu trình — cần chốt một tên rồi dùng thống nhất. -->
+    <h3>Foot Tẩy Massage · tẩy da chết chân và massage bấm huyệt đá nóng</h3>
+    <p>Bắt đầu bằng bước ngâm chân và tẩy da chết, làm sạch vùng gót và mu bàn chân, sau đó chuyển sang toàn bộ quy trình bấm huyệt kết hợp đá nóng như trên. Phù hợp với khách muốn chăm sóc cả về cảm giác lẫn bề mặt da. Liệu trình kéo dài 60 phút.</p>
+
+    <div class="rule"></div>
+
+    <h2>Lợi ích massage chân mang lại</h2>
+    <ul>
+      <li><b>Giảm sưng và đau nhức.</b> Các kỹ thuật massage giúp giảm sưng và đau nhức, đặc biệt hữu ích cho những người thường xuyên đứng hoặc đi lại nhiều.</li>
+      <li><b>Thư giãn tức thì.</b> Hơi ấm từ đá nóng cùng nhịp ấn đều đặn giúp cơ thể thả lỏng ngay trong buổi trị liệu.</li>
+      <li><b>Cải thiện tuần hoàn.</b> Động tác miết dọc theo bắp chân hỗ trợ lưu thông máu ở chi dưới.</li>
+      <li><b>Chăm sóc da vùng chân.</b> Riêng gói Foot Love Massage có thêm bước tẩy da chết, làm mềm vùng gót chân.</li>
+    </ul>
+
+    <div class="rule"></div>
+
+    <h2>Không gian tại Clover Spa Đà Nẵng</h2>
+    <p>Không gian tại Clover Spa Đà Nẵng được thiết kế tinh tế, mang lại cảm giác thoải mái và yên bình ngay từ khi bước vào. Với gam màu nhẹ nhàng, ánh sáng dịu mắt và âm nhạc êm dịu, spa tạo nên một không gian lý tưởng để thư giãn.</p>
+    <p>Phòng massage chân được trang bị ghế massage hiện đại, mang lại sự thoải mái tối đa cho khách hàng. Mỗi khu vực đều được bố trí riêng biệt, đảm bảo sự riêng tư và tĩnh lặng cho từng khách hàng.</p>
+
+    <div class="rule"></div>
+
+    <h2>Đường tới chi nhánh Đà Nẵng</h2>
+    <p>Chi nhánh nằm tại <b>266 Trần Phú, phường Phước Ninh, quận Hải Châu</b> — trục đường trung tâm chạy song song với sông Hàn, cách chợ Hàn khoảng 5 phút đi bộ và cách cầu Rồng chừng 10 phút. Mở cửa <b>9:00 – 23:00</b> tất cả các ngày.</p>
+
+    <div class="rule"></div>
+
+    <h2>Câu hỏi thường gặp</h2>
+    <div class="faq">
+      <details open>
+        <summary>Massage chân kéo dài bao lâu?</summary>
+        <p>Gói massage chân bấm huyệt kết hợp đá nóng kéo dài 30 phút. Gói Foot Love Massage có thêm bước tẩy da chết chân, kéo dài 60 phút.</p>
+      </details>
+      <details>
+        <summary>Clover Spa Đà Nẵng mở cửa mấy giờ?</summary>
+        <p>Chi nhánh Đà Nẵng tại 266 Trần Phú mở cửa từ 9:00 đến 23:00 tất cả các ngày trong tuần.</p>
+      </details>
+      <details>
+        <summary>Có cần đặt lịch trước không?</summary>
+        <p>Không bắt buộc, nhưng nên đặt trước để chắc chắn có kỹ thuật viên và phòng trống vào khung giờ bạn muốn. Đặt lịch qua Zalo, Facebook, KakaoTalk hoặc gọi trực tiếp 0909 433 086.</p>
+      </details>
+      <details>
+        <summary>Massage chân có phù hợp với người đi bộ nhiều không?</summary>
+        <p>Có. Các kỹ thuật massage giúp giảm sưng và đau nhức, đặc biệt hữu ích cho những người thường xuyên đứng hoặc đi lại nhiều.</p>
+      </details>
+    </div>
+
+  </article>
+
+  <aside class="canh">
+    <div class="hop">
+      <h4>Chi nhánh Đà Nẵng</h4>
+      <p class="dc">266 Trần Phú<br>Phường Phước Ninh, Quận Hải Châu</p>
+      <p style="margin-top:10px">Mở cửa 9:00 – 23:00<br>Điện thoại 0909 433 086</p>
+      <a class="btn btn-gold" href="/#dat-lich">Đặt lịch</a>
+    </div>
+
+    <div class="hop">
+      <h4>Liệu trình khác tại Đà Nẵng</h4>
+      <ul class="dsv">
+        <li><a href="/dich-vu/massage-co-truyen-da-nang.html">Massage Cổ Truyền <i>590.000đ</i></a></li>
+        <li><a href="/dich-vu/massage-oc-bien-da-nang.html">Massage Ốc Biển <i>899.000đ</i></a></li>
+        <li><a href="/dich-vu/massage-couple-da-nang.html">Massage Couple <i>1.380.000đ</i></a></li>
+        <li><a href="/dich-vu/massage-da-nong-da-nang.html">Massage Đá Nóng <i>Xem giá</i></a></li>
+        <li><a href="/dich-vu/">Xem tất cả liệu trình <i>→</i></a></li>
+      </ul>
+    </div>
+
+    <div class="hop">
+      <h4>Massage chân ở chi nhánh khác</h4>
+      <ul class="dsv">
+        <li><a href="https://cloverspahue.com/dich-vu/massage-chan-hue.html">Huế <i>40A Lê Lợi</i></a></li>
+        <li><a href="https://cloverspanhatrang.com/dich-vu/massage-chan-nha-trang.html">Nha Trang <i>28C Nguyễn Trung Trực</i></a></li>
+        <li><a href="https://cloverspadalat.com/dich-vu/massage-chan-da-lat.html">Đà Lạt <i>27/5 Hai Bà Trưng</i></a></li>
+      </ul>
+    </div>
+  </aside>
+
+</div>
+
+<section class="cta">
+  <div class="in">
+    <div>
+      <h2>Đặt lịch massage chân tại Đà Nẵng</h2>
+      <p>Xác nhận trong 5 phút qua Zalo, KakaoTalk hoặc Facebook. Huỷ miễn phí trước 3 giờ, không cần thanh toán trước.</p>
+    </div>
+    <a class="btn btn-gold" href="/#dat-lich">Đặt lịch ngay</a>
+  </div>
+</section>
+</main>
+
+<footer class="chan">
+  <div class="in">
+    <div>
+      <h5>Clover Spa</h5>
+      <p>Massage trị liệu và chăm sóc da tại Đà Nẵng, Huế, Nha Trang và Đà Lạt. Mở cửa 9:00 – 23:00 tất cả các ngày.</p>
+    </div>
+    <div>
+      <h5>Liệu trình</h5>
+      <ul>
+        <li><a href="/dich-vu/massage-chan-da-nang.html">Massage chân</a></li>
+        <li><a href="/dich-vu/massage-co-truyen-da-nang.html">Massage cổ truyền</a></li>
+        <li><a href="/dich-vu/massage-oc-bien-da-nang.html">Massage ốc biển</a></li>
+        <li><a href="/dich-vu/massage-couple-da-nang.html">Massage couple</a></li>
+      </ul>
+    </div>
+    <div>
+      <h5>Chi nhánh Đà Nẵng</h5>
+      <ul>
+        <li>266 Trần Phú, Phước Ninh, Hải Châu</li>
+        <li><a href="tel:+84909433086">0909 433 086</a></li>
+        <li><a href="https://zalo.me/0909433086" rel="noopener">Zalo</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="duoi">© 2026 Clover Spa · 266 Trần Phú, Phường Phước Ninh, Quận Hải Châu, Đà Nẵng</div>
+</footer>
+
+</body>
+</html>
