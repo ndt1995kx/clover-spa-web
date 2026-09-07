@@ -968,17 +968,26 @@ a{color:inherit;text-decoration:none}
   <div class="grid">
     <div class="rv">
       <h2 id="h-bk" class="sec-h" data-i18n="bk_h2">Đặt Lịch Ngay Hôm Nay</h2>
-      <p class="lede" data-i18n="bk_lede1">Xác nhận trong 5 phút qua WhatsApp, KakaoTalk, WeChat hoặc Zalo.</p>
+      <p class="lede" data-i18n="bk_lede1">Xác nhận trong 5 phút qua Zalo, WhatsApp, KakaoTalk hoặc Facebook.</p>
       <p class="lede" style="margin-top:8px" data-i18n="bk_lede2">Huỷ miễn phí trước 3 giờ.</p>
     </div>
 
     <form class="form rv-st" id="form" novalidate>
+      <div class="field full">
+        <label for="f-branch" data-i18n="bk_l_branch">Chi nhánh</label>
+        <select id="f-branch" name="branch">
+          <option value="danang">Đà Nẵng — 123 Trần Hưng Đạo, Sơn Trà</option>
+          <option value="hue">Huế — 40A Lê Lợi, Thuận Hóa</option>
+          <option value="nhatrang">Nha Trang — 28C Nguyễn Trung Trực</option>
+          <option value="dalat">Đà Lạt — 27/5 Hai Bà Trưng, Cam Ly</option>
+        </select>
+      </div>
       <div class="field">
         <label for="f-name" data-i18n="bk_l_name">Tên của bạn</label>
         <input id="f-name" name="name" type="text" autocomplete="name" placeholder="Nguyễn Văn A" data-i18n-ph="bk_ph_name">
       </div>
       <div class="field">
-        <label for="f-svc">Liệu trình</label>
+        <label for="f-svc" data-i18n="bk_l_svc">Liệu trình</label>
         <select id="f-svc" name="service">
           <optgroup label="Signature" data-i18n-lb="og_sig">
             <option value="p4a" data-i18n="sv_p4a">Ốc Biển - 90′</option>
@@ -1041,10 +1050,11 @@ a{color:inherit;text-decoration:none}
       </div>
       <div class="field">
         <label for="f-channel" data-i18n="bk_l_channel">Kênh xác nhận</label>
-        <select id="f-channel" name="channel">
-          <option>Zalo</option><option>KakaoTalk</option><option>WhatsApp</option>
-          <option>Facebook</option><option>WeChat</option>
-        </select>
+        <!-- Danh sách kênh dựng theo chi nhánh đang chọn: mỗi chi nhánh có
+             bộ kênh khác nhau, Đà Lạt có Messenger và LINE nhưng không có
+             Facebook. Để cứng một danh sách chung sẽ mời khách chọn kênh
+             không tồn tại. -->
+        <select id="f-channel" name="channel"></select>
       </div>
       <div class="field full">
         <button class="btn btn-dark" type="submit"><span data-i18n="bk_submit">Đặt lịch ngay</span></button>
@@ -1401,9 +1411,9 @@ a{color:inherit;text-decoration:none}
       br_h2:"Choose a location",
       br_sub:"Four locations, one standard of treatment and service.",
       bk_h2:"Book Your Visit Today",
-      bk_lede1:"Confirmed within 5 minutes on WhatsApp, KakaoTalk, WeChat or Zalo.",
+      bk_lede1:"Confirmed within 5 minutes on Zalo, WhatsApp, KakaoTalk or Facebook.",
       bk_lede2:"Free cancellation up to 3 hours before.",
-      bk_l_name:"Your name", bk_ph_name:"e.g. Alex Miller", bk_l_svc:"Treatment",
+      bk_l_name:"Your name", bk_l_branch:"Branch", bk_msg_hi:"Hi Clover Spa, I'd like to book:", bk_copied:"Copied — paste it in the chat", bk_ph_name:"e.g. Alex Miller", bk_l_svc:"Treatment",
       bk_l_date:"Date", bk_l_time:"Time (GMT+7)",
       bk_hint:"The 09:00 - 14:00 slot has code CLOVERCALM",
       bk_l_guests:"Guests", bk_l_channel:"Confirm via", bk_submit:"Book now",
@@ -1520,9 +1530,9 @@ a{color:inherit;text-decoration:none}
       br_h2:"지점 선택",
       br_sub:"네 개 지점, 같은 트리트먼트 기준과 같은 서비스.",
       bk_h2:"오늘 바로 예약하세요",
-      bk_lede1:"WhatsApp·KakaoTalk·WeChat·Zalo로 5분 안에 확인해 드립니다.",
+      bk_lede1:"Zalo·WhatsApp·KakaoTalk·Facebook으로 5분 안에 확인해 드립니다.",
       bk_lede2:"3시간 전까지 무료 취소.",
-      bk_l_name:"성함", bk_ph_name:"예: 홍길동", bk_l_svc:"트리트먼트",
+      bk_l_name:"성함", bk_l_branch:"지점", bk_msg_hi:"클로버 스파, 예약하고 싶습니다:", bk_copied:"복사됨 — 채팅창에 붙여넣기", bk_ph_name:"예: 홍길동", bk_l_svc:"트리트먼트",
       bk_l_date:"날짜", bk_l_time:"시간 (GMT+7)",
       bk_hint:"09:00 - 14:00 시간대는 CLOVERCALM 코드 적용",
       bk_l_guests:"인원", bk_l_channel:"확인 채널", bk_submit:"예약하기",
@@ -1639,9 +1649,9 @@ a{color:inherit;text-decoration:none}
       br_h2:"选择门店",
       br_sub:"四家门店，同样的疗程标准与服务方式。",
       bk_h2:"今天就来预约",
-      bk_lede1:"通过 WhatsApp、KakaoTalk、微信或 Zalo 五分钟内确认。",
+      bk_lede1:"通过 Zalo、WhatsApp、KakaoTalk 或 Facebook 五分钟内确认。",
       bk_lede2:"提前 3 小时可免费取消。",
-      bk_l_name:"您的姓名", bk_ph_name:"例：王小明", bk_l_svc:"疗程",
+      bk_l_name:"您的姓名", bk_l_branch:"分店", bk_msg_hi:"你好 Clover Spa，我想预约：", bk_copied:"已复制 — 请粘贴到聊天窗口", bk_ph_name:"例：王小明", bk_l_svc:"疗程",
       bk_l_date:"日期", bk_l_time:"时间 (GMT+7)",
       bk_hint:"09:00 - 14:00 时段适用 CLOVERCALM 优惠码",
       bk_l_guests:"人数", bk_l_channel:"确认渠道", bk_submit:"立即预约",
@@ -1758,9 +1768,9 @@ a{color:inherit;text-decoration:none}
       br_h2:"Выберите филиал",
       br_sub:"Четыре филиала — единый стандарт процедур и сервиса.",
       bk_h2:"Запишитесь сегодня",
-      bk_lede1:"Подтверждение за 5 минут в WhatsApp, KakaoTalk, WeChat или Zalo.",
+      bk_lede1:"Подтверждение за 5 минут в Zalo, WhatsApp, KakaoTalk или Facebook.",
       bk_lede2:"Бесплатная отмена за 3 часа.",
-      bk_l_name:"Ваше имя", bk_ph_name:"напр. Иван Петров", bk_l_svc:"Процедура",
+      bk_l_name:"Ваше имя", bk_l_branch:"Филиал", bk_msg_hi:"Здравствуйте, Clover Spa! Хочу записаться:", bk_copied:"Скопировано — вставьте в чат", bk_ph_name:"напр. Иван Петров", bk_l_svc:"Процедура",
       bk_l_date:"Дата", bk_l_time:"Время (GMT+7)",
       bk_hint:"На слот 09:00 - 14:00 действует код CLOVERCALM",
       bk_l_guests:"Гостей", bk_l_channel:"Канал подтверждения", bk_submit:"Записаться",
@@ -1828,6 +1838,8 @@ a{color:inherit;text-decoration:none}
     VI.js_nopage = 'Trang đang xây';
     VI.js_nokenh = 'Chưa nối kênh này';
     VI.br_goi = 'Gọi điện';
+    VI.bk_msg_hi = 'Chào Clover Spa, mình muốn đặt lịch:';
+    VI.bk_copied = 'Đã chép — dán vào khung chat';
     VI.alt_cn_nt = 'Mặt tiền Clover Spa Nha Trang sơn vàng, giàn hoa giấy hồng phủ kín tường và đèn lồng treo trước cửa.';
 
     /* Menu đầy đủ: chú thích và mô tả 10 trang. Không nằm sẵn trong HTML vì
@@ -2157,12 +2169,86 @@ a{color:inherit;text-decoration:none}
     });
   }
 
-  /* form chưa nối kênh chat */
+  /* --- Đặt lịch --------------------------------------------------------
+     Mỗi chi nhánh có bộ kênh chat riêng, nên danh sách "Kênh xác nhận"
+     phải dựng theo chi nhánh đang chọn. Trước đây danh sách để cứng nên
+     mời khách chọn cả kênh chi nhánh đó không có (WeChat không chi nhánh
+     nào có, Đà Lạt không có Facebook).
+
+     Bấm gửi: không có máy chủ nhận đơn, nên gom thông tin thành một đoạn
+     tin nhắn, chép vào bộ nhớ tạm rồi mở thẳng kênh chat của chi nhánh đó
+     để khách dán. Các kênh này (Zalo, QR WhatsApp, Kakao, Messenger, LINE)
+     đều không nhận nội dung soạn sẵn qua đường dẫn nên chép tay là cách
+     chạy được ở mọi kênh. */
+  var oChiNhanh = document.getElementById('f-branch'),
+      oKenh = document.getElementById('f-channel'),
+      oTen = document.getElementById('f-name'),
+      oNgay = document.getElementById('f-date'),
+      oGio = document.getElementById('f-time'),
+      oKhach = document.getElementById('f-guests');
+
+  var TEN_KENH = [
+    ['zalo', 'Zalo'], ['kakao', 'KakaoTalk'], ['wa', 'WhatsApp'],
+    ['fb', 'Facebook'], ['mess', 'Messenger'], ['line', 'LINE'], ['tel', 'Gọi điện']
+  ];
+
+  function nutChiNhanh(ma) {
+    return document.querySelector('.pill[data-city="' + ma + '"]');
+  }
+
+  function dungKenh() {
+    if (!oKenh || !oChiNhanh) return;
+    var b = nutChiNhanh(oChiNhanh.value);
+    var giu = oKenh.value;
+    oKenh.innerHTML = '';
+    if (!b) return;
+    TEN_KENH.forEach(function (k) {
+      if (!b.dataset[k[0]]) return;
+      var o = document.createElement('option');
+      o.value = k[0];
+      o.textContent = k[0] === 'tel' ? tra('br_goi') : k[1];
+      oKenh.appendChild(o);
+    });
+    if (giu && oKenh.querySelector('option[value="' + giu + '"]')) oKenh.value = giu;
+  }
+
+  if (oChiNhanh) {
+    oChiNhanh.addEventListener('change', dungKenh);
+    dungKenh();
+    /* bấm ô chi nhánh trên bản đồ thì form theo luôn, và ngược lại */
+    document.querySelectorAll('.pill[data-city]').forEach(function (x) {
+      x.addEventListener('click', function () { oChiNhanh.value = x.dataset.city; dungKenh(); });
+    });
+  }
+
   document.getElementById('form').addEventListener('submit', function (e) {
     e.preventDefault();
-    var s = this.querySelector('button[type="submit"] span'), old = s.textContent;
-    s.textContent = tra('js_nochat');
-    setTimeout(function () { s.textContent = old; }, 1800);
+    var s = this.querySelector('button[type="submit"] span'), cu2 = s.textContent;
+    var b = nutChiNhanh(oChiNhanh.value);
+    var dich = b && oKenh.value ? b.dataset[oKenh.value] : '';
+    if (!dich) {
+      s.textContent = tra('js_nochat');
+      setTimeout(function () { s.textContent = cu2; }, 1800);
+      return;
+    }
+    var tin = [
+      tra('bk_msg_hi'),
+      '• ' + tra('bk_l_branch') + ': ' + b.querySelector('b').textContent,
+      '• ' + tra('bk_l_svc') + ': ' + (selSvc ? selSvc.options[selSvc.selectedIndex].textContent : ''),
+      '• ' + tra('bk_l_date') + ': ' + ((oNgay && oNgay.value) || '—') +
+        '  ' + ((oGio && oGio.value) || ''),
+      '• ' + tra('bk_l_guests') + ': ' + ((oKhach && oKhach.value) || ''),
+      '• ' + tra('bk_l_name') + ': ' + ((oTen && oTen.value.trim()) || '—')
+    ].join('\n');
+
+    function moKenh() {
+      window.open(dich, dich.indexOf('tel:') === 0 ? '_self' : '_blank', 'noopener');
+      s.textContent = tra('bk_copied');
+      setTimeout(function () { s.textContent = cu2; }, 2600);
+    }
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(tin).then(moKenh, moKenh);
+    } else { moKenh(); }
   });
 })();
 </script>
