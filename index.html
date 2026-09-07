@@ -2153,9 +2153,12 @@ a{color:inherit;text-decoration:none}
       oGio = document.getElementById('f-time'),
       oKhach = document.getElementById('f-guests');
 
+  /* Thứ tự trùng với dải bong bóng nổi: Gọi - Facebook - Zalo - KakaoTalk.
+     Khách quen mắt với dải đó nên danh sách này xếp y hệt để khỏi phải dò lại.
+     Các kênh không có trên dải xếp xuống dưới cùng. */
   var TEN_KENH = [
-    ['zalo', 'Zalo'], ['kakao', 'KakaoTalk'], ['wa', 'WhatsApp'],
-    ['fb', 'Facebook'], ['mess', 'Messenger'], ['line', 'LINE'], ['tel', 'Gọi điện']
+    ['tel', 'Gọi điện'], ['fb', 'Facebook'], ['zalo', 'Zalo'], ['kakao', 'KakaoTalk'],
+    ['wa', 'WhatsApp'], ['mess', 'Messenger'], ['line', 'LINE']
   ];
 
   function nutChiNhanh(ma) {
@@ -2172,7 +2175,11 @@ a{color:inherit;text-decoration:none}
       if (!b.dataset[k[0]]) return;
       var o = document.createElement('option');
       o.value = k[0];
-      o.textContent = k[0] === 'tel' ? tra('br_goi') : k[1];
+      /* Chỉ "Gọi điện" cần dịch, các tên còn lại là tên thương hiệu nên giữ
+         nguyên. Gắn data-i18n để lượt dịch khi đổi ngôn ngữ quét thấy: ô này
+         dựng bằng JS nên nếu không gắn thì nó kẹt lại tiếng Việt. */
+      if (k[0] === 'tel') { o.dataset.i18n = 'br_goi'; o.textContent = tra('br_goi'); }
+      else { o.textContent = k[1]; }
       oKenhXn.appendChild(o);
     });
     if (giu && oKenhXn.querySelector('option[value="' + giu + '"]')) oKenhXn.value = giu;
