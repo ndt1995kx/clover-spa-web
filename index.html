@@ -915,8 +915,8 @@ a{color:inherit;text-decoration:none}
     <h2 id="h-br" class="rv" data-i18n="br_h2">Chọn chi nhánh</h2>
     <p class="sub rv" data-i18n="br_sub">Bốn chi nhánh, cùng một tiêu chuẩn liệu trình và cùng một cách phục vụ.</p>
 
-    <!-- CẦN DỮ LIỆU THẬT: địa chỉ đầy đủ và giờ mở cửa riêng của Huế, Nha Trang, Đà Lạt.
-         Điện thoại và kênh chat của cả bốn chi nhánh đã có (khách gửi 07/09/2026). -->
+    <!-- Địa chỉ, điện thoại và kênh chat của cả bốn chi nhánh đã đủ (khách gửi 07/09/2026).
+         CẦN DỮ LIỆU THẬT: giờ mở cửa riêng của từng chi nhánh, nếu khác nhau. -->
     <div class="map-wrap" id="mapWrap">
 
       <!-- CẦN DỮ LIỆU THẬT: địa chỉ đầy đủ và ảnh riêng của Huế, Nha Trang, Đà Lạt.
@@ -926,13 +926,13 @@ a{color:inherit;text-decoration:none}
           data-img="images/design/am-tra-rong.jpg" data-addr="123 Trần Hưng Đạo, Sơn Trà, Đà Nẵng">
           <span class="dot"></span><b>Đà Nẵng</b></button>
         <button type="button" class="pill" data-city="hue" data-tel="tel:+84935733689" data-zalo="https://zalo.me/0935733689" data-wa="https://api.whatsapp.com/qr/PQ24XDYOEXU6I1?autoload=1&amp;app_absent=0" data-fb="https://www.facebook.com/share/1Bt7wQJJXh/?mibextid=wwXIfr" data-kakao="https://qr.kakao.com/talk/yS9vPJjD3tjuh7qePQg7KIVA2dI-" data-mess="" data-line="" data-map="" data-altkey="alt_m1" aria-pressed="false"
-          data-img="images/design/phong-doi.jpg" data-addr="">
+          data-img="images/design/phong-doi.jpg" data-addr="40A Lê Lợi, Thuận Hóa, Huế">
           <span class="dot"></span><b>Huế</b></button>
         <button type="button" class="pill" data-city="nhatrang" data-tel="tel:+84905520089" data-zalo="https://zalo.me/0905520089" data-wa="https://api.whatsapp.com/qr/L7ICBUHCPXAXN1?autoload=1&amp;app_absent=0" data-fb="https://www.facebook.com/share/1GYdDEv2T5/?mibextid=wwXIfr" data-kakao="https://qr.kakao.com/talk/nPpic.y759S_vYmB2XsBlwJzcys-" data-mess="" data-line="" data-map="" data-altkey="alt_m4" aria-pressed="false"
-          data-img="images/design/tri-lieu-tre.jpg" data-addr="">
+          data-img="images/design/tri-lieu-tre.jpg" data-addr="28C Nguyễn Trung Trực, Nha Trang, Khánh Hòa">
           <span class="dot"></span><b>Nha Trang</b></button>
         <button type="button" class="pill" data-city="dalat" data-tel="tel:+84935450089" data-zalo="https://zalo.me/0935450089" data-wa="https://wa.me/qr/7XDX5WX7UB3OI1" data-fb="" data-kakao="https://qr.kakao.com/talk/XkqX6aAUzENPeQj8x4NblJ31uy4-" data-mess="https://www.messenger.com/t/cloverspadalat" data-line="https://line.me/ti/p/HU_YcS4DIB" data-map="https://maps.app.goo.gl/AXnuj8pPwT4kKXh27" data-altkey="alt_m2" aria-pressed="false"
-          data-img="images/design/khay-thao-moc.jpg" data-addr="">
+          data-img="images/design/khay-thao-moc.jpg" data-addr="27/5 Hai Bà Trưng, Cam Ly, Đà Lạt, Lâm Đồng">
           <span class="dot"></span><b>Đà Lạt</b></button>
       </div>
 
@@ -1168,14 +1168,17 @@ a{color:inherit;text-decoration:none}
          "address":{"@type":"PostalAddress","addressLocality":"Đà Nẵng","addressCountry":"VN"},
          "geo":{"@type":"GeoCoordinates","latitude":16.0544,"longitude":108.2022}},
         {"@type":"DaySpa","name":"Clover Spa Huế","telephone":"+84935733689",
-         "address":{"@type":"PostalAddress","addressLocality":"Huế","addressCountry":"VN"},
+         "address":{"@type":"PostalAddress","streetAddress":"40A Lê Lợi, Thuận Hóa",
+           "addressLocality":"Huế","addressCountry":"VN"},
          "geo":{"@type":"GeoCoordinates","latitude":16.4637,"longitude":107.5909}},
         {"@type":"DaySpa","name":"Clover Spa Nha Trang","telephone":"+84905520089",
-         "address":{"@type":"PostalAddress","addressLocality":"Nha Trang","addressCountry":"VN"},
+         "address":{"@type":"PostalAddress","streetAddress":"28C Nguyễn Trung Trực",
+           "addressLocality":"Nha Trang","addressRegion":"Khánh Hòa","addressCountry":"VN"},
          "geo":{"@type":"GeoCoordinates","latitude":12.2388,"longitude":109.1967}},
         {"@type":"DaySpa","name":"Clover Spa Đà Lạt","telephone":"+84935450089",
          "hasMap":"https://maps.app.goo.gl/AXnuj8pPwT4kKXh27",
-         "address":{"@type":"PostalAddress","addressLocality":"Đà Lạt","addressCountry":"VN"},
+         "address":{"@type":"PostalAddress","streetAddress":"27/5 Hai Bà Trưng, Cam Ly",
+           "addressLocality":"Đà Lạt","addressRegion":"Lâm Đồng","addressCountry":"VN"},
          "geo":{"@type":"GeoCoordinates","latitude":11.9404,"longitude":108.4583}}
       ],
       "hasOfferCatalog":{
