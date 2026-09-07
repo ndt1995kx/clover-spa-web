@@ -58,6 +58,7 @@ function docVI(doc) {
   doc.querySelectorAll('[data-i18n-ph]').forEach(e => { VI[e.dataset.i18nPh] = e.placeholder; });
   doc.querySelectorAll('[data-i18n-al]').forEach(e => { VI[e.dataset.i18nAl] = e.getAttribute('aria-label'); });
   doc.querySelectorAll('[data-i18n-alt]').forEach(e => { VI[e.dataset.i18nAlt] = e.alt; });
+  doc.querySelectorAll('[data-i18n-lb]').forEach(e => { VI[e.dataset.i18nLb] = e.label; });
   VI.doc_title = doc.title;
   const md = doc.querySelector('meta[name="description"]');
   VI.doc_desc = md ? md.content : '';
@@ -132,6 +133,7 @@ for (const b of BAN) {
     doc.querySelectorAll('[data-i18n-ph]').forEach(e => { const v = tra(e.dataset.i18nPh); if (v != null) { e.placeholder = v; dem++; } });
     doc.querySelectorAll('[data-i18n-al]').forEach(e => { const v = tra(e.dataset.i18nAl); if (v != null) { e.setAttribute('aria-label', v); dem++; } });
     doc.querySelectorAll('[data-i18n-alt]').forEach(e => { const v = tra(e.dataset.i18nAlt); if (v != null) { e.alt = v; dem++; } });
+    doc.querySelectorAll('[data-i18n-lb]').forEach(e => { const v = tra(e.dataset.i18nLb); if (v != null) { e.label = v; dem++; } });
   }
 
   /* --- Phan head --- */
